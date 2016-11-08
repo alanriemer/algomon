@@ -7,6 +7,6 @@ public abstract class Ataque {
 	int potencia;
 	int cantidad;
 	Tipo tipo;
-	
+		
 	public abstract void usarAtaque (Algomon unPokemon, Algomon enemigo);
 }
