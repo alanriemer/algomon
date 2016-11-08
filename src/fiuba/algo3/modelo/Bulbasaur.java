@@ -4,6 +4,7 @@ import fiuba.algo3.modelo.ataques.Ataque;
 
 public class Bulbasaur extends Algomon{
 	public Bulbasaur(){
+		tipo = Tipo.Planta;
 		healthPoints = 140;
 		Ataque ataque1 = new Ataque(15,10, Tipo.Planta);
 		moveSet.put("Latigo Cepa",ataque1);
@@ -14,6 +15,6 @@ public class Bulbasaur extends Algomon{
 	}
 	
 	public void atacaConLatigoCepaAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Latigo Cepa"));
+		enemigo.recibirAtaque(moveSet.get("Latigo Cepa"), this);
 	}
 }

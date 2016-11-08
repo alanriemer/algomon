@@ -4,6 +4,7 @@ import fiuba.algo3.modelo.ataques.Ataque;
 
 public class Charmander extends Algomon{
 	public Charmander(){
+		tipo = Tipo.Fuego;
 		healthPoints = 170;
 		Ataque ataque1 = new Ataque(16,10,Tipo.Fuego);
 		moveSet.put("Brasas",ataque1);
@@ -14,6 +15,6 @@ public class Charmander extends Algomon{
 	}
 	
 	public void atacaConBrasasAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Brasas"));;
+		enemigo.recibirAtaque(moveSet.get("Brasas"), this);;
 	}
 }

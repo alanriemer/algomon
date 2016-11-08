@@ -4,6 +4,7 @@ import fiuba.algo3.modelo.ataques.Ataque;
 
 public class Squirtle extends Algomon{	
 	public Squirtle (){
+		tipo = Tipo.Agua;
 		healthPoints = 150;
 		Ataque ataque1 = new Ataque(10,15, Tipo.Agua);
 		Ataque ataque2 = new Ataque(20,8,Tipo.Agua);
@@ -16,10 +17,10 @@ public class Squirtle extends Algomon{
 	}
 	
 	public void atacaConBurbujaAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Burbuja"));
+		enemigo.recibirAtaque(moveSet.get("Burbuja"), this);
 	}
 	
 	public void atacaConCanionDeAguaAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Canion de Agua"));
+		enemigo.recibirAtaque(moveSet.get("Canion de Agua"), this);
 	}
 }
