@@ -10,6 +10,7 @@ import fiuba.algo3.modelo.Rattata;
 import fiuba.algo3.modelo.Squirtle;
 
 public class BulbasaurTest {
+	
 	@Test
 	public void test01BulbasaurRealizaLatigoCepaContraOtroBulbasaurYHace7deDanio(){
 		Bulbasaur unBulbasaur = new Bulbasaur();
