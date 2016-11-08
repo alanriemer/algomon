@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>algomon</name>
+	<name>Tp Algomon</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -14,16 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>build</name>
-			<type>2</type>
-			<location>/home/casa/tmp/algomon/build</location>
-		</link>
-		<link>
-			<name>instrumented</name>
-			<type>2</type>
-			<location>/home/casa/tmp/algomon/build/instrumented</location>
-		</link>
-	</linkedResources>
 </projectDescription>
