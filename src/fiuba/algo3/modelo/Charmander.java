@@ -7,10 +7,10 @@ public class Charmander extends Algomon{
 		healthPoints = 170;
 		tipo = Tipo.Fuego;
 		Ataque ataque1 = new Ataque("Brasas",16,10,Tipo.Fuego);
-		moveSet.put(1,ataque1);
+		moveSet.put("Brasas",ataque1);
 	}
 	
 	public void atacaConBrasasAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get(1));;
+		enemigo.recibirAtaque(moveSet.get("Brasas"));;
 	}
 }

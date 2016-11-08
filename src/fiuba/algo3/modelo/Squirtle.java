@@ -7,16 +7,16 @@ public class Squirtle extends Algomon{
 		healthPoints = 150;
 		tipo = Tipo.Agua;
 		Ataque ataque1 = new Ataque("Burbuja",10,15,Tipo.Agua);
-		Ataque ataque2 = new Ataque("Cañoñ de Agua",20,8,Tipo.Agua);
-		moveSet.put(1,ataque1);
-		moveSet.put(2,ataque2);
+		Ataque ataque2 = new Ataque("Canion de Agua",20,8,Tipo.Agua);
+		moveSet.put("Burbuja",ataque1);
+		moveSet.put("Canion de Agua",ataque2);
 	}
 	
 	public void atacaConBurbujaAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get(1));
+		enemigo.recibirAtaque(moveSet.get("Burbuja"));
 	}
 	
 	public void atacaConCanionDeAguaAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get(2));
+		enemigo.recibirAtaque(moveSet.get("Canion de Agua"));
 	}
 }
