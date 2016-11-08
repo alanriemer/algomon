@@ -28,5 +28,6 @@
 	<classpathentry kind="con" path="/home/casa/tmp/algomon/build"/>
 	<classpathentry kind="con" path="/home/casa/tmp/algomon/build/instrumented"/>
 	<classpathentry kind="con" path="/home/casa/tmp/algomon/build/tests"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
