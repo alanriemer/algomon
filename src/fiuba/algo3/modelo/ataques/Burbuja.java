@@ -11,6 +11,6 @@ public class Burbuja extends Ataque{
 
 	@Override
 	public void usarAtaque(Algomon unAlgomon, Algomon enemigo) {
-		enemigo.hacerDanio(CalcularDaño.calcularPorTipo(unAlgomon, this.tipo, potencia, enemigo));
+		enemigo.hacerDanio(CalcularDanio.calcularPorTipo(unAlgomon, this.tipo, potencia, enemigo));
 	}
 }

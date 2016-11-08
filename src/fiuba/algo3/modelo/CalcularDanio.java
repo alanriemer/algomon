@@ -1,6 +1,6 @@
 package fiuba.algo3.modelo;
 
-public class CalcularDaño {
+public class CalcularDanio {
 	
 	public static double calcularMultiplicador(Tipo ataque, Tipo enemigo){
 		if (ataque == enemigo)
