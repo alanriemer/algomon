@@ -5,9 +5,10 @@ import java.util.HashMap;
 import fiuba.algo3.modelo.ataques.Ataque;
 
 public abstract class Algomon {
-	int healthPoints;
-	Tipo tipo;
-	HashMap<String,Ataque> moveSet = new HashMap<String,Ataque>();
+	protected int healthPoints;
+	protected Tipo tipo;
+	protected HashMap<String,Ataque> moveSet = new HashMap<String,Ataque>();
+	protected HashMap<Tipo,Double> weakAndStr = new HashMap<Tipo,Double>();
 	
 	public int getHealthPoints(){
 		return healthPoints;
