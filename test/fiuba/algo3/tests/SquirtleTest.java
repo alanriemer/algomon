@@ -6,9 +6,9 @@ import org.junit.Test;
 
 import fiuba.algo3.modelo.Squirtle;
 
-public class UnitariosTest {
+public class SquirtleTest {
 	@Test
-	public void pruebaBurbujaSquirtle(){
+	public void test01SquirtleRealizaBurbujaContraOtroSquirtleYHace5deDanio(){
 		Squirtle unSquirtle = new Squirtle();
 		Squirtle otroSquirtle = new Squirtle();
 		
