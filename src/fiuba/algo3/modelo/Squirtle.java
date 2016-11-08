@@ -1,7 +1,7 @@
-package fiuba.algo3.modelos;
+package fiuba.algo3.modelo;
 
 public class Squirtle extends Algomon{
 	public Squirtle (){
-		lifePoints = 150;
+		healthPoints = 150;
 	}
 }

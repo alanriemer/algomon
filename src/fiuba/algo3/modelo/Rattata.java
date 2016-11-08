@@ -1,7 +1,7 @@
-package fiuba.algo3.modelos;
+package fiuba.algo3.modelo;
 
 public class Rattata extends Algomon{
 	public Rattata(){
-		lifePoints = 170;
+		healthPoints = 170;
 	}
 }

@@ -1,8 +1,8 @@
-package fiuba.algo3.modelos;
+package fiuba.algo3.modelo;
 
 public class Jigglypuff extends Algomon{
 	public Jigglypuff(){
-		lifePoints = 130;
+		healthPoints = 130;
 	}
 
 }

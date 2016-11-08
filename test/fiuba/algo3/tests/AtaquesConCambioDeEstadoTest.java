@@ -4,12 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelos.algomones.Bulbasaur;
-import fiuba.algo3.modelos.algomones.Chansey;
-import fiuba.algo3.modelos.algomones.Charmander;
-import fiuba.algo3.modelos.algomones.Jigglypuff;
-import fiuba.algo3.modelos.algomones.Rattata;
-import fiuba.algo3.modelos.algomones.Squirtle;
+import fiuba.algo3.modelo.*;
 
 public class AtaquesConCambioDeEstadoTest {
 

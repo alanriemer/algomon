@@ -1,7 +1,7 @@
-package fiuba.algo3.modelos;
+package fiuba.algo3.modelo;
 
 public class Chansey extends Algomon {
 	public Chansey (){
-		lifePoints = 130;
+		healthPoints = 130;
 	}
 }

@@ -1,7 +1,7 @@
-package fiuba.algo3.modelos;
+package fiuba.algo3.modelo;
 
 public class Bulbasaur extends Algomon{
 	public Bulbasaur(){
-		lifePoints = 140;
+		healthPoints = 140;
 	}
 }
