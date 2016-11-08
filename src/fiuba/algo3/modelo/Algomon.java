@@ -7,7 +7,7 @@ import fiuba.algo3.modelo.ataques.Ataque;
 public abstract class Algomon {
 	int healthPoints;
 	Tipo tipo;
-	HashMap<Integer,Ataque> moveList = new HashMap<Integer,Ataque>();
+	HashMap<Integer,Ataque> moveSet = new HashMap<Integer,Ataque>();
 	
 	public int getHealthPoints(){
 		return healthPoints;

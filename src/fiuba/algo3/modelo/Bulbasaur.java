@@ -7,10 +7,10 @@ public class Bulbasaur extends Algomon{
 		healthPoints = 140;
 		tipo = Tipo.Planta;
 		Ataque ataque1 = new Ataque("Latigo Cepa",15,10,Tipo.Planta);
-		moveList.put(1,ataque1);
+		moveSet.put(1,ataque1);
 	}
 	
 	public void atacaConLatigoCepaAlEnemigo(Algomon enemigo){
-		moveList.get(1).usarAtaque(this, enemigo);
+		moveSet.get(1).usarAtaque(this, enemigo);
 	}
 }

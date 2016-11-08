@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import fiuba.algo3.modelo.Charmander;
 import fiuba.algo3.modelo.Squirtle;
 
 public class SquirtleTest {
@@ -38,5 +39,16 @@ public class SquirtleTest {
 		unSquirtle.atacaConAtaqueRapidoAlEnemigo(otroSquirtle);
 		
 		assertEquals(otroSquirtle.getHealthPoints(),vida-10);
+	}
+	
+	@Test
+	public void test04SquirtleRealizaBurbujaContraCharmanderYHace20deDanio(){
+		Squirtle unSquirtle = new Squirtle();
+		Charmander unCharmander = new Charmander();
+		
+		int vida = unCharmander.getHealthPoints();
+		unSquirtle.atacaConBurbujaAlEnemigo(unCharmander);
+		
+		assertEquals(unCharmander.getHealthPoints(),vida-20);
 	}
 }
