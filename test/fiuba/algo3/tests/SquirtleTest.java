@@ -17,4 +17,15 @@ public class SquirtleTest {
 		
 		assertEquals(otroSquirtle.getHealthPoints(),vida-5);
 	}
+	
+	@Test
+	public void test02SquirtleRealizaCanionDeAguaContraOtroSquirtleYHace10deDanio(){
+		Squirtle unSquirtle = new Squirtle();
+		Squirtle otroSquirtle = new Squirtle();
+		
+		int vida = otroSquirtle.getHealthPoints();
+		unSquirtle.atacaConCanionDeAguaAlEnemigo(otroSquirtle);
+		
+		assertEquals(otroSquirtle.getHealthPoints(),vida-10);
+	}
 }
