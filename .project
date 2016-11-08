@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>algomon</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>build</name>
+			<type>2</type>
+			<location>/home/casa/tmp/algomon/build</location>
+		</link>
+		<link>
+			<name>instrumented</name>
+			<type>2</type>
+			<location>/home/casa/tmp/algomon/build/instrumented</location>
+		</link>
+		<link>
+			<name>tests</name>
+			<type>2</type>
+			<location>/home/casa/tmp/algomon/build/tests</location>
+		</link>
+	</linkedResources>
+</projectDescription>
