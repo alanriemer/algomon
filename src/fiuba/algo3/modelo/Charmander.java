@@ -11,6 +11,6 @@ public class Charmander extends Algomon{
 	}
 	
 	public void atacaConBrasasAlEnemigo(Algomon enemigo){
-		moveSet.get(1).usarAtaque(this, enemigo);
+		enemigo.recibirAtaque(moveSet.get(1));;
 	}
 }

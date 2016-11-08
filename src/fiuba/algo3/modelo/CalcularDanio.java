@@ -20,7 +20,7 @@ public class CalcularDanio {
 		return 0.5;
 	}
 	
-	public static int calcularPorTipo(Algomon unAlgomon, Tipo tipo, int potencia, Algomon enemigo){
+	public static int calcularPorTipo(Tipo tipo, int potencia, Algomon enemigo){
 		double multiplicador = calcularMultiplicador(tipo, enemigo.tipo);
 		return (int) Math.floor(potencia * multiplicador);
 	}

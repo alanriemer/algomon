@@ -17,9 +17,9 @@ public class Ataque {
 		this.tipo = tipo;
 	}
 	
-	public void usarAtaque (Algomon unAlgomon, Algomon enemigo){
+	public void usarAtaque (Algomon enemigo){
 		if (cantidad > 0){ 
-			enemigo.hacerDanio(CalcularDanio.calcularPorTipo(unAlgomon, this.tipo, potencia, enemigo));
+			enemigo.hacerDanio(CalcularDanio.calcularPorTipo(this.tipo, potencia, enemigo));
 			cantidad--;
 		}
 	}

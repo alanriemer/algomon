@@ -19,6 +19,10 @@ public abstract class Algomon {
 	
 	public void atacaConAtaqueRapidoAlEnemigo(Algomon enemigo){
 		Ataque ataqueRapido = new Ataque("Ataque Rapido",10,16,Tipo.Normal);
-		ataqueRapido.usarAtaque(this, enemigo);
+		enemigo.recibirAtaque(ataqueRapido);
+	}
+	
+	public void recibirAtaque(Ataque unAtaque){
+		unAtaque.usarAtaque(this);
 	}
 }
