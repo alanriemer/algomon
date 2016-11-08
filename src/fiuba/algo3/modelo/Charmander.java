@@ -5,8 +5,7 @@ import fiuba.algo3.modelo.ataques.Ataque;
 public class Charmander extends Algomon{
 	public Charmander(){
 		healthPoints = 170;
-		tipo = Tipo.Fuego;
-		Ataque ataque1 = new Ataque("Brasas",16,10,Tipo.Fuego);
+		Ataque ataque1 = new Ataque(16,10,Tipo.Fuego);
 		moveSet.put("Brasas",ataque1);
 		weakAndStr.put(Tipo.Agua, 2.0);
 		weakAndStr.put(Tipo.Fuego, 0.5);

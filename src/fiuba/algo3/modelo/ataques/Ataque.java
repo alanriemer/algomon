@@ -1,26 +1,30 @@
 package fiuba.algo3.modelo.ataques;
 
-import fiuba.algo3.modelo.Algomon;
-import fiuba.algo3.modelo.CalcularDanio;
 import fiuba.algo3.modelo.Tipo;
 
 public class Ataque {
-	String nombre;
 	int potencia;
 	int cantidad;
 	Tipo tipo;
 	
-	public Ataque (String nombre, int potencia, int cantidad, Tipo tipo){
-		this.nombre = nombre;
+	public Ataque(int potencia, int cantidad, Tipo t){
 		this.potencia = potencia;
 		this.cantidad = cantidad;
-		this.tipo = tipo;
+		this.tipo = t;
 	}
 	
-	public void usarAtaque (Algomon enemigo){
-		if (cantidad > 0){ 
-			enemigo.hacerDanio(CalcularDanio.calcularPorTipo(this.tipo, potencia, enemigo));
-			cantidad--;
-		}
+	public boolean sePuedeUsarAtaque(){
+		if (cantidad > 0)
+			return true;
+		return false;
+	}
+	
+	public int usarAtaque(){
+		cantidad--;
+		return potencia;
+	}
+	
+	public Tipo tipoDeAtaque(){
+		return tipo;
 	}
 }

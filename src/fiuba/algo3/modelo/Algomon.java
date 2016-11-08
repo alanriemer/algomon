@@ -5,10 +5,14 @@ import java.util.HashMap;
 import fiuba.algo3.modelo.ataques.Ataque;
 
 public abstract class Algomon {
-	protected int healthPoints; //Test rodrigo segundo test
-	protected Tipo tipo;
+	protected int healthPoints; 
 	protected HashMap<String,Ataque> moveSet = new HashMap<String,Ataque>();
 	protected HashMap<Tipo,Double> weakAndStr = new HashMap<Tipo,Double>();
+	
+	public Algomon(){
+		Ataque ataque1 = new Ataque(10,16, Tipo.Normal);
+		moveSet.put("Ataque rapido",ataque1);
+	}
 	
 	public int getHealthPoints(){
 		return healthPoints;
@@ -19,11 +23,17 @@ public abstract class Algomon {
 	}
 	
 	public void atacaConAtaqueRapidoAlEnemigo(Algomon enemigo){
-		Ataque ataqueRapido = new Ataque("Ataque Rapido",10,16,Tipo.Normal);
-		enemigo.recibirAtaque(ataqueRapido);
+		enemigo.recibirAtaque(moveSet.get("Ataque rapido"));
 	}
 	
 	public void recibirAtaque(Ataque unAtaque){
-		unAtaque.usarAtaque(this);
+		int danio;
+		if(unAtaque.sePuedeUsarAtaque()){
+			danio = unAtaque.usarAtaque();
+			danio = (int) (danio * weakAndStr.get(unAtaque.tipoDeAtaque()));
+			healthPoints = healthPoints - danio;
+		}
 	}
+	
+	
 }
