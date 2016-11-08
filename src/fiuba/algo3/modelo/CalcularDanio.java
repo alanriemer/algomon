@@ -3,6 +3,8 @@ package fiuba.algo3.modelo;
 public class CalcularDanio {
 	
 	public static double calcularMultiplicador(Tipo ataque, Tipo enemigo){
+		if (ataque == Tipo.Normal)
+			return 1;
 		if (ataque == enemigo)
 			return 0.5;	
 		return 1;

@@ -16,4 +16,9 @@ public abstract class Algomon {
 	public void hacerDanio(int dmg){
 		healthPoints -= dmg;
 	}
+	
+	public void atacaConAtaqueRapidoAlEnemigo(Algomon enemigo){
+		Ataque ataqueRapido = new Ataque("Ataque Rapido",10,16,Tipo.Normal);
+		ataqueRapido.usarAtaque(this, enemigo);
+	}
 }
