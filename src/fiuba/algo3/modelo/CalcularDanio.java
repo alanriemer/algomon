@@ -13,7 +13,7 @@ public class CalcularDanio {
 	}
 	
 	public static double calcularMultiplicador(Tipo ataque, Tipo enemigo){
-		if (ataque == Tipo.Normal)
+		if (enemigo == Tipo.Normal || ataque == Tipo.Normal)
 			return 1;
 		if (enemigo == devolverTipoDebilAnte(ataque))
 			return 2;
