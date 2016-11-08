@@ -1,5 +1,7 @@
-package fiuba.algo3.modelo;
+package fiuba.algo3.modelos;
 
-public class Charmander {
-
+public class Charmander extends Algomon{
+	public Charmander(){
+		lifePoints = 170;
+	}
 }
