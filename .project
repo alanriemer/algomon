@@ -25,10 +25,5 @@
 			<type>2</type>
 			<location>/home/casa/tmp/algomon/build/instrumented</location>
 		</link>
-		<link>
-			<name>tests</name>
-			<type>2</type>
-			<location>/home/casa/tmp/algomon/build/tests</location>
-		</link>
 	</linkedResources>
 </projectDescription>
