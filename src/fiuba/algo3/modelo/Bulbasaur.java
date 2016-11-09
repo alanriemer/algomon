@@ -24,6 +24,6 @@ public class Bulbasaur extends Algomon{
 		int vidaEnemigo = enemigo.getPuntosVida();
 		enemigo.recibirAtaque(moveSet.get("ChupaVidas"));
 		int danioEnemigo = vidaEnemigo - enemigo.getPuntosVida();
-		this.puntosVida = (int) (this.puntosVida+ Math.ceil(danioEnemigo*0.3));//Redondeo
+		this.puntosVida = (int) (this.puntosVida+ Math.round(danioEnemigo*0.3));//Redondeo
 	}	
 }
