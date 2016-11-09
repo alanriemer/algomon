@@ -27,7 +27,7 @@ public abstract class Algomon {
 	public void recibirAtaque(Ataque unAtaque) throws AtaqueNoDisponibleException{
 		int danio;
 		if(!unAtaque.sePuedeUsarAtaque()){
-			new AtaqueNoDisponibleException();
+			throw new AtaqueNoDisponibleException();
 		}
 		danio = unAtaque.usarAtaque();
 		danio = (int) (danio * weakAndStr.get(unAtaque.tipoDeAtaque()));

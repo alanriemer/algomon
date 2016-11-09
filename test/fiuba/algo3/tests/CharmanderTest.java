@@ -143,8 +143,8 @@ public class CharmanderTest {
 		unCharmander.atacarConFogonazo(unBulbasaur);
 		unCharmander.atacarConFogonazo(unBulbasaur);		
 		unCharmander.atacarConFogonazo(unBulbasaur);		
-
+		//unCharmander.atacarConFogonazo(unBulbasaur);	
 		
-		assertEquals(unBulbasaur.getPuntosVida(),vida-12);
+		assertEquals(unBulbasaur.getPuntosVida(),vida-16);
 	}	
 }
