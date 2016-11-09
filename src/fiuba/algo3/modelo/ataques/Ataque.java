@@ -5,10 +5,12 @@ import fiuba.algo3.modelo.Tipo;
 public class Ataque {
 	int potencia;
 	int cantidad;
+	Tipo tipo;
 	
 	public Ataque(int potencia, int cantidad, Tipo t){
 		this.potencia = potencia;
 		this.cantidad = cantidad;
+		this.tipo = t;
 	}
 	
 	public boolean sePuedeUsarAtaque(){
@@ -21,5 +23,8 @@ public class Ataque {
 		cantidad--;
 		return potencia;
 	}
-
+	
+	public Tipo tipoDeAtaque(){
+		return tipo;
+	}
 }

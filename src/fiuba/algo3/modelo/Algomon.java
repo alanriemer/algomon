@@ -27,15 +27,11 @@ public abstract class Algomon {
 		int danio;
 		if(unAtaque.sePuedeUsarAtaque()){
 			danio = unAtaque.usarAtaque();
-			danio = (int) (danio * weakAndStr.get(atacante.getTipo()));
+			danio = (int) (danio * weakAndStr.get(atacante.coincideElTipo(unAtaque.tipoDeAtaque())));
 			puntosVida = puntosVida - danio;
 		}
 	}
 	
-	public Tipo getTipo() {
-		return tipo;
-	}
-
 	public Tipo coincideElTipo(Tipo unTipo){
 		if(tipo == unTipo)
 			return tipo;

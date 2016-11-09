@@ -52,7 +52,7 @@ public class CharmanderTest {
 		int vida = unBulbasaur.getPuntosVida();
 		unCharmander.atacaConAtaqueRapidoAlEnemigo(unBulbasaur);
 		
-		assertEquals(unBulbasaur.getPuntosVida(),vida-20);
+		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
 	}
 	
 	@Test
@@ -63,7 +63,7 @@ public class CharmanderTest {
 		int vida = unSquirtle.getPuntosVida();
 		unCharmander.atacaConAtaqueRapidoAlEnemigo(unSquirtle);
 		
-		assertEquals(unSquirtle.getPuntosVida(),vida-5);
+		assertEquals(unSquirtle.getPuntosVida(),vida-10);
 	}
 	
 	@Test
@@ -74,7 +74,7 @@ public class CharmanderTest {
 		int vida = otroCharmander.getPuntosVida();
 		unCharmander.atacaConAtaqueRapidoAlEnemigo(otroCharmander);
 		
-		assertEquals(otroCharmander.getPuntosVida(),vida-5);
+		assertEquals(otroCharmander.getPuntosVida(),vida-10);
 	}
 	
 	@Test
