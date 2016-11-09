@@ -16,11 +16,11 @@ public class Squirtle extends Algomon{
 		weakAndStr.put(Tipo.Normal, 1.0);
 	}
 	
-	public void atacaConBurbujaAlEnemigo(Algomon enemigo){
+	public void atacarConBurbuja(Algomon enemigo){
 		enemigo.recibirAtaque(moveSet.get("Burbuja"));
 	}
 	
-	public void atacaConCanionDeAguaAlEnemigo(Algomon enemigo){
+	public void atacarConCanionDeAgua(Algomon enemigo){
 		enemigo.recibirAtaque(moveSet.get("Canion de Agua"));
 	}
 }

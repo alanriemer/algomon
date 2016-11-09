@@ -14,7 +14,7 @@ public class Bulbasaur extends Algomon{
 		weakAndStr.put(Tipo.Normal, 1.0);
 	}
 	
-	public void atacaConLatigoCepaAlEnemigo(Algomon enemigo){
+	public void atacarConLatigoCepa(Algomon enemigo){
 		enemigo.recibirAtaque(moveSet.get("Latigo Cepa"));
 	}
 }

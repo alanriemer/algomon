@@ -19,7 +19,7 @@ public abstract class Algomon {
 		return puntosVida;
 	}
 	
-	public void atacaConAtaqueRapidoAlEnemigo(Algomon enemigo){
+	public void atacarConAtaqueRapido(Algomon enemigo){
 		enemigo.recibirAtaque(moveSet.get("Ataque rapido"));
 	}
 	

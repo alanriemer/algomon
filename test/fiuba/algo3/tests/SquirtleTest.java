@@ -17,7 +17,7 @@ public class SquirtleTest {
 		Squirtle otroSquirtle = new Squirtle();
 		
 		int vida = otroSquirtle.getPuntosVida();
-		unSquirtle.atacaConBurbujaAlEnemigo(otroSquirtle);
+		unSquirtle.atacarConBurbuja(otroSquirtle);
 		
 		assertEquals(otroSquirtle.getPuntosVida(),vida-5);
 	}
@@ -28,7 +28,7 @@ public class SquirtleTest {
 		Squirtle otroSquirtle = new Squirtle();
 		
 		int vida = otroSquirtle.getPuntosVida();
-		unSquirtle.atacaConCanionDeAguaAlEnemigo(otroSquirtle);
+		unSquirtle.atacarConCanionDeAgua(otroSquirtle);
 		
 		assertEquals(otroSquirtle.getPuntosVida(),vida-10);
 	}
@@ -39,7 +39,7 @@ public class SquirtleTest {
 		Squirtle otroSquirtle = new Squirtle();
 		
 		int vida = otroSquirtle.getPuntosVida();
-		unSquirtle.atacaConAtaqueRapidoAlEnemigo(otroSquirtle);
+		unSquirtle.atacarConAtaqueRapido(otroSquirtle);
 		
 		assertEquals(otroSquirtle.getPuntosVida(),vida-10);
 	}
@@ -50,7 +50,7 @@ public class SquirtleTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVida();
-		unSquirtle.atacaConBurbujaAlEnemigo(unCharmander);
+		unSquirtle.atacarConBurbuja(unCharmander);
 		
 		assertEquals(unCharmander.getPuntosVida(),vida-20);
 	}
@@ -61,7 +61,7 @@ public class SquirtleTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVida();
-		unSquirtle.atacaConCanionDeAguaAlEnemigo(unCharmander);
+		unSquirtle.atacarConCanionDeAgua(unCharmander);
 		
 		assertEquals(unCharmander.getPuntosVida(),vida-40);
 	}
@@ -72,7 +72,7 @@ public class SquirtleTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVida();
-		unSquirtle.atacaConAtaqueRapidoAlEnemigo(unCharmander);		
+		unSquirtle.atacarConAtaqueRapido(unCharmander);		
 		
 		assertEquals(unCharmander.getPuntosVida(),vida-10);
 	}
@@ -83,7 +83,7 @@ public class SquirtleTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVida();
-		unSquirtle.atacaConBurbujaAlEnemigo(unBulbasaur);
+		unSquirtle.atacarConBurbuja(unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVida(),vida-5);
 	}
@@ -94,7 +94,7 @@ public class SquirtleTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVida();
-		unSquirtle.atacaConCanionDeAguaAlEnemigo(unBulbasaur);
+		unSquirtle.atacarConCanionDeAgua(unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
 	}
@@ -105,7 +105,7 @@ public class SquirtleTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVida();
-		unSquirtle.atacaConAtaqueRapidoAlEnemigo(unBulbasaur);
+		unSquirtle.atacarConAtaqueRapido(unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
 	}	
@@ -116,7 +116,7 @@ public class SquirtleTest {
 		Rattata unRattata = new Rattata();
 		
 		int vida = unRattata.getPuntosVida();
-		unSquirtle.atacaConBurbujaAlEnemigo(unRattata);
+		unSquirtle.atacarConBurbuja(unRattata);
 		
 		assertEquals(unRattata.getPuntosVida(),vida-10);
 	}
@@ -127,7 +127,7 @@ public class SquirtleTest {
 		Rattata unRattata = new Rattata();
 		
 		int vida = unRattata.getPuntosVida();
-		unSquirtle.atacaConCanionDeAguaAlEnemigo(unRattata);
+		unSquirtle.atacarConCanionDeAgua(unRattata);
 		
 		assertEquals(unRattata.getPuntosVida(),vida-20);
 	}
@@ -138,7 +138,7 @@ public class SquirtleTest {
 		Rattata unRattata = new Rattata();
 		
 		int vida = unRattata.getPuntosVida();
-		unSquirtle.atacaConAtaqueRapidoAlEnemigo(unRattata);
+		unSquirtle.atacarConAtaqueRapido(unRattata);
 		
 		assertEquals(unRattata.getPuntosVida(),vida-10);
 	}
@@ -149,7 +149,7 @@ public class SquirtleTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVida();
-		unSquirtle.atacaConAtaqueRapidoAlEnemigo(unBulbasaur);
+		unSquirtle.atacarConAtaqueRapido(unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
 	}

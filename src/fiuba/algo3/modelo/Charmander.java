@@ -16,11 +16,11 @@ public class Charmander extends Algomon{
 		weakAndStr.put(Tipo.Normal, 1.0);
 	}
 	
-	public void atacaConBrasasAlEnemigo(Algomon enemigo){
+	public void atacarConBrasas(Algomon enemigo){
 		enemigo.recibirAtaque(moveSet.get("Brasas"));
 	}
 	
-	public void atacaConFogonazoAlEnemigo(Algomon enemigo){
+	public void atacarConFogonazo(Algomon enemigo){
 		enemigo.recibirAtaque(moveSet.get("Fogonazo"));
 	}
 }
