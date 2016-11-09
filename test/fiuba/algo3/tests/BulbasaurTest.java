@@ -110,4 +110,30 @@ public class BulbasaurTest {
 		
 		assertEquals(unSquirtle.getPuntosVida(),vida-10);
 	}
+	
+	@Test	
+	public void test10BulbasaurRealizaChupaVidasContraSquirtleYHace10deDanioYAumenta30porcSuVida() throws AtaqueNoDisponibleException{
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Squirtle unSquirtle = new Squirtle();
+		
+		int vidaSquirtle = unSquirtle.getPuntosVida();
+		int vidaBulbasaur = unBulbasaur.getPuntosVida();
+		unBulbasaur.atacarConChupavidas(unSquirtle);
+		
+		assertEquals(unBulbasaur.getPuntosVida(),vidaBulbasaur + 1);
+		assertEquals(unSquirtle.getPuntosVida(),vidaSquirtle-30);
+	}
+	
+	@Test	
+	public void test11BulbasaurRealizaChupaVidasContraOtroBulbasaurYHace10deDanioYAumenta30porcSuVida() throws AtaqueNoDisponibleException{
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Bulbasaur otroBulbasaur = new Bulbasaur();
+		
+		int vidaSquirtle = otroBulbasaur.getPuntosVida();
+		int vidaBulbasaur = unBulbasaur.getPuntosVida();
+		unBulbasaur.atacarConChupavidas(otroBulbasaur);
+		
+		assertEquals(unBulbasaur.getPuntosVida(),vidaBulbasaur +1);
+		assertEquals(otroBulbasaur.getPuntosVida(),vidaSquirtle-7);
+	}	
 }
