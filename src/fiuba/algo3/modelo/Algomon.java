@@ -11,8 +11,8 @@ public abstract class Algomon {
 	protected HashMap<Tipo,Double> weakAndStr = new HashMap<Tipo,Double>();
 	
 	public Algomon(){
-		Ataque ataque1 = new Ataque(10,16, Tipo.Normal);
-		moveSet.put("Ataque rapido",ataque1);
+		Ataque ataqueRapido = new Ataque(10,16, Tipo.Normal);
+		moveSet.put("Ataque rapido",ataqueRapido);
 	}
 	
 	public int getPuntosVida(){

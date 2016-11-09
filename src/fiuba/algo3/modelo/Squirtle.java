@@ -6,10 +6,10 @@ public class Squirtle extends Algomon{
 	public Squirtle (){
 		tipo = Tipo.Agua;
 		puntosVida = 150;
-		Ataque ataque1 = new Ataque(10,15, Tipo.Agua);
-		Ataque ataque2 = new Ataque(20,8,Tipo.Agua);
-		moveSet.put("Burbuja",ataque1);
-		moveSet.put("Canion de Agua",ataque2);
+		Ataque burbuja = new Ataque(10,15, Tipo.Agua);
+		Ataque canionDeAgua = new Ataque(20,8,Tipo.Agua);
+		moveSet.put("Burbuja",burbuja);
+		moveSet.put("Canion de Agua",canionDeAgua);
 		weakAndStr.put(Tipo.Agua, 0.5);
 		weakAndStr.put(Tipo.Fuego, 0.5);
 		weakAndStr.put(Tipo.Planta, 2.0);
