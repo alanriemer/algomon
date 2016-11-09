@@ -133,7 +133,7 @@ public class CharmanderTest {
 		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
 	}
 	
-	@Test	
+	@Test (expected = AtaqueNoDisponibleException.class)	
 	public void test12CharmanderRealizaFogonazoSeLeAgotaYLanzaExcepcion() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Bulbasaur unBulbasaur = new Bulbasaur();
@@ -141,10 +141,10 @@ public class CharmanderTest {
 		int vida = unBulbasaur.getPuntosVida();
 		unCharmander.atacarConFogonazo(unBulbasaur);
 		unCharmander.atacarConFogonazo(unBulbasaur);
-		unCharmander.atacarConFogonazo(unBulbasaur);		
-		unCharmander.atacarConFogonazo(unBulbasaur);		
-		//unCharmander.atacarConFogonazo(unBulbasaur);	
+		unCharmander.atacarConFogonazo(unBulbasaur);
+		unCharmander.atacarConFogonazo(unBulbasaur);
+		unCharmander.atacarConFogonazo(unBulbasaur);
+		assertEquals(unBulbasaur.getPuntosVida(),vida-16); //Resta sólo los 4 primeros ataques
 		
-		assertEquals(unBulbasaur.getPuntosVida(),vida-16);
 	}	
 }
