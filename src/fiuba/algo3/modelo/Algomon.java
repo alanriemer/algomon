@@ -3,6 +3,7 @@ package fiuba.algo3.modelo;
 import java.util.HashMap;
 
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public abstract class Algomon {
 	protected int puntosVida; 
@@ -19,17 +20,19 @@ public abstract class Algomon {
 		return puntosVida;
 	}
 	
-	public void atacarConAtaqueRapido(Algomon enemigo){
+	public void atacarConAtaqueRapido(Algomon enemigo) throws AtaqueNoDisponibleException{
 		enemigo.recibirAtaque(moveSet.get("Ataque rapido"));
 	}
 	
-	public void recibirAtaque(Ataque unAtaque){
+	public void recibirAtaque(Ataque unAtaque) throws AtaqueNoDisponibleException{
 		int danio;
-		if(unAtaque.sePuedeUsarAtaque()){
-			danio = unAtaque.usarAtaque();
-			danio = (int) (danio * weakAndStr.get(unAtaque.tipoDeAtaque()));
-			puntosVida = puntosVida - danio;
+		if(!unAtaque.sePuedeUsarAtaque()){
+			new AtaqueNoDisponibleException();
 		}
+		danio = unAtaque.usarAtaque();
+		danio = (int) (danio * weakAndStr.get(unAtaque.tipoDeAtaque()));
+		puntosVida = puntosVida - danio;
+		
 	}
 	
 	

@@ -8,11 +8,12 @@ import fiuba.algo3.modelo.Bulbasaur;
 import fiuba.algo3.modelo.Charmander;
 import fiuba.algo3.modelo.Rattata;
 import fiuba.algo3.modelo.Squirtle;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class BulbasaurTest {
 	
 	@Test
-	public void test01BulbasaurRealizaLatigoCepaContraOtroBulbasaurYHace7deDanio(){
+	public void test01BulbasaurRealizaLatigoCepaContraOtroBulbasaurYHace7deDanio() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Bulbasaur otroBulbasaur = new Bulbasaur();
 		
@@ -23,7 +24,7 @@ public class BulbasaurTest {
 	}
 	
 	@Test
-	public void test02BulbasaurRealizaAtaqueRapidoContraOtroBulbasaurYHace10deDanio(){
+	public void test02BulbasaurRealizaAtaqueRapidoContraOtroBulbasaurYHace10deDanio() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Bulbasaur otroBulbasaur = new Bulbasaur();
 		
@@ -34,7 +35,7 @@ public class BulbasaurTest {
 	}
 	
 	@Test
-	public void test03BulbasaurRealizaLatigoCepaContraSquirtleYHace30deDanio(){
+	public void test03BulbasaurRealizaLatigoCepaContraSquirtleYHace30deDanio() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Squirtle otroSquirtle = new Squirtle();
 		
@@ -45,7 +46,7 @@ public class BulbasaurTest {
 	}
 	
 	@Test
-	public void test04BulbasaurRealizaAtaqueRapidoContraSquirtleYHace10deDanio(){
+	public void test04BulbasaurRealizaAtaqueRapidoContraSquirtleYHace10deDanio() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Squirtle unSquirtle = new Squirtle();
 		
@@ -56,7 +57,7 @@ public class BulbasaurTest {
 	}
 	
 	@Test
-	public void test05BulbasaurRealizaLatigoCepaContraCharmanderYHace7deDanio(){
+	public void test05BulbasaurRealizaLatigoCepaContraCharmanderYHace7deDanio() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Charmander unCharmander = new Charmander();
 		
@@ -67,7 +68,7 @@ public class BulbasaurTest {
 	}
 	
 	@Test
-	public void test06BulbasaurRealizaAtaqueRapidoContraCharmanderYHace10deDanio(){
+	public void test06BulbasaurRealizaAtaqueRapidoContraCharmanderYHace10deDanio() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Charmander unCharmander = new Charmander();
 		
@@ -78,7 +79,7 @@ public class BulbasaurTest {
 	}
 	
 	@Test
-	public void test07BulbasaurRealizaLatigoCepaContraRattataYHace15deDanio(){
+	public void test07BulbasaurRealizaLatigoCepaContraRattataYHace15deDanio() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Rattata unRattata = new Rattata();
 		
@@ -89,7 +90,7 @@ public class BulbasaurTest {
 	}
 	
 	@Test
-	public void test08BulbasaurRealizaAtaqueRapidoContraRattataYHace10deDanio(){
+	public void test08BulbasaurRealizaAtaqueRapidoContraRattataYHace10deDanio() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Rattata unRattata = new Rattata();
 		
@@ -100,7 +101,7 @@ public class BulbasaurTest {
 	}
 	
 	@Test
-	public void test09BulbasaurRealizaAtaqueRapidoContraSquirtleYHace10deDanio(){
+	public void test09BulbasaurRealizaAtaqueRapidoContraSquirtleYHace10deDanio() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Squirtle unSquirtle = new Squirtle();
 		

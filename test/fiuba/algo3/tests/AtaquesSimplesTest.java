@@ -7,9 +7,10 @@ import fiuba.algo3.modelo.Charmander;
 import fiuba.algo3.modelo.Jigglypuff;
 import fiuba.algo3.modelo.Rattata;
 import fiuba.algo3.modelo.Squirtle;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public class AtaquesSimplesTest {
 	@Test
-	public void test01SquirtleAtacaConBurbujaYCanionACharmander(){
+	public void test01SquirtleAtacaConBurbujaYCanionACharmander() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Charmander unCharmander = new Charmander();
 		int vidaCharmander = unCharmander.getPuntosVida();
@@ -21,7 +22,7 @@ public class AtaquesSimplesTest {
 	}
 	
 	@Test
-	public void test02SquirtleAtacaConBurbujaYCanionABulbasaur(){
+	public void test02SquirtleAtacaConBurbujaYCanionABulbasaur() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Bulbasaur unBulbasaur= new Bulbasaur();
 		int vidaBulbasaur = unBulbasaur.getPuntosVida();
@@ -33,7 +34,7 @@ public class AtaquesSimplesTest {
 	}
 	
 	@Test
-	public void test03SquirtleAtacaConBurbujaYCanionADemasCriaturas(){
+	public void test03SquirtleAtacaConBurbujaYCanionADemasCriaturas() throws AtaqueNoDisponibleException{
 		int danioBurbuja = 0;
 		int danioCanion = 0;
 		
@@ -67,7 +68,7 @@ public class AtaquesSimplesTest {
 	}
 	
 	@Test
-	public void test04BulbasaurYChanseyAtacanConLatigoCepaASquirtle(){
+	public void test04BulbasaurYChanseyAtacanConLatigoCepaASquirtle() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Chansey unChansey= new Chansey();
 		Bulbasaur unBulbasaur= new Bulbasaur();
@@ -85,7 +86,7 @@ public class AtaquesSimplesTest {
 	}
 	
 	@Test
-	public void test05BulbasaurYChanseyAtacanConLatigoCepaACharmander(){
+	public void test05BulbasaurYChanseyAtacanConLatigoCepaACharmander() throws AtaqueNoDisponibleException{
 		Chansey unChansey= new Chansey();
 		Bulbasaur unBulbasaur= new Bulbasaur();
 		Charmander unCharmander = new Charmander();		
@@ -103,7 +104,7 @@ public class AtaquesSimplesTest {
 	}
 	
 	@Test
-	public void test06BulbasaurYChanseyAtacanConLatigoCepaADemasCriaturas(){
+	public void test06BulbasaurYChanseyAtacanConLatigoCepaADemasCriaturas() throws AtaqueNoDisponibleException{
 		Chansey unChansey= new Chansey();
 		Bulbasaur unBulbasaur= new Bulbasaur();
 		
@@ -120,7 +121,7 @@ public class AtaquesSimplesTest {
 	}
 	
 	@Test
-	public void test07CharmanderAtacaConBrasasABulbasaur(){
+	public void test07CharmanderAtacaConBrasasABulbasaur() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Bulbasaur unBulbasaur= new Bulbasaur();
 		
@@ -131,7 +132,7 @@ public class AtaquesSimplesTest {
 	}
 	
 	@Test
-	public void test08CharmanderAtacaConBrasasASquirtle(){
+	public void test08CharmanderAtacaConBrasasASquirtle() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle= new Squirtle();
 		
@@ -142,7 +143,7 @@ public class AtaquesSimplesTest {
 	}
 	
 	@Test
-	public void test09CharmanderAtacaConBrasasADemasCriaturas(){
+	public void test09CharmanderAtacaConBrasasADemasCriaturas() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Rattata unRattata = new Rattata();		
 		int vidaRattata = unRattata.getPuntosVida();
@@ -153,7 +154,7 @@ public class AtaquesSimplesTest {
 	}
 	
 	@Test
-	public void test10AlgomonesAtacanConAtaqueRapido(){
+	public void test10AlgomonesAtacanConAtaqueRapido() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle= new Squirtle();
 		

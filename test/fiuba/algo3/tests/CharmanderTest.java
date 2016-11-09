@@ -6,13 +6,14 @@ import org.junit.Test;
 
 import fiuba.algo3.modelo.Bulbasaur;
 import fiuba.algo3.modelo.Squirtle;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 import fiuba.algo3.modelo.Rattata;
 import fiuba.algo3.modelo.Charmander;
 
 public class CharmanderTest {
 	
 	@Test
-	public void test01CharmanderRealizaBrasasContraOtroCharmanderYHace8deDanio(){
+	public void test01CharmanderRealizaBrasasContraOtroCharmanderYHace8deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Charmander otroCharmander = new Charmander();
 		
@@ -23,7 +24,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test02CharmanderRealizaBrasasContraSquirtleYHace8deDanio(){
+	public void test02CharmanderRealizaBrasasContraSquirtleYHace8deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		
@@ -34,7 +35,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test03CharmanderRealizaBrasasContraBulbasaurYHace32deDanio(){
+	public void test03CharmanderRealizaBrasasContraBulbasaurYHace32deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -45,7 +46,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test04CharmanderRealizaAtaqueRapidoContraBulbasaurYHace10deDanio(){
+	public void test04CharmanderRealizaAtaqueRapidoContraBulbasaurYHace10deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -56,7 +57,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test05CharmanderRealizaAtaqueRapidoContraSquirtleYHace10deDanio(){
+	public void test05CharmanderRealizaAtaqueRapidoContraSquirtleYHace10deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		
@@ -67,7 +68,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test06CharmanderRealizaAtaqueRapidoContraOtroCharmanderYHace10deDanio(){
+	public void test06CharmanderRealizaAtaqueRapidoContraOtroCharmanderYHace10deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Charmander otroCharmander = new Charmander();
 		
@@ -78,7 +79,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test07CharmanderRealizaAtaqueRapidoContraRattataYHace10deDanio(){
+	public void test07CharmanderRealizaAtaqueRapidoContraRattataYHace10deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Rattata unRattata = new Rattata();
 		
@@ -89,7 +90,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test08CharmanderRealizaBrasasContraRattataYHace16deDanio(){
+	public void test08CharmanderRealizaBrasasContraRattataYHace16deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Rattata unRattata = new Rattata();
 		
@@ -100,7 +101,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test09CharmanderRealizaFogonazoContraRattataYHace2deDanio(){
+	public void test09CharmanderRealizaFogonazoContraRattataYHace2deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Rattata unRattata = new Rattata();
 		
@@ -111,7 +112,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test10CharmanderRealizaFogonazoContraBulbasaurYHace2deDanio(){
+	public void test10CharmanderRealizaFogonazoContraBulbasaurYHace2deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -122,7 +123,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test11CharmanderRealizaAtaqueRapidoContraBulbasaurYHace10deDanio(){
+	public void test11CharmanderRealizaAtaqueRapidoContraBulbasaurYHace10deDanio() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -131,4 +132,19 @@ public class CharmanderTest {
 		
 		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
 	}
+	
+	@Test	
+	public void test12CharmanderRealizaFogonazoSeLeAgotaYLanzaExcepcion() throws AtaqueNoDisponibleException{
+		Charmander unCharmander = new Charmander();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		
+		int vida = unBulbasaur.getPuntosVida();
+		unCharmander.atacarConFogonazo(unBulbasaur);
+		unCharmander.atacarConFogonazo(unBulbasaur);
+		unCharmander.atacarConFogonazo(unBulbasaur);		
+		unCharmander.atacarConFogonazo(unBulbasaur);		
+
+		
+		assertEquals(unBulbasaur.getPuntosVida(),vida-12);
+	}	
 }

@@ -8,11 +8,12 @@ import fiuba.algo3.modelo.Bulbasaur;
 import fiuba.algo3.modelo.Charmander;
 import fiuba.algo3.modelo.Rattata;
 import fiuba.algo3.modelo.Squirtle;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class SquirtleTest {
 	
 	@Test
-	public void test01SquirtleRealizaBurbujaContraOtroSquirtleYHace5deDanio(){
+	public void test01SquirtleRealizaBurbujaContraOtroSquirtleYHace5deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Squirtle otroSquirtle = new Squirtle();
 		
@@ -23,7 +24,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test02SquirtleRealizaCanionDeAguaContraOtroSquirtleYHace10deDanio(){
+	public void test02SquirtleRealizaCanionDeAguaContraOtroSquirtleYHace10deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Squirtle otroSquirtle = new Squirtle();
 		
@@ -34,7 +35,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test03SquirtleRealizaAtaqueRapidoContraOtroSquirtleYHace10deDanio(){
+	public void test03SquirtleRealizaAtaqueRapidoContraOtroSquirtleYHace10deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Squirtle otroSquirtle = new Squirtle();
 		
@@ -45,7 +46,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test04SquirtleRealizaBurbujaContraCharmanderYHace20deDanio(){
+	public void test04SquirtleRealizaBurbujaContraCharmanderYHace20deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Charmander unCharmander = new Charmander();
 		
@@ -56,7 +57,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test05SquirtleRealizaCanionDeAguaContraCharmanderYHace40deDanio(){
+	public void test05SquirtleRealizaCanionDeAguaContraCharmanderYHace40deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Charmander unCharmander = new Charmander();
 		
@@ -67,7 +68,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test06SquirtleRealizaAtaqueRapidoContraCharmanderYHace10deDanio(){
+	public void test06SquirtleRealizaAtaqueRapidoContraCharmanderYHace10deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Charmander unCharmander = new Charmander();
 		
@@ -78,7 +79,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test07SquirtleRealizaBurbujaContraBulbasaurYHace5deDanio(){
+	public void test07SquirtleRealizaBurbujaContraBulbasaurYHace5deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -89,7 +90,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test08SquirtleRealizaCanionDeAguaContraBulbasaurYHace10deDanio(){
+	public void test08SquirtleRealizaCanionDeAguaContraBulbasaurYHace10deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -100,7 +101,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test09SquirtleRealizaAtaqueRapidoContraBulbasaurYHace10deDanio(){
+	public void test09SquirtleRealizaAtaqueRapidoContraBulbasaurYHace10deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -111,7 +112,7 @@ public class SquirtleTest {
 	}	
 	
 	@Test
-	public void test10SquirtleRealizaBurbujaContraRattataYHace10deDanio(){
+	public void test10SquirtleRealizaBurbujaContraRattataYHace10deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Rattata unRattata = new Rattata();
 		
@@ -122,7 +123,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test11SquirtleRealizaCanionDeAguaContraRattataYHace20deDanio(){
+	public void test11SquirtleRealizaCanionDeAguaContraRattataYHace20deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Rattata unRattata = new Rattata();
 		
@@ -133,7 +134,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test12SquirtleRealizaAtaqueRapidoContraRattataYHace10deDanio(){
+	public void test12SquirtleRealizaAtaqueRapidoContraRattataYHace10deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Rattata unRattata = new Rattata();
 		
@@ -144,7 +145,7 @@ public class SquirtleTest {
 	}
 	
 	@Test
-	public void test13SquirtleRealizaAtaqueRapidoContraBulbasaurYHace10deDanio(){
+	public void test13SquirtleRealizaAtaqueRapidoContraBulbasaurYHace10deDanio() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		

@@ -8,11 +8,12 @@ import fiuba.algo3.modelo.Bulbasaur;
 import fiuba.algo3.modelo.Chansey;
 import fiuba.algo3.modelo.Charmander;
 import fiuba.algo3.modelo.Squirtle;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class ChanseyTest {
 	
 	@Test
-	public void test01ChanseyRealizaLatigoCepaContraOtroChanseyYHace15deDanio(){
+	public void test01ChanseyRealizaLatigoCepaContraOtroChanseyYHace15deDanio() throws AtaqueNoDisponibleException{
 		Chansey unChansey = new Chansey();
 		Chansey otroChansey = new Chansey();
 		
@@ -23,7 +24,7 @@ public class ChanseyTest {
 	}
 	
 	@Test
-	public void test02ChanseyRealizaLatigoCepaContraSquirtleYHace30deDanio(){
+	public void test02ChanseyRealizaLatigoCepaContraSquirtleYHace30deDanio() throws AtaqueNoDisponibleException{
 		Chansey unChansey = new Chansey();
 		Squirtle unSquirtle = new Squirtle();
 		
@@ -34,7 +35,7 @@ public class ChanseyTest {
 	}
 	
 	@Test
-	public void test03ChanseyRealizaLatigoCepaContraCharmanderYHace7deDanio(){
+	public void test03ChanseyRealizaLatigoCepaContraCharmanderYHace7deDanio() throws AtaqueNoDisponibleException{
 		Chansey unChansey = new Chansey();
 		Charmander unCharmander = new Charmander();
 		
@@ -45,7 +46,7 @@ public class ChanseyTest {
 	}
 	
 	@Test
-	public void test04ChanseyRealizaLatigoCepaContraBulbasaurYHace7deDanio(){
+	public void test04ChanseyRealizaLatigoCepaContraBulbasaurYHace7deDanio() throws AtaqueNoDisponibleException{
 		Chansey unChansey = new Chansey();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -56,7 +57,7 @@ public class ChanseyTest {
 	}
 	
 	@Test
-	public void test05ChanseyRealizaAtaqueRapidoContraOtroChanseyYHace10deDanio(){
+	public void test05ChanseyRealizaAtaqueRapidoContraOtroChanseyYHace10deDanio() throws AtaqueNoDisponibleException{
 		Chansey unChansey = new Chansey();
 		Chansey otroChansey = new Chansey();
 		
@@ -67,7 +68,7 @@ public class ChanseyTest {
 	}
 	
 	@Test
-	public void test06ChanseyRealizaAtaqueRapidoContraSquirtleYHace10deDanio(){
+	public void test06ChanseyRealizaAtaqueRapidoContraSquirtleYHace10deDanio() throws AtaqueNoDisponibleException{
 		Chansey unChansey = new Chansey();
 		Squirtle unSquirtle = new Squirtle();
 		
@@ -78,7 +79,7 @@ public class ChanseyTest {
 	}
 	
 	@Test
-	public void test07ChanseyRealizaAtaqueRapidoContraCharmanderYHace10deDanio(){
+	public void test07ChanseyRealizaAtaqueRapidoContraCharmanderYHace10deDanio() throws AtaqueNoDisponibleException{
 		Chansey unChansey = new Chansey();
 		Charmander unCharmander = new Charmander();
 		
@@ -89,7 +90,7 @@ public class ChanseyTest {
 	}
 	
 	@Test
-	public void test08ChanseyRealizaAtaqueRapidoContraBulbasaurYHace10deDanio(){
+	public void test08ChanseyRealizaAtaqueRapidoContraBulbasaurYHace10deDanio() throws AtaqueNoDisponibleException{
 		Chansey unChansey = new Chansey();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		

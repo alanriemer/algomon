@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class Charmander extends Algomon{
 	public Charmander(){
@@ -16,11 +17,11 @@ public class Charmander extends Algomon{
 		weakAndStr.put(Tipo.Normal, 1.0);
 	}
 	
-	public void atacarConBrasas(Algomon enemigo){
+	public void atacarConBrasas(Algomon enemigo) throws AtaqueNoDisponibleException{
 		enemigo.recibirAtaque(moveSet.get("Brasas"));
 	}
 	
-	public void atacarConFogonazo(Algomon enemigo){
+	public void atacarConFogonazo(Algomon enemigo) throws AtaqueNoDisponibleException {
 		enemigo.recibirAtaque(moveSet.get("Fogonazo"));
 	}
 }

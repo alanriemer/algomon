@@ -5,11 +5,12 @@ import org.junit.Test;
 
 import fiuba.algo3.modelo.Bulbasaur;
 import fiuba.algo3.modelo.Rattata;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class RattataTest {
 
 	@Test
-	public void test01RattataAtacaConFogonazoContaBalbasurYHace4DeDanio(){
+	public void test01RattataAtacaConFogonazoContaBalbasurYHace4DeDanio() throws AtaqueNoDisponibleException{
 		Rattata unRattata = new Rattata();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -19,7 +20,7 @@ public class RattataTest {
 	}
 	
 	@Test
-	public void test02RattataAtacaConBurbujaContraBalbasurYHace5deDanio(){
+	public void test02RattataAtacaConBurbujaContraBalbasurYHace5deDanio() throws AtaqueNoDisponibleException{
 		Rattata unRattata = new Rattata();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -30,7 +31,7 @@ public class RattataTest {
 	
 	
 	@Test
-	public void test03RattataAtacaConAtaqueRapidoContraCharmanderYHace10deDanio(){
+	public void test03RattataAtacaConAtaqueRapidoContraCharmanderYHace10deDanio() throws AtaqueNoDisponibleException{
 		Rattata unRattata = new Rattata();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		

@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class Rattata extends Algomon{
 	public Rattata(){
@@ -17,11 +18,11 @@ public class Rattata extends Algomon{
 	}
 	
 	
-	public void atacarConFogonazo(Algomon enemigo){
+	public void atacarConFogonazo(Algomon enemigo) throws AtaqueNoDisponibleException{
 		enemigo.recibirAtaque(moveSet.get("Fogonazo"));
 	}
 	
-	public void atacarConBurbuja(Algomon enemigo){
+	public void atacarConBurbuja(Algomon enemigo) throws AtaqueNoDisponibleException{
 		enemigo.recibirAtaque(moveSet.get("Burbuja"));
 	}
 }

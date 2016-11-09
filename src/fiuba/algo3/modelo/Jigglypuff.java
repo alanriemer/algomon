@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class Jigglypuff extends Algomon{
 	public Jigglypuff(){
@@ -14,7 +15,7 @@ public class Jigglypuff extends Algomon{
 		weakAndStr.put(Tipo.Normal, 1.0);		
 	}
 	
-	public void atacarConBurbuja(Algomon enemigo){
+	public void atacarConBurbuja(Algomon enemigo) throws AtaqueNoDisponibleException{
 		enemigo.recibirAtaque(moveSet.get("Burbuja"));
 	}
 }

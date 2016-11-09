@@ -8,11 +8,12 @@ import fiuba.algo3.modelo.Bulbasaur;
 import fiuba.algo3.modelo.Jigglypuff;
 import fiuba.algo3.modelo.Charmander;
 import fiuba.algo3.modelo.Squirtle;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class JigglypuffTest {
 	
 	@Test
-	public void test01JigglypuffRealizaBurbujaContraOtroJigglypuffYHace10deDanio(){
+	public void test01JigglypuffRealizaBurbujaContraOtroJigglypuffYHace10deDanio() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jigglypuff otroJigglypuff = new Jigglypuff();
 		
@@ -23,7 +24,7 @@ public class JigglypuffTest {
 	}
 	
 	@Test
-	public void test02JigglypuffRealizaBurbujaContraSquirtleYHace5deDanio(){
+	public void test02JigglypuffRealizaBurbujaContraSquirtleYHace5deDanio() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Squirtle unSquirtle = new Squirtle();
 		
@@ -34,7 +35,7 @@ public class JigglypuffTest {
 	}
 	
 	@Test
-	public void test03JigglypuffRealizaBurbujaContraCharmanderYHace20deDanio(){
+	public void test03JigglypuffRealizaBurbujaContraCharmanderYHace20deDanio() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Charmander unCharmander = new Charmander();
 		
@@ -45,7 +46,7 @@ public class JigglypuffTest {
 	}
 	
 	@Test
-	public void test04JigglypuffRealizaBurbujaContraBulbasaurYHace5deDanio(){
+	public void test04JigglypuffRealizaBurbujaContraBulbasaurYHace5deDanio() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -56,7 +57,7 @@ public class JigglypuffTest {
 	}
 	
 	@Test
-	public void test05JigglypuffRealizaAtaqueRapidoContraOtroJigglypuffYHace10deDanio(){
+	public void test05JigglypuffRealizaAtaqueRapidoContraOtroJigglypuffYHace10deDanio() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jigglypuff otroJigglypuff = new Jigglypuff();
 		
@@ -67,7 +68,7 @@ public class JigglypuffTest {
 	}
 	
 	@Test
-	public void test06JigglypuffRealizaAtaqueRapidoContraSquirtleYHace10deDanio(){
+	public void test06JigglypuffRealizaAtaqueRapidoContraSquirtleYHace10deDanio() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Squirtle unSquirtle = new Squirtle();
 		
@@ -78,7 +79,7 @@ public class JigglypuffTest {
 	}
 	
 	@Test
-	public void test07JigglypuffRealizaAtaqueRapidoContraCharmanderYHace10deDanio(){
+	public void test07JigglypuffRealizaAtaqueRapidoContraCharmanderYHace10deDanio() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Charmander unCharmander = new Charmander();
 		
@@ -89,7 +90,7 @@ public class JigglypuffTest {
 	}
 	
 	@Test
-	public void test08JigglypuffRealizaAtaqueRapidoContraBulbasaurYHace10deDanio(){
+	public void test08JigglypuffRealizaAtaqueRapidoContraBulbasaurYHace10deDanio() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		

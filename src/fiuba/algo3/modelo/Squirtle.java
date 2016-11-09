@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class Squirtle extends Algomon{	
 	public Squirtle (){
@@ -16,11 +17,11 @@ public class Squirtle extends Algomon{
 		weakAndStr.put(Tipo.Normal, 1.0);
 	}
 	
-	public void atacarConBurbuja(Algomon enemigo){
+	public void atacarConBurbuja(Algomon enemigo) throws AtaqueNoDisponibleException{
 		enemigo.recibirAtaque(moveSet.get("Burbuja"));
 	}
 	
-	public void atacarConCanionDeAgua(Algomon enemigo){
+	public void atacarConCanionDeAgua(Algomon enemigo) throws AtaqueNoDisponibleException{
 		enemigo.recibirAtaque(moveSet.get("Canion de Agua"));
 	}
 }

@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class Chansey extends Algomon {
 	public Chansey (){
@@ -14,7 +15,7 @@ public class Chansey extends Algomon {
 		weakAndStr.put(Tipo.Normal, 1.0);		
 	}
 
-	public void atacarConLatigoCepa(Algomon enemigo) {
+	public void atacarConLatigoCepa(Algomon enemigo) throws AtaqueNoDisponibleException {
 		enemigo.recibirAtaque(moveSet.get("Latigo Cepa"));
 	}
 }
