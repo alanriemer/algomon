@@ -17,10 +17,10 @@ public class Squirtle extends Algomon{
 	}
 	
 	public void atacaConBurbujaAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Burbuja"), this);
+		enemigo.recibirAtaque(moveSet.get("Burbuja"));
 	}
 	
 	public void atacaConCanionDeAguaAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Canion de Agua"), this);
+		enemigo.recibirAtaque(moveSet.get("Canion de Agua"));
 	}
 }

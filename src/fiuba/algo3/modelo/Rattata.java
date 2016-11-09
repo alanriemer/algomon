@@ -18,10 +18,10 @@ public class Rattata extends Algomon{
 	
 	
 	public void atacaConFogonazoAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Fogonazo"), this);
+		enemigo.recibirAtaque(moveSet.get("Fogonazo"));
 	}
 	
 	public void atacaConBurbujaAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Burbuja"), this);
+		enemigo.recibirAtaque(moveSet.get("Burbuja"));
 	}
 }

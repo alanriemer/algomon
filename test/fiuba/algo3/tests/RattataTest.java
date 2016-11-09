@@ -9,23 +9,23 @@ import fiuba.algo3.modelo.Rattata;
 public class RattataTest {
 
 	@Test
-	public void test01RattataAtacaConFogonazoContaBalbasurYHace2DeDanioPorqueNoSeAplicaLaBonificacion(){
+	public void test01RattataAtacaConFogonazoContaBalbasurYHace4DeDanio(){
 		Rattata unRattata = new Rattata();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVida();
 		unRattata.atacaConFogonazoAlEnemigo(unBulbasaur);
-		assertEquals(unBulbasaur.getPuntosVida(),vida-2);
+		assertEquals(unBulbasaur.getPuntosVida(),vida-4);
 	}
 	
 	@Test
-	public void test02RattataAtacaConBurbujaContraBalbasurYHace10deDanio(){
+	public void test02RattataAtacaConBurbujaContraBalbasurYHace5deDanio(){
 		Rattata unRattata = new Rattata();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVida();
 		unRattata.atacaConBurbujaAlEnemigo(unBulbasaur);
-		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
+		assertEquals(unBulbasaur.getPuntosVida(),vida-5);
 	}
 	
 	

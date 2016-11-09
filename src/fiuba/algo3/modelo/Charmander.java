@@ -17,10 +17,10 @@ public class Charmander extends Algomon{
 	}
 	
 	public void atacaConBrasasAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Brasas"), this);;
+		enemigo.recibirAtaque(moveSet.get("Brasas"));
 	}
 	
 	public void atacaConFogonazoAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Fogonazo"), this);;
+		enemigo.recibirAtaque(moveSet.get("Fogonazo"));
 	}
 }

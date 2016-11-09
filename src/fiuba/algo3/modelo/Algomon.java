@@ -20,23 +20,18 @@ public abstract class Algomon {
 	}
 	
 	public void atacaConAtaqueRapidoAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Ataque rapido"), this);
+		enemigo.recibirAtaque(moveSet.get("Ataque rapido"));
 	}
 	
-	public void recibirAtaque(Ataque unAtaque, Algomon atacante){
+	public void recibirAtaque(Ataque unAtaque){
 		int danio;
 		if(unAtaque.sePuedeUsarAtaque()){
 			danio = unAtaque.usarAtaque();
-			danio = (int) (danio * weakAndStr.get(atacante.coincideElTipo(unAtaque.tipoDeAtaque())));
+			danio = (int) (danio * weakAndStr.get(unAtaque.tipoDeAtaque()));
 			puntosVida = puntosVida - danio;
 		}
 	}
 	
-	public Tipo coincideElTipo(Tipo unTipo){
-		if(tipo == unTipo)
-			return tipo;
-		return Tipo.Normal;
-	}
 	
 	
 }

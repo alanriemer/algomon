@@ -15,6 +15,6 @@ public class Bulbasaur extends Algomon{
 	}
 	
 	public void atacaConLatigoCepaAlEnemigo(Algomon enemigo){
-		enemigo.recibirAtaque(moveSet.get("Latigo Cepa"), this);
+		enemigo.recibirAtaque(moveSet.get("Latigo Cepa"));
 	}
 }
