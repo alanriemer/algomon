@@ -98,4 +98,15 @@ public class BulbasaurTest {
 		
 		assertEquals(unRattata.getPuntosVida(),vida-10);
 	}
+	
+	@Test
+	public void test09BulbasaurRealizaAtaqueRapidoContraSquirtleYHace10deDanio(){
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Squirtle unSquirtle = new Squirtle();
+		
+		int vida = unSquirtle.getPuntosVida();
+		unBulbasaur.atacaConAtaqueRapidoAlEnemigo(unSquirtle);
+		
+		assertEquals(unSquirtle.getPuntosVida(),vida-10);
+	}
 }
