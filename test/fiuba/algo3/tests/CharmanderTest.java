@@ -120,4 +120,15 @@ public class CharmanderTest {
 		
 		assertEquals(unBulbasaur.getPuntosVida(),vida-4);
 	}
+	
+	@Test
+	public void test11CharmanderRealizaAtaqueRapidoContraBulbasaurYHace10deDanio(){
+		Charmander unCharmander = new Charmander();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		
+		int vida = unBulbasaur.getPuntosVida();
+		unCharmander.atacaConAtaqueRapidoAlEnemigo(unBulbasaur);
+		
+		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
+	}
 }
