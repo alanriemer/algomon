@@ -5,14 +5,20 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import fiuba.algo3.modelo.Bulbasaur;
-import fiuba.algo3.modelo.Chansey;
 import fiuba.algo3.modelo.Charmander;
+import fiuba.algo3.modelo.Jigglypuff;
 import fiuba.algo3.modelo.Rattata;
 import fiuba.algo3.modelo.Squirtle;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class AtaquesConCambioDeEstado {
-
+/*	@Test (expected = AtaqueNoDisponibleException.class)
+	public void test01JigglypuffyChanseyAtacannConCantoYAlgomonAtacadoNoPuedeAtacarPor3turnos() throws AtaqueNoDisponibleException{
+		Jigglypuff unJigglypuff= new Jigglypuff();
+		Charmander unCharmander = new Charmander();	
+		unJigglypuff.atacarConCanto(unCharmander);
+		unCharmander.atacarConBrasas(unJigglypuff);
+	}*/
 	@Test
 	public void test02bulbasaurAtacaConChupavidasACharmanderyLeQuita30PuntosYGanaPuntosDeVida() throws AtaqueNoDisponibleException {
 		Bulbasaur unBulbasaur= new Bulbasaur();

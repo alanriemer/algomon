@@ -8,6 +8,7 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public abstract class Algomon {
 	protected int puntosVida; 
 	protected Tipo tipo;
+	protected EstadoAlgomon estado = new EstadoNormalAlgomon();
 	protected HashMap<String,Ataque> moveSet = new HashMap<String,Ataque>();
 	protected HashMap<Tipo,Double> weakAndStr = new HashMap<Tipo,Double>();
 	
