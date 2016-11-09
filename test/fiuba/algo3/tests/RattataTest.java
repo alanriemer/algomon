@@ -29,5 +29,15 @@ public class RattataTest {
 	}
 	
 	
+	@Test
+	public void test01RattataAtacaConAtaqueRapidoContraCharmanderYHace10deDanio(){
+		Rattata unRattata = new Rattata();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		
+		int vida = unBulbasaur.getHealthPoints();
+		unRattata.atacaConAtaqueRapidoAlEnemigo(unBulbasaur);
+		assertEquals(unBulbasaur.getHealthPoints(),vida-10);
+	}
+	
 	
 }
