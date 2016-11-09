@@ -5,7 +5,7 @@ import fiuba.algo3.modelo.ataques.Ataque;
 public class Rattata extends Algomon{
 	public Rattata(){
 		tipo = Tipo.Normal;
-		healthPoints = 170;
+		puntosVida = 170;
 		Ataque ataque1 = new Ataque(2,4,Tipo.Fuego);
 		moveSet.put("Fogonazo",ataque1);
 		Ataque ataque2 = new Ataque(10,15,Tipo.Agua);

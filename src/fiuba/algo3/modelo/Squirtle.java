@@ -5,7 +5,7 @@ import fiuba.algo3.modelo.ataques.Ataque;
 public class Squirtle extends Algomon{	
 	public Squirtle (){
 		tipo = Tipo.Agua;
-		healthPoints = 150;
+		puntosVida = 150;
 		Ataque ataque1 = new Ataque(10,15, Tipo.Agua);
 		Ataque ataque2 = new Ataque(20,8,Tipo.Agua);
 		moveSet.put("Burbuja",ataque1);
