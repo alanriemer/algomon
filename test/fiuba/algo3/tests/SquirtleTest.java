@@ -41,7 +41,7 @@ public class SquirtleTest {
 		int vida = otroSquirtle.getPuntosVida();
 		unSquirtle.atacaConAtaqueRapidoAlEnemigo(otroSquirtle);
 		
-		assertEquals(otroSquirtle.getPuntosVida(),vida-10);
+		assertEquals(otroSquirtle.getPuntosVida(),vida-5);
 	}
 	
 	@Test
@@ -74,7 +74,7 @@ public class SquirtleTest {
 		int vida = unCharmander.getPuntosVida();
 		unSquirtle.atacaConAtaqueRapidoAlEnemigo(unCharmander);		
 		
-		assertEquals(unCharmander.getPuntosVida(),vida-10);
+		assertEquals(unCharmander.getPuntosVida(),vida-20);
 	}
 	
 	@Test
@@ -107,7 +107,7 @@ public class SquirtleTest {
 		int vida = unBulbasaur.getPuntosVida();
 		unSquirtle.atacaConAtaqueRapidoAlEnemigo(unBulbasaur);
 		
-		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
+		assertEquals(unBulbasaur.getPuntosVida(),vida-5);
 	}	
 	
 	@Test
