@@ -55,6 +55,7 @@ public class CharmanderTest {
 		assertEquals(unBulbasaur.getHealthPoints(),vida-10);
 	}
 	
+	@Test
 	public void test05CharmanderRealizaAtaqueRapidoContraSquirtleYHace10deDanio(){
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
@@ -65,6 +66,7 @@ public class CharmanderTest {
 		assertEquals(unSquirtle.getHealthPoints(),vida-10);
 	}
 	
+	@Test
 	public void test06CharmanderRealizaAtaqueRapidoContraOtroCharmanderYHace10deDanio(){
 		Charmander unCharmander = new Charmander();
 		Charmander otroCharmander = new Charmander();
@@ -75,6 +77,7 @@ public class CharmanderTest {
 		assertEquals(otroCharmander.getHealthPoints(),vida-10);
 	}
 	
+	@Test
 	public void test07CharmanderRealizaAtaqueRapidoContraRattataYHace10deDanio(){
 		Charmander unCharmander = new Charmander();
 		Rattata unRattata = new Rattata();
@@ -85,6 +88,7 @@ public class CharmanderTest {
 		assertEquals(unRattata.getHealthPoints(),vida-10);
 	}
 	
+	@Test
 	public void test08CharmanderRealizaBrasasContraRattataYHace16deDanio(){
 		Charmander unCharmander = new Charmander();
 		Rattata unRattata = new Rattata();
@@ -95,4 +99,25 @@ public class CharmanderTest {
 		assertEquals(unRattata.getHealthPoints(),vida-16);
 	}
 	
+	@Test
+	public void test09CharmanderRealizaFogonazoContraRattataYHace2deDanio(){
+		Charmander unCharmander = new Charmander();
+		Rattata unRattata = new Rattata();
+		
+		int vida = unRattata.getHealthPoints();
+		unCharmander.atacaConFogonazoAlEnemigo(unRattata);
+		
+		assertEquals(unRattata.getHealthPoints(),vida-2);
+	}
+	
+	@Test
+	public void test10CharmanderRealizaFogonazoContraBulbasaurYHace2deDanio(){
+		Charmander unCharmander = new Charmander();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		
+		int vida = unBulbasaur.getHealthPoints();
+		unCharmander.atacaConFogonazoAlEnemigo(unBulbasaur);
+		
+		assertEquals(unBulbasaur.getHealthPoints(),vida-4);
+	}
 }

@@ -19,7 +19,7 @@ public class RattataTest {
 	}
 	
 	@Test
-	public void test01RattataAtacaConBurbujaContraBalbasurYHace10deDanio(){
+	public void test02RattataAtacaConBurbujaContraBalbasurYHace10deDanio(){
 		Rattata unRattata = new Rattata();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
@@ -30,7 +30,7 @@ public class RattataTest {
 	
 	
 	@Test
-	public void test01RattataAtacaConAtaqueRapidoContraCharmanderYHace10deDanio(){
+	public void test03RattataAtacaConAtaqueRapidoContraCharmanderYHace10deDanio(){
 		Rattata unRattata = new Rattata();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
