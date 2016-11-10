@@ -48,6 +48,7 @@ public class AtaquesConCambioDeEstado {
 		Rattata unRattata = new Rattata();
 		
 		int vidaRattata = unRattata.getPuntosVida();
+		unRattata.atacarConAtaqueRapido(unBulbasaur);
 		int vidaBulbasaur = unBulbasaur.getPuntosVida();
 		unBulbasaur.atacarConChupavidas(unRattata);
 		assertEquals(unBulbasaur.getPuntosVida(),vidaBulbasaur + 4);
