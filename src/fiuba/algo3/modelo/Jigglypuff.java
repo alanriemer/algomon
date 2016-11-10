@@ -22,7 +22,8 @@ public class Jigglypuff extends Algomon{
 	}
 
 	public void atacarConCanto(Algomon enemigo) throws AtaqueNoDisponibleException {
-		enemigo.recibirAtaque(moveSet.get("Canto"));
+		enemigo.recibirCanto(moveSet.get("Canto"));
+		
 		
 	}
 }
