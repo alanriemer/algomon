@@ -21,9 +21,7 @@ public class Bulbasaur extends Algomon{
 		enemigo.recibirAtaque(moveSet.get("Latigo Cepa"));
 	}
 	public void atacarConChupavidas(Algomon enemigo) throws AtaqueNoDisponibleException{
-		int vidaEnemigo = enemigo.getPuntosVida();
-		enemigo.recibirAtaque(moveSet.get("ChupaVidas"));
-		int danioEnemigo = vidaEnemigo - enemigo.getPuntosVida();
+		int danioEnemigo = enemigo.recibirAtaque(moveSet.get("ChupaVidas"));
 		this.puntosVida = (int) (this.puntosVida+ Math.round(danioEnemigo*0.3));//Redondeo
 	}	
 }

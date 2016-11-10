@@ -25,7 +25,7 @@ public abstract class Algomon {
 		enemigo.recibirAtaque(moveSet.get("Ataque rapido"));
 	}
 	
-	public void recibirAtaque(Ataque unAtaque) throws AtaqueNoDisponibleException{
+	public int recibirAtaque(Ataque unAtaque) throws AtaqueNoDisponibleException{
 		int danio;
 		if(!unAtaque.sePuedeUsarAtaque()){
 			throw new AtaqueNoDisponibleException();
@@ -33,7 +33,7 @@ public abstract class Algomon {
 		danio = unAtaque.usarAtaque();
 		danio = (int) (danio * weakAndStr.get(unAtaque.tipoDeAtaque()));
 		puntosVida = puntosVida - danio;
-		
+		return danio;		
 	}
 	
 	
