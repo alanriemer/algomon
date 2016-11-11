@@ -7,6 +7,7 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public class Bulbasaur extends Algomon{
 	public Bulbasaur(){
 		puntosVida = 140;
+		puntosVidaActuales = 140;
 		Ataque latigoCepa = new AtaquePlanta(15,10);
 		Ataque chupaVidas = new AtaquePlanta(15,8);
 		ataques.put("Latigo Cepa",latigoCepa);
@@ -20,13 +21,13 @@ public class Bulbasaur extends Algomon{
 	
 	public void atacarConChupavidas(Algomon enemigo) throws AtaqueNoDisponibleException{
 		int danioEnemigo = enemigo.recibirAtaque(ataques.get("ChupaVidas"));
-		this.aumentarPuntosDeVida((int)Math.floor(danioEnemigo*0.3));
+		this.aumentarPuntosDeVidaActuales((int)Math.floor(danioEnemigo*0.3));
 	}
 	
-	public void aumentarPuntosDeVida(int puntos){
-		if(this.puntosVida + puntos > 140)
-			this.puntosVida = 140;
-		this.puntosVida += puntos;
+	public void aumentarPuntosDeVidaActuales(int puntos){
+		if(this.puntosVidaActuales + puntos > puntosVida)
+			this.puntosVidaActuales = puntosVida;
+		this.puntosVidaActuales += puntos;
 	}
 	 
 

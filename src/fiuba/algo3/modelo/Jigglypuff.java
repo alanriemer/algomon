@@ -8,6 +8,7 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public class Jigglypuff extends Algomon{
 	public Jigglypuff(){
 		puntosVida = 130;
+		puntosVidaActuales = 130;
 		Ataque burbuja = new AtaqueAgua(10,15);
 		Ataque canto = new AtaqueNormal(0,6);
 		ataques.put("Burbuja",burbuja);

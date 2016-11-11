@@ -7,7 +7,8 @@ import fiuba.algo3.modelo.ataques.AtaqueNormal;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public abstract class Algomon {
-	protected int puntosVida; 
+	protected int puntosVida;
+	protected int puntosVidaActuales; 
 	protected EstadosEfimeros estadoEfimero = new EstadoNormalAlgomon(this);
 	protected EstadosPersistentes estadoPersistente = new EstadoNormalAlgomon(this);
 	protected HashMap<String,Ataque> ataques = new HashMap<String,Ataque>();
@@ -30,14 +31,14 @@ public abstract class Algomon {
 	public abstract int calcularDanio(Ataque unAtaque);
 	
 	public int getPuntosVida(){
-		return puntosVida;
+		return puntosVidaActuales;
 	}
 	
 
 	public void recibirDanio(int danio){
-		if(danio > puntosVida)
-			puntosVida = 0;
-		puntosVida -= danio;
+		if(danio > puntosVidaActuales)
+			puntosVidaActuales = 0;
+		puntosVidaActuales -= danio;
 	}
 		
 	

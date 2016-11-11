@@ -8,6 +8,7 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public class Rattata extends Algomon{
 	public Rattata(){
 		puntosVida = 170;
+		puntosVidaActuales = 170;
 		Ataque fogonazo = new AtaqueFuego(2,4);
 		Ataque burbuja = new AtaqueAgua(10,15);
 		ataques.put("Fogonazo",fogonazo);

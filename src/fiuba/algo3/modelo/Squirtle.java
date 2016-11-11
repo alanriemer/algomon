@@ -7,6 +7,7 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public class Squirtle extends Algomon{	
 	public Squirtle (){
 		puntosVida = 150;
+		puntosVidaActuales = 150;
 		Ataque burbuja = new AtaqueAgua(10,15);
 		Ataque canionDeAgua = new AtaqueAgua(20,8);
 		ataques.put("Burbuja",burbuja);
