@@ -101,7 +101,11 @@ public class JigglypuffTest {
 	}
 	
 	@Test
-	public void test09JigglypuffRealizaCantoContraBulbasaurYLoDuerme(){
+	public void test09JigglypuffAtacaConCantoYElCharmanderQuedaEnEstadoDormido() throws AtaqueNoDisponibleException{
+		Jigglypuff unJigglypuff= new Jigglypuff();
+		Charmander unCharmander = new Charmander();	
+		unJigglypuff.atacarConCanto(unCharmander);
+		assertEquals(unCharmander.estaDormido(), true);
 	}
 
 }

@@ -133,6 +133,15 @@ public class CharmanderTest {
 		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
 	}
 	
+	@Test
+	public void test12CharmanderRealizaFogonazoContraBulbasaurYQuedaQuemado(){
+		Charmander unCharmander = new Charmander();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		unCharmander.atacarConFogonazo(unBulbasaur);
+		
+		assertEquals(unBulbasaur.estaQuemado(), true);
+	}
+	
 	//COMENTO LOS TESTS QUE MANEJA EXCEPCION PORQUE EN EL REFACTOR NO LAS PUSE
 	/*
 	@Test (expected = AtaqueNoDisponibleException.class)	

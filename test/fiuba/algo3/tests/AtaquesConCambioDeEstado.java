@@ -2,11 +2,11 @@ package fiuba.algo3.tests;
 
 import static org.junit.Assert.*;
 
+
 import org.junit.Test;
 
 import fiuba.algo3.modelo.Bulbasaur;
 import fiuba.algo3.modelo.Charmander;
-import fiuba.algo3.modelo.Jigglypuff;
 //import fiuba.algo3.modelo.Jigglypuff;
 import fiuba.algo3.modelo.Rattata;
 import fiuba.algo3.modelo.Squirtle;
@@ -59,11 +59,5 @@ public class AtaquesConCambioDeEstado {
 	}
 	
 	
-	@Test
-	public void test05JigglypuffAtacaConCantoYElCharmanderQuedaEnEstadoDormido() throws AtaqueNoDisponibleException{
-		Jigglypuff unJigglypuff= new Jigglypuff();
-		Charmander unCharmander = new Charmander();	
-		unJigglypuff.atacarConCanto(unCharmander);
-		assertEquals(unCharmander.estaDormido(), true);
-	}
+
 }

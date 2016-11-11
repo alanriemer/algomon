@@ -2,13 +2,13 @@ package fiuba.algo3.modelo;
 
 
 
-public class EstadoDormidoAlgomon extends EstadoAlgomon{
+public class EstadoDormidoAlgomon implements EstadosEfimeros{
 
-	public EstadoDormidoAlgomon(Algomon poke) {
-		super(poke);
-		
+	Algomon pokemon;
+	
+	public EstadoDormidoAlgomon(Algomon poke){
+		pokemon = poke;
 	}
-
 
 	
 	public boolean estaDormido(){

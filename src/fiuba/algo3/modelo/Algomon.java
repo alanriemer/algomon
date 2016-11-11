@@ -8,8 +8,8 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public abstract class Algomon {
 	protected int puntosVida; 
-	protected EstadoAlgomon estadoEfimero = new EstadoNormalAlgomon(this);
-	protected EstadoAlgomon estadoPersistente = new EstadoNormalAlgomon(this);
+	protected EstadosEfimeros estadoEfimero = new EstadoNormalAlgomon(this);
+	protected EstadosPersistentes estadoPersistente = new EstadoNormalAlgomon(this);
 	protected HashMap<String,Ataque> ataques = new HashMap<String,Ataque>();
 	
 	public Algomon(){
@@ -37,11 +37,21 @@ public abstract class Algomon {
 	}
 	
 	
-	public void nuevoEstadoEfimero(EstadoAlgomon nuevoEstado){
-		estadoEfimero = nuevoEstado;
+	public void nuevoEstadoEfimero(EstadosEfimeros nuevoEstado){
+		this.estadoEfimero = nuevoEstado;
+	}
+	
+	public void nuevoEstadoPersistente(EstadoQuemadoAlgomon nuevoEstado) {
+		this.estadoPersistente = nuevoEstado;	
 	}
 	
 	public boolean estaDormido(){
 		return estadoEfimero.estaDormido();
 	}
+	
+	public boolean estaQuemado(){
+		return estadoPersistente.estaQuemado();
+	}
+
+
 }
