@@ -27,7 +27,7 @@ public class Bulbasaur extends Algomon{
 	public void aumentarPuntosDeVidaActuales(int puntos){
 		if(this.puntosVidaActuales + puntos > puntosVida)
 			this.puntosVidaActuales = puntosVida;
-		this.puntosVidaActuales += puntos;
+		else this.puntosVidaActuales += puntos;
 	}
 	 
 
