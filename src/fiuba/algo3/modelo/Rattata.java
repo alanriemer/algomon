@@ -23,14 +23,12 @@ public class Rattata extends Algomon{
 	public void atacarConBurbuja(Algomon enemigo) throws AtaqueNoDisponibleException{
 		enemigo.recibirAtaque(ataques.get("Burbuja"));
 	}
-	
+
+
 	@Override
-	public int recibirAtaque(Ataque unAtaque) {
-		if(unAtaque.sePuedeUsarAtaque()){
-			int danio = unAtaque.atacarNormal();
-			this.recibirDanio(danio);
-			return danio;
-		}
-		return 0;
+	public int calcularDanio(Ataque unAtaque) {
+		return unAtaque.atacarNormal();
 	}
+	
+	
 }

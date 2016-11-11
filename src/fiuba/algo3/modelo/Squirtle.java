@@ -20,15 +20,10 @@ public class Squirtle extends Algomon{
 	public void atacarConCanionDeAgua(Algomon enemigo) throws AtaqueNoDisponibleException{
 		enemigo.recibirAtaque(ataques.get("Canion de Agua"));
 	}
-	
+
 	@Override
-	public int recibirAtaque(Ataque unAtaque) {
-		if(unAtaque.sePuedeUsarAtaque()){
-			int danio = unAtaque.atacarAgua();
-			this.recibirDanio(danio);
-			return danio;
-		}
-		return 0;
+	public int calcularDanio(Ataque unAtaque) {
+		return unAtaque.atacarAgua();
 	}
 
 

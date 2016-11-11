@@ -23,14 +23,11 @@ public class Jigglypuff extends Algomon{
 		enemigo.recibirAtaque(ataques.get("Canto"));
 		enemigo.nuevoEstadoEfimero(new EstadoDormidoAlgomon(enemigo));
 	}
-	
+
 	@Override
-	public int recibirAtaque(Ataque unAtaque) {
-		if(unAtaque.sePuedeUsarAtaque()){
-			int danio = unAtaque.atacarNormal();
-			this.recibirDanio(danio);
-			return danio;
-		}
-		return 0;
+	public int calcularDanio(Ataque unAtaque) {
+		return unAtaque.atacarNormal();
 	}
+	
+	
 }

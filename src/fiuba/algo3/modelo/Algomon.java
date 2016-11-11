@@ -18,7 +18,16 @@ public abstract class Algomon {
 	}
 	
 	
-	public abstract int recibirAtaque(Ataque unAtaque);
+	public int recibirAtaque(Ataque unAtaque) {
+		if(unAtaque.sePuedeUsarAtaque()){
+			int danio = this.calcularDanio(unAtaque);
+			this.recibirDanio(danio);
+			return danio;
+		}
+		return 0;
+	}
+	
+	public abstract int calcularDanio(Ataque unAtaque);
 	
 	public int getPuntosVida(){
 		return puntosVida;

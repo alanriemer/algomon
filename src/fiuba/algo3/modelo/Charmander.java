@@ -24,14 +24,10 @@ public class Charmander extends Algomon{
 		enemigo.nuevoEstadoPersistente(new EstadoQuemadoAlgomon(enemigo));
 	}
 
+
 	@Override
-	public int recibirAtaque(Ataque unAtaque) {
-		if(unAtaque.sePuedeUsarAtaque()){
-			int danio = unAtaque.atacarFuego();
-			this.recibirDanio(danio);
-			return danio;
-		}
-		return 0;
+	public int calcularDanio(Ataque unAtaque) {
+		return unAtaque.atacarFuego();
 	}
 	
 	

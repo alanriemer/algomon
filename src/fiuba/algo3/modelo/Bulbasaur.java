@@ -29,13 +29,9 @@ public class Bulbasaur extends Algomon{
 		this.puntosVida += puntos;
 	}
 	 
+
 	@Override
-	public int recibirAtaque(Ataque unAtaque) {
-		if(unAtaque.sePuedeUsarAtaque()){
-			int danio = unAtaque.atacarPlanta();
-			this.recibirDanio(danio);
-			return danio;
-		}
-		return 0;
+	public int calcularDanio(Ataque unAtaque) {
+		return unAtaque.atacarPlanta();
 	}
 }
