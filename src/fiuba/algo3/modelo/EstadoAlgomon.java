@@ -1,7 +1,6 @@
 package fiuba.algo3.modelo;
 
-import fiuba.algo3.modelo.ataques.Ataque;
-import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
+
 
 public abstract class EstadoAlgomon {
 
@@ -11,7 +10,8 @@ public abstract class EstadoAlgomon {
 		pokemon = poke;
 	}
 	
-	public abstract void Canto(Ataque unAtaque) throws AtaqueNoDisponibleException;
+	
+	
 	public abstract boolean estaDormido();
 
 }

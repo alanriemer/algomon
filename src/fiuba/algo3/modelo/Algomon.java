@@ -37,11 +37,9 @@ public abstract class Algomon {
 	}
 	
 	
-	public void estadoEfimero(EstadoAlgomon nuevoEstado){
+	public void nuevoEstadoEfimero(EstadoAlgomon nuevoEstado){
 		estadoEfimero = nuevoEstado;
 	}
-	
-
 	
 	public boolean estaDormido(){
 		return estadoEfimero.estaDormido();

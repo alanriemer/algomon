@@ -58,6 +58,7 @@ public class AtaquesConCambioDeEstado {
 		assertEquals(unRattata.getPuntosVida(),vidaRattata -15);		
 	}
 	
+	
 	@Test
 	public void test05JigglypuffAtacaConCantoYElCharmanderQuedaEnEstadoDormido() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff= new Jigglypuff();

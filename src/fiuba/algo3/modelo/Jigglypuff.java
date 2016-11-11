@@ -21,6 +21,7 @@ public class Jigglypuff extends Algomon{
 
 	public void atacarConCanto(Algomon enemigo) throws AtaqueNoDisponibleException {
 		enemigo.recibirAtaque(ataques.get("Canto"));
+		enemigo.nuevoEstadoEfimero(new EstadoDormidoAlgomon(enemigo));
 	}
 	
 	@Override

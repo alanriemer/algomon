@@ -20,9 +20,15 @@ public class Bulbasaur extends Algomon{
 	
 	public void atacarConChupavidas(Algomon enemigo) throws AtaqueNoDisponibleException{
 		int danioEnemigo = enemigo.recibirAtaque(ataques.get("ChupaVidas"));
-		this.puntosVida = (int) (this.puntosVida+ Math.floor(danioEnemigo*0.3));//Redondeo
+		this.aumentarPuntosDeVida((int)Math.floor(danioEnemigo*0.3));
 	}
 	
+	public void aumentarPuntosDeVida(int puntos){
+		if(this.puntosVida + puntos > 140)
+			this.puntosVida = 140;
+		this.puntosVida += puntos;
+	}
+	 
 	@Override
 	public int recibirAtaque(Ataque unAtaque) {
 		if(unAtaque.sePuedeUsarAtaque()){
