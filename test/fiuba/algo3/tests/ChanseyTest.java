@@ -101,7 +101,15 @@ public class ChanseyTest {
 	}
 	
 	@Test
-	public void test09ChanseyRealizaCantoContraBulbasaurYLoDuerme(){
+	public void test09ChanseyRealizaCantoContraBulbasaurYLoDuerme() throws AtaqueNoDisponibleException{
+		Chansey unChansey = new Chansey();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		
+		int vida = unBulbasaur.getPuntosVida();
+		unChansey.atacarConCanto(unBulbasaur);
+		
+		assertEquals(unBulbasaur.getPuntosVida(),vida);
+		assertEquals(unBulbasaur.estaDormido(), true);
 	}
 
 }
