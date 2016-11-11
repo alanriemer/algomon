@@ -8,7 +8,6 @@ public class EstadoQuemadoAlgomon implements EstadosPersistentes {
 		pokemon = poke;
 	}
 	
-	@Override
 	public boolean estaQuemado() {
 		return true;
 	}

@@ -134,7 +134,7 @@ public class CharmanderTest {
 	}
 	
 	@Test
-	public void test12CharmanderRealizaFogonazoContraBulbasaurYQuedaQuemado(){
+	public void test12CharmanderRealizaFogonazoContraBulbasaurYQuedaQuemado() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		unCharmander.atacarConFogonazo(unBulbasaur);
@@ -142,8 +142,7 @@ public class CharmanderTest {
 		assertEquals(unBulbasaur.estaQuemado(), true);
 	}
 	
-	//COMENTO LOS TESTS QUE MANEJA EXCEPCION PORQUE EN EL REFACTOR NO LAS PUSE
-	/*
+
 	@Test (expected = AtaqueNoDisponibleException.class)	
 	public void test12CharmanderRealizaFogonazoSeLeAgotaYLanzaExcepcion() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
@@ -157,6 +156,5 @@ public class CharmanderTest {
 		unCharmander.atacarConFogonazo(unBulbasaur);
 		assertEquals(unBulbasaur.getPuntosVida(),vida-16); //Resta sólo los 4 primeros ataques
 		
-	}
-	*/	
+	}	
 }

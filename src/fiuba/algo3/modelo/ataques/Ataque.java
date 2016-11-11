@@ -21,9 +21,7 @@ public abstract class Ataque {
 	public abstract int atacarNormal();
 	
 	public boolean sePuedeUsarAtaque(){
-		if (cantidad > 0)
-			return true;
-		return false;
+		return (cantidad > 0);
 	}
 
 	

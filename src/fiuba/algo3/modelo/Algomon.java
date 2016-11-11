@@ -19,13 +19,14 @@ public abstract class Algomon {
 	}
 	
 	
-	public int recibirAtaque(Ataque unAtaque) {
-		if(unAtaque.sePuedeUsarAtaque()){
-			int danio = this.calcularDanio(unAtaque);
-			this.recibirDanio(danio);
-			return danio;
+	public int recibirAtaque(Ataque unAtaque) throws AtaqueNoDisponibleException {
+		if (!unAtaque.sePuedeUsarAtaque()){
+			throw new AtaqueNoDisponibleException();
 		}
-		return 0;
+		int danio = this.calcularDanio(unAtaque);
+		this.recibirDanio(danio);
+		return danio;
+
 	}
 	
 	public abstract int calcularDanio(Ataque unAtaque);
