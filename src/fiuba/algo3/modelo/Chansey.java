@@ -1,21 +1,27 @@
 package fiuba.algo3.modelo;
 
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.ataques.AtaquePlanta;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class Chansey extends Algomon {
 	public Chansey (){
 		puntosVida = 130;
-		tipo = Tipo.Normal;
-		Ataque latigoCepa = new Ataque(15,10, Tipo.Planta);
-		moveSet.put("Latigo Cepa",latigoCepa);
-		weakAndStr.put(Tipo.Agua, 1.0);
-		weakAndStr.put(Tipo.Fuego, 1.0);
-		weakAndStr.put(Tipo.Planta, 1.0);
-		weakAndStr.put(Tipo.Normal, 1.0);		
+		Ataque latigoCepa = new AtaquePlanta(15,10);
+		ataques.put("Latigo Cepa",latigoCepa);	
 	}
 
 	public void atacarConLatigoCepa(Algomon enemigo) throws AtaqueNoDisponibleException {
-		enemigo.recibirAtaque(moveSet.get("Latigo Cepa"));
+		enemigo.recibirAtaque(ataques.get("Latigo Cepa"));
+	}
+	
+	@Override
+	public int recibirAtaque(Ataque unAtaque) {
+		if(unAtaque.sePuedeUsarAtaque()){
+			int danio = unAtaque.atacarNormal();
+			this.recibirDanio(danio);
+			return danio;
+		}
+		return 0;
 	}
 }

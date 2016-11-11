@@ -3,47 +3,45 @@ package fiuba.algo3.modelo;
 import java.util.HashMap;
 
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.ataques.AtaqueNormal;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public abstract class Algomon {
 	protected int puntosVida; 
-	protected Tipo tipo;
 	protected EstadoAlgomon estadoEfimero = new EstadoNormalAlgomon(this);
 	protected EstadoAlgomon estadoPersistente = new EstadoNormalAlgomon(this);
-	protected HashMap<String,Ataque> moveSet = new HashMap<String,Ataque>();
-	protected HashMap<Tipo,Double> weakAndStr = new HashMap<Tipo,Double>();
+	protected HashMap<String,Ataque> ataques = new HashMap<String,Ataque>();
 	
 	public Algomon(){
-		Ataque ataqueRapido = new Ataque(10,16, Tipo.Normal);
-		moveSet.put("Ataque rapido",ataqueRapido);
+		Ataque ataqueRapido = new AtaqueNormal(10,16);
+		ataques.put("Ataque rapido",ataqueRapido);
 	}
+	
+	
+	public abstract int recibirAtaque(Ataque unAtaque);
 	
 	public int getPuntosVida(){
 		return puntosVida;
 	}
 	
+
+	public void recibirDanio(int danio){
+		if(danio > puntosVida)
+			puntosVida = 0;
+		puntosVida -= danio;
+	}
+		
+	
 	public void atacarConAtaqueRapido(Algomon enemigo) throws AtaqueNoDisponibleException{
-		enemigo.recibirAtaque(moveSet.get("Ataque rapido"));
+		enemigo.recibirAtaque(ataques.get("Ataque rapido"));
 	}
 	
-	public int recibirAtaque(Ataque unAtaque) throws AtaqueNoDisponibleException{
-		int danio;
-		if(!unAtaque.sePuedeUsarAtaque()){
-			throw new AtaqueNoDisponibleException();
-		}
-		danio = unAtaque.usarAtaque();
-		danio = (int) (danio * weakAndStr.get(unAtaque.tipoDeAtaque()));
-		puntosVida = puntosVida - danio;
-		return danio;		
-	}
 	
 	public void estadoEfimero(EstadoAlgomon nuevoEstado){
 		estadoEfimero = nuevoEstado;
 	}
 	
-	public void recibirCanto(Ataque unAtaque) throws AtaqueNoDisponibleException{
-		estadoEfimero.Canto(unAtaque);
-	}
+
 	
 	public boolean estaDormido(){
 		return estadoEfimero.estaDormido();
