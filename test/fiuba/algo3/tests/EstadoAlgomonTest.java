@@ -68,4 +68,37 @@ public class EstadoAlgomonTest {
 		assertEquals(unBulbasaur.estaDormido(),false);
 		assertEquals(unBulbasaur.estaQuemado(),false);
 	}
+	
+	@Test
+	public void test06BulbasaurNoHaceDañoPor3TurnosAlEstarDormido() throws AtaqueNoDisponibleException{
+		Bulbasaur unBulbasaur = new Bulbasaur();		
+		Chansey unChansey = new Chansey();
+		
+		unChansey.atacarConCanto(unBulbasaur);
+
+		unBulbasaur.atacarConAtaqueRapido(unChansey);
+		unBulbasaur.atacarConAtaqueRapido(unChansey);
+		unBulbasaur.atacarConAtaqueRapido(unChansey);
+		
+		
+		assertEquals(unBulbasaur.estaDormido(),false);
+		assertEquals(unChansey.getPuntosVidaActuales(), 130);
+	}
+	
+	@Test
+	public void test07BulbasaurDespiertaDeEstarDormidoYRealizaAtaqueRapido() throws AtaqueNoDisponibleException{
+		Bulbasaur unBulbasaur = new Bulbasaur();		
+		Chansey unChansey = new Chansey();
+		
+		unChansey.atacarConCanto(unBulbasaur);
+		//Ataques que realiza mientras duerme y no hacen daño
+		unBulbasaur.atacarConAtaqueRapido(unChansey);
+		unBulbasaur.atacarConAtaqueRapido(unChansey);
+		unBulbasaur.atacarConAtaqueRapido(unChansey);
+		//Despierta y realiza ataque con daño
+		unBulbasaur.atacarConAtaqueRapido(unChansey);
+		
+		assertEquals(unBulbasaur.estaDormido(),false);
+		assertEquals(unChansey.getPuntosVidaActuales(), 120);
+	}
 }

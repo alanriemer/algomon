@@ -8,23 +8,27 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public class EstadoDormidoAlgomon implements Estado{
 
 	Algomon algomon;
+	int turnos;
 	
 	public EstadoDormidoAlgomon(Algomon actual){
 		algomon = actual;
+		turnos = 0;
 	}
 
 	public boolean estaDormido(){
 		return true;
 	}
 
-
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
-		throw new AtaqueNoDisponibleException();
+		turnos++;
+		if (turnos == 3) {
+			algomon.nuevoEstado(new EstadoNormalAlgomon(algomon));
+		}
+//		throw new AtaqueNoDisponibleException();
 	}
 
 	@Override
 	public boolean estaQuemado() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
