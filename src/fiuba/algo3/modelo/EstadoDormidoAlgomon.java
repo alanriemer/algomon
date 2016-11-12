@@ -15,6 +15,7 @@ public class EstadoDormidoAlgomon implements EstadosEfimeros{
 		return true;
 	}
 
+	
 
 
 

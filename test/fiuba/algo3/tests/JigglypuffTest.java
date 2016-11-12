@@ -17,10 +17,10 @@ public class JigglypuffTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jigglypuff otroJigglypuff = new Jigglypuff();
 		
-		int vida = otroJigglypuff.getPuntosVida();
+		int vida = otroJigglypuff.getPuntosVidaActuales();
 		unJigglypuff.atacarConBurbuja(otroJigglypuff);
 		
-		assertEquals(otroJigglypuff.getPuntosVida(),vida-10);
+		assertEquals(otroJigglypuff.getPuntosVidaActuales(),vida-10);
 	}
 	
 	@Test
@@ -28,10 +28,10 @@ public class JigglypuffTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Squirtle unSquirtle = new Squirtle();
 		
-		int vida = unSquirtle.getPuntosVida();
+		int vida = unSquirtle.getPuntosVidaActuales();
 		unJigglypuff.atacarConBurbuja(unSquirtle);
 		
-		assertEquals(unSquirtle.getPuntosVida(),vida-5);
+		assertEquals(unSquirtle.getPuntosVidaActuales(),vida-5);
 	}
 	
 	@Test
@@ -39,10 +39,10 @@ public class JigglypuffTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Charmander unCharmander = new Charmander();
 		
-		int vida = unCharmander.getPuntosVida();
+		int vida = unCharmander.getPuntosVidaActuales();
 		unJigglypuff.atacarConBurbuja(unCharmander);
 		
-		assertEquals(unCharmander.getPuntosVida(),vida-20);
+		assertEquals(unCharmander.getPuntosVidaActuales(),vida-20);
 	}
 	
 	@Test
@@ -50,10 +50,10 @@ public class JigglypuffTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
-		int vida = unBulbasaur.getPuntosVida();
+		int vida = unBulbasaur.getPuntosVidaActuales();
 		unJigglypuff.atacarConBurbuja(unBulbasaur);
 		
-		assertEquals(unBulbasaur.getPuntosVida(),vida-5);
+		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-5);
 	}
 	
 	@Test
@@ -61,10 +61,10 @@ public class JigglypuffTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jigglypuff otroJigglypuff = new Jigglypuff();
 		
-		int vida = otroJigglypuff.getPuntosVida();
+		int vida = otroJigglypuff.getPuntosVidaActuales();
 		unJigglypuff.atacarConAtaqueRapido(otroJigglypuff);
 		
-		assertEquals(otroJigglypuff.getPuntosVida(),vida-10);
+		assertEquals(otroJigglypuff.getPuntosVidaActuales(),vida-10);
 	}
 	
 	@Test
@@ -72,10 +72,10 @@ public class JigglypuffTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Squirtle unSquirtle = new Squirtle();
 		
-		int vida = unSquirtle.getPuntosVida();
+		int vida = unSquirtle.getPuntosVidaActuales();
 		unJigglypuff.atacarConAtaqueRapido(unSquirtle);
 		
-		assertEquals(unSquirtle.getPuntosVida(),vida-10);
+		assertEquals(unSquirtle.getPuntosVidaActuales(),vida-10);
 	}
 	
 	@Test
@@ -83,10 +83,10 @@ public class JigglypuffTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Charmander unCharmander = new Charmander();
 		
-		int vida = unCharmander.getPuntosVida();
+		int vida = unCharmander.getPuntosVidaActuales();
 		unJigglypuff.atacarConAtaqueRapido(unCharmander);
 		
-		assertEquals(unCharmander.getPuntosVida(),vida-10);
+		assertEquals(unCharmander.getPuntosVidaActuales(),vida-10);
 	}
 	
 	@Test
@@ -94,10 +94,10 @@ public class JigglypuffTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
-		int vida = unBulbasaur.getPuntosVida();
+		int vida = unBulbasaur.getPuntosVidaActuales();
 		unJigglypuff.atacarConAtaqueRapido(unBulbasaur);
 		
-		assertEquals(unBulbasaur.getPuntosVida(),vida-10);
+		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-10);
 	}
 	
 	@Test

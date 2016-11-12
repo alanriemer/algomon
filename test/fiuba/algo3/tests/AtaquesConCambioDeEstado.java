@@ -23,26 +23,27 @@ public class AtaquesConCambioDeEstado {
 		unCharmander.atacarConBrasas(unJigglypuff);
 	}*/
 	@Test
-	public void test02bulbasaurAtacaConChupavidasACharmanderyLeQuita30PuntosYGanaPuntosDeVida() throws AtaqueNoDisponibleException {
+	public void test02bulbasaurAtacaConChupavidasACharmanderyLeQuita30PuntosYNOGanaPuntosDeVidaPorqueEstaAlMaximo() throws AtaqueNoDisponibleException {
 		Bulbasaur unBulbasaur= new Bulbasaur();
 		Charmander unCharmander = new Charmander();
-		int vidaCharmander = unCharmander.getPuntosVida();
-		int vidaBulbasaur = unBulbasaur.getPuntosVida();
+		int vidaCharmander = unCharmander.getPuntosVidaActuales();
+		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
 		unBulbasaur.atacarConChupavidas(unCharmander);
-		assertEquals(unBulbasaur.getPuntosVida(),vidaBulbasaur + 2);//Este test está mal en el TP.
-		assertEquals(unCharmander.getPuntosVida(),vidaCharmander -7);
+		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur);//Este test está mal en el TP.
+		assertEquals(unCharmander.getPuntosVidaActuales(),vidaCharmander -7);
 	}
 	
 	@Test	
-	public void test03bulbasaurAtacaConChupavidasASquirtleYLeQuita7PuntosYGana2PuntosDeVida() throws AtaqueNoDisponibleException {
+	public void test03bulbasaurAtacadoPorSquirtleConAtaqueRapidoYRecibe10DeDanioDespuesAtacaConChupavidasASquirtleYLeQuita30PuntosYGana9PuntosDeVida() throws AtaqueNoDisponibleException {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Squirtle unSquirtle = new Squirtle();
 		
-		int vidaSquirtle = unSquirtle.getPuntosVida();
-		int vidaBulbasaur = unBulbasaur.getPuntosVida();
+		int vidaSquirtle = unSquirtle.getPuntosVidaActuales();
+		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
+		unSquirtle.atacarConAtaqueRapido(unBulbasaur);
 		unBulbasaur.atacarConChupavidas(unSquirtle);
-		assertEquals(unBulbasaur.getPuntosVida(),vidaBulbasaur + 9);//Este test está mal en el TP.
-		assertEquals(unSquirtle.getPuntosVida(),vidaSquirtle -30);
+		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur -1);//Este test está mal en el TP.
+		assertEquals(unSquirtle.getPuntosVidaActuales(),vidaSquirtle -30);
 	}	
 	
 	@Test
@@ -50,12 +51,12 @@ public class AtaquesConCambioDeEstado {
 		Bulbasaur unBulbasaur= new Bulbasaur();
 		Rattata unRattata = new Rattata();
 		
-		int vidaRattata = unRattata.getPuntosVida();
+		int vidaRattata = unRattata.getPuntosVidaActuales();
 		unRattata.atacarConAtaqueRapido(unBulbasaur);
-		int vidaBulbasaur = unBulbasaur.getPuntosVida();
+		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
 		unBulbasaur.atacarConChupavidas(unRattata);
-		assertEquals(unBulbasaur.getPuntosVida(),vidaBulbasaur + 4);
-		assertEquals(unRattata.getPuntosVida(),vidaRattata -15);		
+		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur + 4);
+		assertEquals(unRattata.getPuntosVidaActuales(),vidaRattata -15);		
 	}
 	
 	

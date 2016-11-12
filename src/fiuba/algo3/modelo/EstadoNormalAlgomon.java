@@ -18,6 +18,11 @@ public class EstadoNormalAlgomon implements EstadosEfimeros, EstadosPersistentes
 		return false;
 	}
 
+	@Override
+	public void efecto() {
+	
+	}
+
 
 
 }

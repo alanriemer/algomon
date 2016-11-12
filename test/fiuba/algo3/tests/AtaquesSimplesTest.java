@@ -13,24 +13,24 @@ public class AtaquesSimplesTest {
 	public void test01SquirtleAtacaConBurbujaYCanionACharmander() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Charmander unCharmander = new Charmander();
-		int vidaCharmander = unCharmander.getPuntosVida();
+		int vidaCharmander = unCharmander.getPuntosVidaActuales();
 		unSquirtle.atacarConBurbuja(unCharmander);
-		int vidaCharmanderBurbuja = unCharmander.getPuntosVida();
+		int vidaCharmanderBurbuja = unCharmander.getPuntosVidaActuales();
 		unSquirtle.atacarConCanionDeAgua(unCharmander);		
 		assertEquals(vidaCharmander-vidaCharmanderBurbuja,20);
-		assertEquals(unCharmander.getPuntosVida(),110);
+		assertEquals(unCharmander.getPuntosVidaActuales(),110);
 	}
 	
 	@Test
 	public void test02SquirtleAtacaConBurbujaYCanionABulbasaur() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Bulbasaur unBulbasaur= new Bulbasaur();
-		int vidaBulbasaur = unBulbasaur.getPuntosVida();
+		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
 		unSquirtle.atacarConBurbuja(unBulbasaur);
-		int vidaBulbasaurBurbuja = unBulbasaur.getPuntosVida();
+		int vidaBulbasaurBurbuja = unBulbasaur.getPuntosVidaActuales();
 		unSquirtle.atacarConCanionDeAgua(unBulbasaur);		
 		assertEquals(vidaBulbasaur-vidaBulbasaurBurbuja,5);
-		assertEquals(unBulbasaur.getPuntosVida(),125);
+		assertEquals(unBulbasaur.getPuntosVidaActuales(),125);
 	}
 	
 	@Test
@@ -40,28 +40,28 @@ public class AtaquesSimplesTest {
 		
 		Squirtle unSquirtle = new Squirtle();
 		Chansey unChansey= new Chansey();
-		int vidaChansey = unChansey.getPuntosVida();
+		int vidaChansey = unChansey.getPuntosVidaActuales();
 		
 		unSquirtle.atacarConBurbuja(unChansey);
-		danioBurbuja = vidaChansey - unChansey.getPuntosVida();
+		danioBurbuja = vidaChansey - unChansey.getPuntosVidaActuales();
 		unSquirtle.atacarConCanionDeAgua(unChansey);	
-		danioCanion = vidaChansey + danioBurbuja - unChansey.getPuntosVida();
+		danioCanion = vidaChansey + danioBurbuja - unChansey.getPuntosVidaActuales();
 		
 		Rattata unRattata= new Rattata();
-		int vidaRattata = unRattata.getPuntosVida();
+		int vidaRattata = unRattata.getPuntosVidaActuales();
 		
 		unSquirtle.atacarConBurbuja(unRattata);
-		danioBurbuja = danioBurbuja + (vidaRattata - unRattata.getPuntosVida());
+		danioBurbuja = danioBurbuja + (vidaRattata - unRattata.getPuntosVidaActuales());
 		unSquirtle.atacarConCanionDeAgua(unRattata);	
-		danioCanion = (vidaRattata + danioBurbuja - unRattata.getPuntosVida());
+		danioCanion = (vidaRattata + danioBurbuja - unRattata.getPuntosVidaActuales());
 		
 		Jigglypuff unJigglypuff= new Jigglypuff();
-		int vidaJigglypuff = unJigglypuff.getPuntosVida();
+		int vidaJigglypuff = unJigglypuff.getPuntosVidaActuales();
 		
 		unSquirtle.atacarConBurbuja(unJigglypuff);
-		danioBurbuja = danioBurbuja + (vidaJigglypuff - unJigglypuff.getPuntosVida());
+		danioBurbuja = danioBurbuja + (vidaJigglypuff - unJigglypuff.getPuntosVidaActuales());
 		unSquirtle.atacarConCanionDeAgua(unJigglypuff);	
-		danioCanion = (vidaJigglypuff + danioBurbuja - unJigglypuff.getPuntosVida());
+		danioCanion = (vidaJigglypuff + danioBurbuja - unJigglypuff.getPuntosVidaActuales());
 		
 		assertEquals(danioBurbuja,30);
 		assertEquals(danioCanion,60);
@@ -72,14 +72,14 @@ public class AtaquesSimplesTest {
 		Squirtle unSquirtle = new Squirtle();
 		Chansey unChansey= new Chansey();
 		Bulbasaur unBulbasaur= new Bulbasaur();
-		int vidaSquirtle = unSquirtle.getPuntosVida();
+		int vidaSquirtle = unSquirtle.getPuntosVidaActuales();
 		
 		unBulbasaur.atacarConLatigoCepa(unSquirtle);
-		int danioBulba = vidaSquirtle - unSquirtle.getPuntosVida();
+		int danioBulba = vidaSquirtle - unSquirtle.getPuntosVidaActuales();
 		
 		unChansey.atacarConLatigoCepa(unSquirtle);
 		
-		int danioChansey = vidaSquirtle - danioBulba - unSquirtle.getPuntosVida();
+		int danioChansey = vidaSquirtle - danioBulba - unSquirtle.getPuntosVidaActuales();
 		
 		assertEquals(danioBulba,30);
 		assertEquals(danioChansey,30);		
@@ -90,14 +90,14 @@ public class AtaquesSimplesTest {
 		Chansey unChansey= new Chansey();
 		Bulbasaur unBulbasaur= new Bulbasaur();
 		Charmander unCharmander = new Charmander();		
-		int vidaCharmander = unCharmander.getPuntosVida();
+		int vidaCharmander = unCharmander.getPuntosVidaActuales();
 		
 		unBulbasaur.atacarConLatigoCepa(unCharmander);
-		int danioBulba = vidaCharmander - unCharmander.getPuntosVida();
+		int danioBulba = vidaCharmander - unCharmander.getPuntosVidaActuales();
 		
 		unChansey.atacarConLatigoCepa(unCharmander);
 		
-		int danioChansey = vidaCharmander - danioBulba - unCharmander.getPuntosVida();
+		int danioChansey = vidaCharmander - danioBulba - unCharmander.getPuntosVidaActuales();
 		assertEquals(danioBulba,7);
 		assertEquals(danioChansey,7);	
 		
@@ -109,13 +109,13 @@ public class AtaquesSimplesTest {
 		Bulbasaur unBulbasaur= new Bulbasaur();
 		
 		Rattata unRattata = new Rattata();		
-		int vidaRattata = unRattata.getPuntosVida();
+		int vidaRattata = unRattata.getPuntosVidaActuales();
 		
 		unBulbasaur.atacarConLatigoCepa(unRattata);
-		int danioBulba = vidaRattata - unRattata.getPuntosVida();
+		int danioBulba = vidaRattata - unRattata.getPuntosVidaActuales();
 		unChansey.atacarConLatigoCepa(unRattata);
 		
-		int danioChansey = vidaRattata - danioBulba - unRattata.getPuntosVida();
+		int danioChansey = vidaRattata - danioBulba - unRattata.getPuntosVidaActuales();
 		assertEquals(danioBulba,15);
 		assertEquals(danioChansey,15);		
 	}
@@ -125,9 +125,9 @@ public class AtaquesSimplesTest {
 		Charmander unCharmander = new Charmander();
 		Bulbasaur unBulbasaur= new Bulbasaur();
 		
-		int vidaBulbasaur = unBulbasaur.getPuntosVida();
+		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
 		unCharmander.atacarConBrasas(unBulbasaur);
-		int danioCharmander = vidaBulbasaur - unBulbasaur.getPuntosVida();
+		int danioCharmander = vidaBulbasaur - unBulbasaur.getPuntosVidaActuales();
 		assertEquals(danioCharmander,32);
 	}
 	
@@ -136,9 +136,9 @@ public class AtaquesSimplesTest {
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle= new Squirtle();
 		
-		int vidaSquirtle = unSquirtle.getPuntosVida();
+		int vidaSquirtle = unSquirtle.getPuntosVidaActuales();
 		unCharmander.atacarConBrasas(unSquirtle);
-		int danioCharmander = vidaSquirtle - unSquirtle.getPuntosVida();
+		int danioCharmander = vidaSquirtle - unSquirtle.getPuntosVidaActuales();
 		assertEquals(danioCharmander,8);		
 	}
 	
@@ -146,10 +146,10 @@ public class AtaquesSimplesTest {
 	public void test09CharmanderAtacaConBrasasADemasCriaturas() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Rattata unRattata = new Rattata();		
-		int vidaRattata = unRattata.getPuntosVida();
+		int vidaRattata = unRattata.getPuntosVidaActuales();
 		
 		unCharmander.atacarConBrasas(unRattata);
-		int danioCharmander = vidaRattata - unRattata.getPuntosVida();
+		int danioCharmander = vidaRattata - unRattata.getPuntosVidaActuales();
 		assertEquals(danioCharmander,16);			
 	}
 	
@@ -158,9 +158,9 @@ public class AtaquesSimplesTest {
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle= new Squirtle();
 		
-		int vidaSquirtle = unSquirtle.getPuntosVida();
+		int vidaSquirtle = unSquirtle.getPuntosVidaActuales();
 		unCharmander.atacarConAtaqueRapido(unSquirtle);
-		int danioCharmander = vidaSquirtle - unSquirtle.getPuntosVida();
+		int danioCharmander = vidaSquirtle - unSquirtle.getPuntosVidaActuales();
 		assertEquals(danioCharmander,10);		
 	}
 	

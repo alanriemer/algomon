@@ -32,6 +32,10 @@ public abstract class Algomon {
 	public abstract int calcularDanio(Ataque unAtaque);
 	
 	public int getPuntosVida(){
+		return puntosVida;
+	}
+	
+	public int getPuntosVidaActuales(){
 		return puntosVidaActuales;
 	}
 	
