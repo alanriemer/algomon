@@ -7,10 +7,10 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class EstadoDormidoAlgomon implements EstadosEfimeros{
 
-	Algomon pokemon;
+	Algomon algomon;
 	
-	public EstadoDormidoAlgomon(Algomon poke){
-		pokemon = poke;
+	public EstadoDormidoAlgomon(Algomon actual){
+		algomon = actual;
 	}
 
 	public boolean estaDormido(){
