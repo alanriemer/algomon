@@ -140,17 +140,4 @@ public class BulbasaurTest {
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur + puntosVidaASumar);
 		assertEquals(otroBulbasaur.getPuntosVidaActuales(),vidaOtroBulbasaur-7);
 	}
-	
-	@Test
-	public void test12BulbasaurRealizaAtaqueRapidoEnEstadoQuemadoYRecibe14deDanio() throws AtaqueNoDisponibleException{
-		Bulbasaur unBulbasaur = new Bulbasaur();
-		Charmander unCharmander = new Charmander();
-		
-		unCharmander.atacarConFogonazo(unBulbasaur);
-		int vida = unBulbasaur.getPuntosVidaActuales(); //vidaBulbasaur = 136
-		unBulbasaur.atacarConLatigoCepa(unCharmander);
-		
-		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-14);
-	}
-	
 }

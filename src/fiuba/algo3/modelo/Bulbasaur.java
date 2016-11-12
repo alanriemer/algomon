@@ -16,8 +16,7 @@ public class Bulbasaur extends Algomon{
 	}
 	
 	public void atacarConLatigoCepa(Algomon enemigo) throws AtaqueNoDisponibleException{
-			enemigo.recibirAtaque(ataques.get("Latigo Cepa"));
-			this.estadoPersistente.efecto();
+		this.estado.atacar(ataques.get("Latigo Cepa"), enemigo);
 	}
 	
 	public void atacarConChupavidas(Algomon enemigo) throws AtaqueNoDisponibleException{

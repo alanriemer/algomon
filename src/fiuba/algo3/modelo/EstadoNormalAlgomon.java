@@ -5,7 +5,7 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 
 
-public class EstadoNormalAlgomon implements EstadosEfimeros, EstadosPersistentes{
+public class EstadoNormalAlgomon implements Estado{
 	
 	Algomon algomon;
 	

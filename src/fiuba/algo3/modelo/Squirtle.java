@@ -15,17 +15,16 @@ public class Squirtle extends Algomon{
 	}
 	
 	public void atacarConBurbuja(Algomon enemigo) throws AtaqueNoDisponibleException{
-		this.estadoEfimero.atacar(ataques.get("Burbuja"), enemigo);
+		this.estado.atacar(ataques.get("Burbuja"), enemigo);
 	}
 	
 	public void atacarConCanionDeAgua(Algomon enemigo) throws AtaqueNoDisponibleException{
-		this.estadoEfimero.atacar(ataques.get("Canion de Agua"), enemigo);
+		this.estado.atacar(ataques.get("Canion de Agua"), enemigo);
 	}
 
 	@Override
 	public int calcularDanio(Ataque unAtaque) {
 		return unAtaque.atacarAgua();
 	}
-
 
 }

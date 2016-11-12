@@ -80,7 +80,7 @@ public class AtaquesConCambioDeEstado {
 		int vidaJigglypuff = unJigglypuff.getPuntosVidaActuales();
 		unBulbasaur.atacarConAtaqueRapido(unJigglypuff);
 		EstadoNormalAlgomon estadoNuevo= new EstadoNormalAlgomon(unBulbasaur);
-		unBulbasaur.nuevoEstadoEfimero(estadoNuevo);
+		unBulbasaur.nuevoEstado(estadoNuevo);
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaJigglypuff + 10);
 	}	
 	

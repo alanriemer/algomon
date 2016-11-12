@@ -43,7 +43,19 @@ public class EstadoAlgomonTest {
 		unChansey.atacarConCanto(unBulbasaur);
 		
 		assertEquals(unBulbasaur.estaDormido(),true);
-		assertEquals(unBulbasaur.estaQuemado(),true);
+		//assertEquals(unBulbasaur.estaQuemado(),true);
+	}
+	
+	@Test
+	public void test04BulbasaurRealizaAtaqueRapidoEnEstadoQuemadoYRecibe14deDanio() throws AtaqueNoDisponibleException{
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Charmander unCharmander = new Charmander();
+		
+		unCharmander.atacarConFogonazo(unBulbasaur);
+		int vida = unBulbasaur.getPuntosVidaActuales(); //vidaBulbasaur = 136
+		unBulbasaur.atacarConLatigoCepa(unCharmander);
+		
+		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-14);
 	}
 	
 }

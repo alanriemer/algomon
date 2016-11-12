@@ -16,20 +16,17 @@ public class Rattata extends Algomon{
 	
 	}
 	
-	
 	public void atacarConFogonazo(Algomon enemigo) throws AtaqueNoDisponibleException{
-		this.estadoEfimero.atacar(ataques.get("Fogonazo"), enemigo);
+		this.estado.atacar(ataques.get("Fogonazo"), enemigo);
 	}
 	
 	public void atacarConBurbuja(Algomon enemigo) throws AtaqueNoDisponibleException{
-		this.estadoEfimero.atacar(ataques.get("Burbuja"), enemigo);
+		this.estado.atacar(ataques.get("Burbuja"), enemigo);
 	}
-
 
 	@Override
 	public int calcularDanio(Ataque unAtaque) {
 		return unAtaque.atacarNormal();
 	}
-	
 	
 }

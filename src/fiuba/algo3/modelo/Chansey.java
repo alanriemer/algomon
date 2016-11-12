@@ -16,12 +16,12 @@ public class Chansey extends Algomon {
 	}
 
 	public void atacarConLatigoCepa(Algomon enemigo) throws AtaqueNoDisponibleException {
-		this.estadoEfimero.atacar(ataques.get("Latigo Cepa"), enemigo);
+		this.estado.atacar(ataques.get("Latigo Cepa"), enemigo);
 	}
 	
 	public void atacarConCanto(Algomon enemigo) throws AtaqueNoDisponibleException {
-		this.estadoEfimero.atacar(ataques.get("Canto"), enemigo);
-		enemigo.nuevoEstadoEfimero(new EstadoDormidoAlgomon(enemigo));
+		this.estado.atacar(ataques.get("Canto"), enemigo);
+		enemigo.nuevoEstado(new EstadoDormidoAlgomon(enemigo));
 	}
 	
 	@Override

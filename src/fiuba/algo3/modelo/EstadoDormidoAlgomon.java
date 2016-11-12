@@ -5,7 +5,7 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 
 
-public class EstadoDormidoAlgomon implements EstadosEfimeros{
+public class EstadoDormidoAlgomon implements Estado{
 
 	Algomon algomon;
 	
@@ -20,6 +20,12 @@ public class EstadoDormidoAlgomon implements EstadosEfimeros{
 
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
 		throw new AtaqueNoDisponibleException();
+	}
+
+	@Override
+	public boolean estaQuemado() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

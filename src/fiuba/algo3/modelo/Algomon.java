@@ -9,15 +9,12 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public abstract class Algomon {
 	protected int puntosVida;
 	protected int puntosVidaActuales; 
-	protected EstadosEfimeros estadoEfimero = new EstadoNormalAlgomon(this);
-	protected EstadosPersistentes estadoPersistente = new EstadoNormalAlgomon(this);
+	protected Estado estado = new EstadoNormalAlgomon(this);
 	protected HashMap<String,Ataque> ataques = new HashMap<String,Ataque>();
 	
 	public Algomon(){
-		Ataque ataqueRapido = new AtaqueNormal(10,16);
-		ataques.put("Ataque rapido",ataqueRapido);
-	}
-	
+		ataques.put("Ataque rapido",new AtaqueNormal(10,16));
+	}	
 	
 	public int recibirAtaque(Ataque unAtaque) throws AtaqueNoDisponibleException {
 		if (!unAtaque.sePuedeUsarAtaque()){
@@ -26,7 +23,6 @@ public abstract class Algomon {
 		int danio = this.calcularDanio(unAtaque);
 		this.recibirDanio(danio);
 		return danio;
-
 	}
 	
 	public abstract int calcularDanio(Ataque unAtaque);
@@ -39,34 +35,25 @@ public abstract class Algomon {
 		return puntosVidaActuales;
 	}
 	
-
 	public void recibirDanio(int danio){
 		if(danio > puntosVidaActuales)
 			puntosVidaActuales = 0;
 		else puntosVidaActuales -= danio;
 	}
-		
 	
 	public void atacarConAtaqueRapido(Algomon enemigo) throws AtaqueNoDisponibleException{
-		estadoEfimero.atacar(ataques.get("Ataque rapido"), enemigo);
+		estado.atacar(ataques.get("Ataque rapido"), enemigo);
 	}
 	
-	
-	public void nuevoEstadoEfimero(EstadosEfimeros nuevoEstado){
-		this.estadoEfimero = nuevoEstado;
-	}
-	
-	public void nuevoEstadoPersistente(EstadoQuemadoAlgomon nuevoEstado) {
-		this.estadoPersistente = nuevoEstado;	
-	}
+	public void nuevoEstado(Estado nuevoEstado){
+		this.estado = nuevoEstado;
+	}	
 	
 	public boolean estaDormido(){
-		return estadoEfimero.estaDormido();
+		return estado.estaDormido();
 	}
 	
 	public boolean estaQuemado(){
-		return estadoPersistente.estaQuemado();
+		return estado.estaQuemado();
 	}
-
-
 }
