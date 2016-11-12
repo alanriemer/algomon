@@ -1,13 +1,16 @@
 package fiuba.algo3.modelo;
 
+import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
+
 
 
 public class EstadoNormalAlgomon implements EstadosEfimeros, EstadosPersistentes{
 	
-	Algomon pokemon;
+	Algomon algomon;
 	
-	public EstadoNormalAlgomon(Algomon poke){
-		pokemon = poke;
+	public EstadoNormalAlgomon(Algomon actual){
+		algomon = actual;
 	}
 	
 	public boolean estaDormido(){
@@ -18,9 +21,13 @@ public class EstadoNormalAlgomon implements EstadosEfimeros, EstadosPersistentes
 		return false;
 	}
 
-	@Override
 	public void efecto() {
 	
+	}
+
+	public void atacar(Ataque ataque, Algomon enemigo) throws AtaqueNoDisponibleException {
+		enemigo.recibirAtaque(ataque);
+		
 	}
 
 

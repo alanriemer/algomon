@@ -48,7 +48,7 @@ public abstract class Algomon {
 		
 	
 	public void atacarConAtaqueRapido(Algomon enemigo) throws AtaqueNoDisponibleException{
-		enemigo.recibirAtaque(ataques.get("Ataque rapido"));
+		estadoEfimero.atacar(ataques.get("Ataque rapido"), enemigo);
 	}
 	
 	

@@ -18,11 +18,11 @@ public class Rattata extends Algomon{
 	
 	
 	public void atacarConFogonazo(Algomon enemigo) throws AtaqueNoDisponibleException{
-		enemigo.recibirAtaque(ataques.get("Fogonazo"));
+		this.estadoEfimero.atacar(ataques.get("Fogonazo"), enemigo);
 	}
 	
 	public void atacarConBurbuja(Algomon enemigo) throws AtaqueNoDisponibleException{
-		enemigo.recibirAtaque(ataques.get("Burbuja"));
+		this.estadoEfimero.atacar(ataques.get("Burbuja"), enemigo);
 	}
 
 

@@ -18,11 +18,11 @@ public class Charmander extends Algomon{
 	}
 	
 	public void atacarConBrasas(Algomon enemigo) throws AtaqueNoDisponibleException{
-		enemigo.recibirAtaque(ataques.get("Brasas"));
+		estadoEfimero.atacar(ataques.get("Brasas"), enemigo);
 	}
 	
 	public void atacarConFogonazo(Algomon enemigo) throws AtaqueNoDisponibleException{
-		enemigo.recibirAtaque(ataques.get("Fogonazo"));
+		estadoEfimero.atacar(ataques.get("Fogonazo"), enemigo);
 		enemigo.nuevoEstadoPersistente(new EstadoQuemadoAlgomon(enemigo));
 	}
 

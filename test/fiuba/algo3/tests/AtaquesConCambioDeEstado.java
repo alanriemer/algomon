@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import fiuba.algo3.modelo.Bulbasaur;
 import fiuba.algo3.modelo.Charmander;
+import fiuba.algo3.modelo.Jigglypuff;
 //import fiuba.algo3.modelo.Jigglypuff;
 import fiuba.algo3.modelo.Rattata;
 import fiuba.algo3.modelo.Squirtle;
@@ -14,14 +15,17 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class AtaquesConCambioDeEstado {
 	
-	/*
+
 	@Test (expected = AtaqueNoDisponibleException.class)
 	public void test01JigglypuffyChanseyAtacannConCantoYAlgomonAtacadoNoPuedeAtacarPor3turnos() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff= new Jigglypuff();
 		Charmander unCharmander = new Charmander();	
 		unJigglypuff.atacarConCanto(unCharmander);
-		unCharmander.atacarConBrasas(unJigglypuff);
-	}*/
+		unCharmander.atacarConAtaqueRapido(unJigglypuff);
+
+		
+	}
+	
 	@Test
 	public void test02bulbasaurAtacaConChupavidasACharmanderyLeQuita30PuntosYNOGanaPuntosDeVidaPorqueEstaAlMaximo() throws AtaqueNoDisponibleException {
 		Bulbasaur unBulbasaur= new Bulbasaur();
@@ -58,6 +62,16 @@ public class AtaquesConCambioDeEstado {
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur + 4);
 		assertEquals(unRattata.getPuntosVidaActuales(),vidaRattata -15);		
 	}
+	
+
+	@Test (expected = AtaqueNoDisponibleException.class)
+	public void test05JigglypuffyChanseyAtacannConCantoYAlgomonAtacadoNoPuedeAtacarPor3turnos() throws AtaqueNoDisponibleException{
+		Jigglypuff unJigglypuff= new Jigglypuff();
+		Bulbasaur unBulbasaur = new Bulbasaur();	
+		unJigglypuff.atacarConCanto(unBulbasaur);
+		unBulbasaur.atacarConAtaqueRapido(unJigglypuff);
+	}
+	
 	
 	
 

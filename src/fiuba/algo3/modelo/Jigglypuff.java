@@ -17,11 +17,12 @@ public class Jigglypuff extends Algomon{
 	}
 	
 	public void atacarConBurbuja(Algomon enemigo) throws AtaqueNoDisponibleException{
-		enemigo.recibirAtaque(ataques.get("Burbuja"));
+		this.estadoEfimero.atacar(ataques.get("Burbuja"), enemigo);
+		
 	}
 
 	public void atacarConCanto(Algomon enemigo) throws AtaqueNoDisponibleException {
-		enemigo.recibirAtaque(ataques.get("Canto"));
+		this.estadoEfimero.atacar(ataques.get("Canto"), enemigo);
 		enemigo.nuevoEstadoEfimero(new EstadoDormidoAlgomon(enemigo));
 	}
 
