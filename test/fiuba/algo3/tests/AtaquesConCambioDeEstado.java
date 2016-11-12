@@ -23,8 +23,6 @@ public class AtaquesConCambioDeEstado {
 		Charmander unCharmander = new Charmander();	
 		unJigglypuff.atacarConCanto(unCharmander);
 		unCharmander.atacarConAtaqueRapido(unJigglypuff);
-
-		
 	}
 	
 	@Test

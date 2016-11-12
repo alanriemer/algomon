@@ -3,8 +3,6 @@ package fiuba.algo3.modelo;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
-
-
 public class EstadoNormalAlgomon implements Estado{
 	
 	Algomon algomon;
@@ -21,15 +19,7 @@ public class EstadoNormalAlgomon implements Estado{
 		return false;
 	}
 
-	public void efecto() {
-	
-	}
-
 	public void atacar(Ataque ataque, Algomon enemigo) throws AtaqueNoDisponibleException {
 		enemigo.recibirAtaque(ataque);
-		
 	}
-
-
-
 }

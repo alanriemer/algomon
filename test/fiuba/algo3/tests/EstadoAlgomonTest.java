@@ -58,4 +58,14 @@ public class EstadoAlgomonTest {
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-14);
 	}
 	
+	@Test
+	public void test05BulbasaurNoEstaDormidoNiQuemadoLuegoDeUnAtaque() throws AtaqueNoDisponibleException{
+		Bulbasaur unBulbasaur = new Bulbasaur();		
+		Chansey unChansey = new Chansey();
+		
+		unChansey.atacarConAtaqueRapido(unBulbasaur);
+		
+		assertEquals(unBulbasaur.estaDormido(),false);
+		assertEquals(unBulbasaur.estaQuemado(),false);
+	}
 }
