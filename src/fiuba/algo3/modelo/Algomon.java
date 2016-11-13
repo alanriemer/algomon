@@ -46,22 +46,16 @@ public abstract class Algomon {
 	}
 
 	public void dormir(){
-		if (this.estaQuemado())
-			this.estado = new EstadoDormidoQuemadoAlgomon(this);
-		else
-			this.estado = new EstadoDormidoAlgomon(this);
+		this.estado = (this.estaQuemado())?
+			new EstadoDormidoQuemadoAlgomon(this): new EstadoDormidoAlgomon(this);
 	}
 	public void quemar(){
-		if (this.estaDormido())
-			this.estado = new EstadoDormidoQuemadoAlgomon(this);
-		else
-			this.estado = new EstadoQuemadoAlgomon(this);
+		this.estado = (this.estaDormido())?
+			new EstadoDormidoQuemadoAlgomon(this): new EstadoQuemadoAlgomon(this);
 	}
 	public void despertar() {
-		if (this.estaDormidoQuemado())
-			this.estado = new EstadoQuemadoAlgomon(this);
-		else
-			this.estado = new EstadoNormalAlgomon(this);
+		this.estado = (this.estaDormidoQuemado())? 
+			new EstadoQuemadoAlgomon(this): new EstadoNormalAlgomon(this);
 	}	
 	public void normalizar(){
 		this.estado = new EstadoNormalAlgomon(this);
