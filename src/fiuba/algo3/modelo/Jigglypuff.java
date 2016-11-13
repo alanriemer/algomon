@@ -3,7 +3,6 @@ package fiuba.algo3.modelo;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueAgua;
 import fiuba.algo3.modelo.ataques.AtaqueNormal;
-import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class Jigglypuff extends Algomon{
 	public Jigglypuff(){
@@ -14,11 +13,6 @@ public class Jigglypuff extends Algomon{
 		ataques.put("Burbuja",burbuja);
 		ataques.put("Canto",canto);
 	
-	}
-
-	public void atacarConCanto(Algomon enemigo) throws AtaqueNoDisponibleException {
-		this.estado.atacar(ataques.get("Canto"), enemigo);
-		enemigo.dormir();
 	}
 
 	@Override

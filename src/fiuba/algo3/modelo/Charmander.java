@@ -3,8 +3,6 @@ package fiuba.algo3.modelo;
 import fiuba.algo3.modelo.ataques.Ataque;
 
 import fiuba.algo3.modelo.ataques.AtaqueFuego;
-import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
-
 
 public class Charmander extends Algomon{
 	public Charmander(){
@@ -16,12 +14,6 @@ public class Charmander extends Algomon{
 		ataques.put("Fogonazo",fogonazo);
 
 	}
-
-	public void atacarConFogonazo(Algomon enemigo) throws AtaqueNoDisponibleException{
-		this.estado.atacar(ataques.get("Fogonazo"), enemigo);
-		enemigo.quemar();
-	}
-
 	@Override
 	public int calcularDanio(Ataque unAtaque) {
 		return unAtaque.atacarFuego();

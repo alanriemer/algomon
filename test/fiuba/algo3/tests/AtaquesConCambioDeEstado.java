@@ -19,7 +19,7 @@ public class AtaquesConCambioDeEstado {
 	public void test01JigglypuffyChanseyAtacannConCantoYAlgomonAtacadoNoPuedeAtacarPor3turnos() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff= new Jigglypuff();
 		Charmander unCharmander = new Charmander();	
-		unJigglypuff.atacarConCanto(unCharmander);
+		unJigglypuff.atacarCon("Canto",unCharmander);
 		unCharmander.atacarCon("Ataque rapido",unJigglypuff);
 		assertEquals(unJigglypuff.getPuntosVida(), unJigglypuff.getPuntosVidaActuales());
 	}
@@ -66,7 +66,7 @@ public class AtaquesConCambioDeEstado {
 	public void test05JigglypuffyChanseyAtacannConCantoYAlgomonAtacadoNoPuedeAtacarPor3turnos() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff= new Jigglypuff();
 		Bulbasaur unBulbasaur = new Bulbasaur();	
-		unJigglypuff.atacarConCanto(unBulbasaur);
+		unJigglypuff.atacarCon("Canto",unBulbasaur);
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		assertEquals(unJigglypuff.getPuntosVida(), unJigglypuff.getPuntosVidaActuales());
 	}
@@ -74,7 +74,7 @@ public class AtaquesConCambioDeEstado {
 	public void test06JigglypuffyChanseyAtacannConCantoYAlgomonLuegoSeRecupera() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff= new Jigglypuff();
 		Bulbasaur unBulbasaur = new Bulbasaur();	
-		unJigglypuff.atacarConCanto(unBulbasaur);
+		unJigglypuff.atacarCon("Canto",unBulbasaur);
 		int vidaJigglypuff = unJigglypuff.getPuntosVidaActuales();
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		unBulbasaur.despertar();
