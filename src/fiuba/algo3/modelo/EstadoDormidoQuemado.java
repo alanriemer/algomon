@@ -10,21 +10,14 @@ public class EstadoDormidoQuemado implements Estado {
 	public EstadoDormidoQuemado(Algomon actual){
 		algomon = actual;
 		if (actual.estaDormido()){
-			
 		}
 	}
 	
-	@Override
-	public boolean estaDormido(){
-		return true;
-	}
-
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
 		turnos++;
 		if (turnos == 3) {
 			algomon.quemar();
 		}
-//		throw new AtaqueNoDisponibleException();
 	}
 
 	@Override
@@ -36,4 +29,9 @@ public class EstadoDormidoQuemado implements Estado {
 	public boolean estaDormidoQuemado() {
 		return true;
 	}
+	@Override
+	public boolean estaDormido(){
+		return true;
+	}
+
 }

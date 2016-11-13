@@ -5,18 +5,14 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class EstadoQuemado implements Estado {
 
-	Algomon pokemon;
+	Algomon algomon;
 	
-	public EstadoQuemado(Algomon poke){
-		this.pokemon = poke;
+	public EstadoQuemado(Algomon actual){
+		this.algomon = actual;
 	}
 	
-	public boolean estaQuemado() {
-		return true;
-	}
-
 	private void efecto() {
-		this.pokemon.recibirDanio((int)Math.floor(this.pokemon.getPuntosVida()*0.1));
+		this.algomon.recibirDanio((int)Math.floor(this.algomon.getPuntosVida()*0.1));
 	}
 	
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
@@ -26,14 +22,14 @@ public class EstadoQuemado implements Estado {
 
 	@Override
 	public boolean estaDormido() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean estaDormidoQuemado() {
-		// TODO Auto-generated method stub
 		return false;
 	}
-
+	public boolean estaQuemado() {
+		return true;
+	}
 }

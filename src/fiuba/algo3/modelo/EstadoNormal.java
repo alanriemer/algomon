@@ -10,7 +10,10 @@ public class EstadoNormal implements Estado{
 	public EstadoNormal(Algomon actual){
 		algomon = actual;
 	}
-	
+
+	public void atacar(Ataque ataque, Algomon enemigo) throws AtaqueNoDisponibleException {
+		enemigo.recibirAtaque(ataque);
+	}
 	public boolean estaDormido(){
 		return false;
 	}
@@ -19,11 +22,6 @@ public class EstadoNormal implements Estado{
 		return false;
 	}
 
-	public void atacar(Ataque ataque, Algomon enemigo) throws AtaqueNoDisponibleException {
-		enemigo.recibirAtaque(ataque);
-	}
-
-	@Override
 	public boolean estaDormidoQuemado() {
 		return false;
 	}
