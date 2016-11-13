@@ -60,7 +60,8 @@ public abstract class Algomon {
 	public void despertar() {
 		if (this.estaDormidoQuemado())
 			this.estado = new EstadoQuemadoAlgomon(this);
-		this.estado = new EstadoNormalAlgomon(this);
+		else
+			this.estado = new EstadoNormalAlgomon(this);
 	}	
 	public void normalizar(){
 		this.estado = new EstadoNormalAlgomon(this);
