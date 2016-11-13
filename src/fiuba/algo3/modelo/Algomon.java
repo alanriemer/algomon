@@ -18,10 +18,7 @@ public abstract class Algomon {
 		ataques.put("Ataque rapido",new AtaqueNormal("Ataque rapido",10,16));
 	}	
 	
-	public int recibirAtaque(Ataque unAtaque) throws AtaqueNoDisponibleException {
-		if (!unAtaque.sePuedeUsarAtaque()){
-			throw new AtaqueNoDisponibleException();
-		}
+	public int recibirAtaque(Ataque unAtaque){
 		unAtaque.modificarEstado(this);
 		int danio = this.calcularDanio(unAtaque);
 		this.recibirDanio(danio);
@@ -45,6 +42,9 @@ public abstract class Algomon {
 	}
 	
 	public void atacarCon(String ataque,Algomon enemigo) throws AtaqueNoDisponibleException{
+		if (!ataques.get(ataque).sePuedeUsarAtaque()){
+			throw new AtaqueNoDisponibleException();
+		}
 		estado.atacar(ataques.get(ataque), enemigo);
 	}
 
