@@ -8,4 +8,5 @@ public interface Estado {
 	public abstract boolean estaDormido();
 	public abstract boolean estaQuemado();
 	public abstract boolean estaDormidoQuemado();
+	public abstract int turnos();
 }

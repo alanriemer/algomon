@@ -30,6 +30,7 @@ public abstract class Ataque {
 		return (cantidad > 0);
 	}
 
+	
 
 
 

@@ -80,5 +80,31 @@ public class AtaquesConCambioDeEstado {
 		unBulbasaur.despertar();
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaJigglypuff + 10);
 	}	
+	
+	@Test
+	public void test07JigglypuffAtacannConCantoYDespuesEsQuemadoYQuedaEnEstadoDormidoQuemado() throws AtaqueNoDisponibleException{
+		Jigglypuff unJigglypuff= new Jigglypuff();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Charmander unCharmander = new Charmander();
+		unJigglypuff.atacarCon("Canto",unBulbasaur);
+		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
+		unCharmander.atacarCon("Fogonazo", unBulbasaur);
+		assertEquals(unBulbasaur.estaDormidoQuemado(), true);
+	}
+	
+	
+	@Test
+	public void test08JigglypuffAtacannConCantoYBulbasaurPasaUnTurnoDespuesEsQuemadoYLeFaltan2TurnosParaQueDormidoTermine() throws AtaqueNoDisponibleException{
+		Jigglypuff unJigglypuff= new Jigglypuff();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Charmander unCharmander = new Charmander();
+		unJigglypuff.atacarCon("Canto",unBulbasaur);
+		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
+		unCharmander.atacarCon("Fogonazo", unBulbasaur);
+		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
+		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
+		
+		assertEquals(unBulbasaur.estaDormido(), false);
+	}
 
 }

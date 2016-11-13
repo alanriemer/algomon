@@ -68,7 +68,7 @@ public abstract class Algomon {
 	public void normalizar(){
 		this.estado = new EstadoNormal(this);
 	}
-	private boolean estaDormidoQuemado() {
+	public boolean estaDormidoQuemado() {
 		return estado.estaDormidoQuemado();
 	}
 
@@ -83,6 +83,10 @@ public abstract class Algomon {
 	public List<String> ataquesDisponibles() {
 		return new ArrayList<String>(this.ataques.keySet());
 
+	}
+
+	public int turnos() {
+		return estado.turnos();
 	}
 
 

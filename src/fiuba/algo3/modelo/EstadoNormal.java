@@ -28,4 +28,11 @@ public class EstadoNormal implements Estado{
 	public boolean estaDormidoQuemado() {
 		return false;
 	}
+
+	@Override
+	public int turnos() {
+		return 0;
+	}
+
+
 }

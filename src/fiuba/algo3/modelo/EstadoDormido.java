@@ -37,4 +37,11 @@ public class EstadoDormido implements Estado{
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public int turnos() {
+		return turnos;
+	}
+
+
 }

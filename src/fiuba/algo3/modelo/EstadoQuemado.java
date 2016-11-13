@@ -35,4 +35,9 @@ public class EstadoQuemado implements Estado {
 	public boolean estaQuemado() {
 		return true;
 	}
+
+	@Override
+	public int turnos() {
+		return 0;
+	}
 }
