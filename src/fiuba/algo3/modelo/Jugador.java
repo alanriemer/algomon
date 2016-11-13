@@ -10,12 +10,15 @@ public class Jugador {
 		this.misAlgomones = new ArrayList<Algomon>();
 	}
 	public void agregarAlgomon(Algomon algomon) {
-		this.misAlgomones.add(algomon);
-		
+		this.misAlgomones.add(algomon);	
 	}
-
-	public Algomon pokemonActual() {
+	public Algomon algomonActual() {
 		return misAlgomones.get(0);
 	}
-
+	public List<Algomon> getAlgomones(){
+		return misAlgomones;
+	}
+	public Iterable<String> ataquesDisponibles() {
+		return this.algomonActual().ataquesDisponibles();
+	}
 }
