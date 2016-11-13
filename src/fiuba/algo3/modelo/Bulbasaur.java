@@ -8,17 +8,13 @@ public class Bulbasaur extends Algomon{
 	public Bulbasaur(){
 		puntosVida = 140;
 		puntosVidaActuales = 140;
-		Ataque latigoCepa = new AtaquePlanta(15,10);
-		Ataque chupaVidas = new AtaquePlanta(15,8);
+		Ataque latigoCepa = new AtaquePlanta("Latigo Cepa",15,10);
+		Ataque chupaVidas = new AtaquePlanta("chupaVidas",15,8);
 		ataques.put("Latigo Cepa",latigoCepa);
 		ataques.put("ChupaVidas",chupaVidas);
 		
 	}
-	
-	public void atacarConLatigoCepa(Algomon enemigo) throws AtaqueNoDisponibleException{
-		this.estado.atacar(ataques.get("Latigo Cepa"), enemigo);
-	}
-	
+
 	public void atacarConChupavidas(Algomon enemigo) throws AtaqueNoDisponibleException{
 		int danioEnemigo = enemigo.recibirAtaque(ataques.get("ChupaVidas"));
 		this.aumentarPuntosDeVidaActuales((int)Math.floor(danioEnemigo*0.3));

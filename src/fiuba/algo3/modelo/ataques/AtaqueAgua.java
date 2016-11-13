@@ -4,8 +4,8 @@ package fiuba.algo3.modelo.ataques;
 public class AtaqueAgua extends Ataque{
 
 
-	public AtaqueAgua(int potencia, int cantidad) {
-		super(potencia, cantidad);
+	public AtaqueAgua(String nombre, int potencia, int cantidad) {
+		super(nombre, potencia, cantidad);
 	}
 
 	@Override

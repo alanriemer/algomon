@@ -9,16 +9,11 @@ public class Jigglypuff extends Algomon{
 	public Jigglypuff(){
 		puntosVida = 130;
 		puntosVidaActuales = 130;
-		Ataque burbuja = new AtaqueAgua(10,15);
-		Ataque canto = new AtaqueNormal(0,6);
+		Ataque burbuja = new AtaqueAgua("Burbuja",10,15);
+		Ataque canto = new AtaqueNormal("Canto",0,6);
 		ataques.put("Burbuja",burbuja);
 		ataques.put("Canto",canto);
 	
-	}
-	
-	public void atacarConBurbuja(Algomon enemigo) throws AtaqueNoDisponibleException{
-		this.estado.atacar(ataques.get("Burbuja"), enemigo);
-		
 	}
 
 	public void atacarConCanto(Algomon enemigo) throws AtaqueNoDisponibleException {

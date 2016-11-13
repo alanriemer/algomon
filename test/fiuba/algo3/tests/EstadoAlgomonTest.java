@@ -16,7 +16,7 @@ public class EstadoAlgomonTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();		
 		Charmander unCharmander = new Charmander();
 		
-		unCharmander.atacarConFogonazo(unBulbasaur);
+		unCharmander.atacarCon("Fogonazo",unBulbasaur);
 		
 		assertEquals(unBulbasaur.estaDormido(),false);
 		assertEquals(unBulbasaur.estaQuemado(),true);
@@ -27,7 +27,7 @@ public class EstadoAlgomonTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();		
 		Chansey unChansey = new Chansey();
 		
-		unChansey.atacarConCanto(unBulbasaur);
+		unChansey.atacarCon("Canto",unBulbasaur);
 		
 		assertEquals(unBulbasaur.estaDormido(),true);
 		assertEquals(unBulbasaur.estaQuemado(),false);
@@ -39,8 +39,8 @@ public class EstadoAlgomonTest {
 		Chansey unChansey = new Chansey();
 		Charmander unCharmander = new Charmander();
 		
-		unCharmander.atacarConFogonazo(unBulbasaur);
-		unChansey.atacarConCanto(unBulbasaur);
+		unCharmander.atacarCon("Fogonazo",unBulbasaur);
+		unChansey.atacarCon("Canto",unBulbasaur);
 		
 		assertEquals(unBulbasaur.estaDormido(),true);
 		//assertEquals(unBulbasaur.estaQuemado(),true);
@@ -51,9 +51,9 @@ public class EstadoAlgomonTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		Charmander unCharmander = new Charmander();
 		
-		unCharmander.atacarConFogonazo(unBulbasaur);
+		unCharmander.atacarCon("Fogonazo",unBulbasaur);
 		int vida = unBulbasaur.getPuntosVidaActuales(); //vidaBulbasaur = 136
-		unBulbasaur.atacarConLatigoCepa(unCharmander);
+		unBulbasaur.atacarCon("Latigo Cepa", unCharmander);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-14);
 	}
@@ -63,7 +63,7 @@ public class EstadoAlgomonTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();		
 		Chansey unChansey = new Chansey();
 		
-		unChansey.atacarConAtaqueRapido(unBulbasaur);
+		unChansey.atacarCon("Ataque rapido", unBulbasaur);
 		
 		assertEquals(unBulbasaur.estaDormido(),false);
 		assertEquals(unBulbasaur.estaQuemado(),false);
@@ -74,13 +74,12 @@ public class EstadoAlgomonTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();		
 		Chansey unChansey = new Chansey();
 		
-		unChansey.atacarConCanto(unBulbasaur);
+		unChansey.atacarCon("Canto",unBulbasaur);
 
-		unBulbasaur.atacarConAtaqueRapido(unChansey);
-		unBulbasaur.atacarConAtaqueRapido(unChansey);
-		unBulbasaur.atacarConAtaqueRapido(unChansey);
-		
-		
+		unBulbasaur.atacarCon("Ataque rapido", unChansey);
+		unBulbasaur.atacarCon("Ataque rapido", unChansey);
+		unBulbasaur.atacarCon("Ataque rapido", unChansey);
+				
 		assertEquals(unBulbasaur.estaDormido(),false);
 		assertEquals(unChansey.getPuntosVidaActuales(), 130);
 	}
@@ -90,13 +89,14 @@ public class EstadoAlgomonTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();		
 		Chansey unChansey = new Chansey();
 		
-		unChansey.atacarConCanto(unBulbasaur);
+		unChansey.atacarCon("Canto",unBulbasaur);
 		//Ataques que realiza mientras duerme y no hacen daño
-		unBulbasaur.atacarConAtaqueRapido(unChansey);
-		unBulbasaur.atacarConAtaqueRapido(unChansey);
-		unBulbasaur.atacarConAtaqueRapido(unChansey);
+		unBulbasaur.atacarCon("Ataque rapido",unChansey);
+		unBulbasaur.atacarCon("Ataque rapido",unChansey);
+		unBulbasaur.atacarCon("Ataque rapido",unChansey);
+
 		//Despierta y realiza ataque con daño
-		unBulbasaur.atacarConAtaqueRapido(unChansey);
+		unBulbasaur.atacarCon("Ataque rapido",unChansey);
 		
 		assertEquals(unBulbasaur.estaDormido(),false);
 		assertEquals(unChansey.getPuntosVidaActuales(), 120);

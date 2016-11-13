@@ -18,7 +18,7 @@ public class SquirtleTest {
 		Squirtle otroSquirtle = new Squirtle();
 		
 		int vida = otroSquirtle.getPuntosVidaActuales();
-		unSquirtle.atacarConBurbuja(otroSquirtle);
+		unSquirtle.atacarCon("Burbuja",otroSquirtle);
 		
 		assertEquals(otroSquirtle.getPuntosVidaActuales(),vida-5);
 	}
@@ -29,7 +29,7 @@ public class SquirtleTest {
 		Squirtle otroSquirtle = new Squirtle();
 		
 		int vida = otroSquirtle.getPuntosVidaActuales();
-		unSquirtle.atacarConCanionDeAgua(otroSquirtle);
+		unSquirtle.atacarCon("Canion de Agua",otroSquirtle);
 		
 		assertEquals(otroSquirtle.getPuntosVidaActuales(),vida-10);
 	}
@@ -40,7 +40,7 @@ public class SquirtleTest {
 		Squirtle otroSquirtle = new Squirtle();
 		
 		int vida = otroSquirtle.getPuntosVidaActuales();
-		unSquirtle.atacarConAtaqueRapido(otroSquirtle);
+		unSquirtle.atacarCon("Ataque rapido",otroSquirtle);
 		
 		assertEquals(otroSquirtle.getPuntosVidaActuales(),vida-10);
 	}
@@ -51,7 +51,7 @@ public class SquirtleTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVidaActuales();
-		unSquirtle.atacarConBurbuja(unCharmander);
+		unSquirtle.atacarCon("Burbuja",unCharmander);
 		
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-20);
 	}
@@ -62,7 +62,7 @@ public class SquirtleTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVidaActuales();
-		unSquirtle.atacarConCanionDeAgua(unCharmander);
+		unSquirtle.atacarCon("Canion de Agua",unCharmander);
 		
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-40);
 	}
@@ -73,7 +73,7 @@ public class SquirtleTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVidaActuales();
-		unSquirtle.atacarConAtaqueRapido(unCharmander);		
+		unSquirtle.atacarCon("Ataque rapido", unCharmander);		
 		
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-10);
 	}
@@ -84,7 +84,7 @@ public class SquirtleTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unSquirtle.atacarConBurbuja(unBulbasaur);
+		unSquirtle.atacarCon("Burbuja", unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-5);
 	}
@@ -95,7 +95,7 @@ public class SquirtleTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unSquirtle.atacarConCanionDeAgua(unBulbasaur);
+		unSquirtle.atacarCon("Canion de Agua",unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-10);
 	}
@@ -106,7 +106,7 @@ public class SquirtleTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unSquirtle.atacarConAtaqueRapido(unBulbasaur);
+		unSquirtle.atacarCon("Ataque rapido",unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-10);
 	}	
@@ -117,7 +117,7 @@ public class SquirtleTest {
 		Rattata unRattata = new Rattata();
 		
 		int vida = unRattata.getPuntosVidaActuales();
-		unSquirtle.atacarConBurbuja(unRattata);
+		unSquirtle.atacarCon("Burbuja", unRattata);
 		
 		assertEquals(unRattata.getPuntosVidaActuales(),vida-10);
 	}
@@ -128,7 +128,7 @@ public class SquirtleTest {
 		Rattata unRattata = new Rattata();
 		
 		int vida = unRattata.getPuntosVidaActuales();
-		unSquirtle.atacarConCanionDeAgua(unRattata);
+		unSquirtle.atacarCon("Canion de Agua",unRattata);
 		
 		assertEquals(unRattata.getPuntosVidaActuales(),vida-20);
 	}
@@ -139,7 +139,7 @@ public class SquirtleTest {
 		Rattata unRattata = new Rattata();
 		
 		int vida = unRattata.getPuntosVidaActuales();
-		unSquirtle.atacarConAtaqueRapido(unRattata);
+		unSquirtle.atacarCon("Ataque rapido",unRattata);
 		
 		assertEquals(unRattata.getPuntosVidaActuales(),vida-10);
 	}
@@ -150,7 +150,7 @@ public class SquirtleTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unSquirtle.atacarConAtaqueRapido(unBulbasaur);
+		unSquirtle.atacarCon("Ataque rapido",unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-10);
 	}

@@ -15,7 +15,7 @@ public class RattataTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unRattata.atacarConFogonazo(unBulbasaur);
+		unRattata.atacarCon("Fogonazo",unBulbasaur);
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-4);
 	}
 	
@@ -25,7 +25,7 @@ public class RattataTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unRattata.atacarConBurbuja(unBulbasaur);
+		unRattata.atacarCon("Burbuja",unBulbasaur);
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-5);
 	}
 	
@@ -36,7 +36,7 @@ public class RattataTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unRattata.atacarConAtaqueRapido(unBulbasaur);
+		unRattata.atacarCon("Ataque rapido",unBulbasaur);
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-10);
 	}
 	

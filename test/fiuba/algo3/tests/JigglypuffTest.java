@@ -18,7 +18,7 @@ public class JigglypuffTest {
 		Jigglypuff otroJigglypuff = new Jigglypuff();
 		
 		int vida = otroJigglypuff.getPuntosVidaActuales();
-		unJigglypuff.atacarConBurbuja(otroJigglypuff);
+		unJigglypuff.atacarCon("Burbuja",otroJigglypuff);
 		
 		assertEquals(otroJigglypuff.getPuntosVidaActuales(),vida-10);
 	}
@@ -29,7 +29,7 @@ public class JigglypuffTest {
 		Squirtle unSquirtle = new Squirtle();
 		
 		int vida = unSquirtle.getPuntosVidaActuales();
-		unJigglypuff.atacarConBurbuja(unSquirtle);
+		unJigglypuff.atacarCon("Burbuja",unSquirtle);
 		
 		assertEquals(unSquirtle.getPuntosVidaActuales(),vida-5);
 	}
@@ -40,7 +40,7 @@ public class JigglypuffTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVidaActuales();
-		unJigglypuff.atacarConBurbuja(unCharmander);
+		unJigglypuff.atacarCon("Burbuja",unCharmander);
 		
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-20);
 	}
@@ -51,7 +51,7 @@ public class JigglypuffTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unJigglypuff.atacarConBurbuja(unBulbasaur);
+		unJigglypuff.atacarCon("Burbuja",unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-5);
 	}
@@ -62,7 +62,7 @@ public class JigglypuffTest {
 		Jigglypuff otroJigglypuff = new Jigglypuff();
 		
 		int vida = otroJigglypuff.getPuntosVidaActuales();
-		unJigglypuff.atacarConAtaqueRapido(otroJigglypuff);
+		unJigglypuff.atacarCon("Ataque rapido",otroJigglypuff);
 		
 		assertEquals(otroJigglypuff.getPuntosVidaActuales(),vida-10);
 	}
@@ -73,7 +73,7 @@ public class JigglypuffTest {
 		Squirtle unSquirtle = new Squirtle();
 		
 		int vida = unSquirtle.getPuntosVidaActuales();
-		unJigglypuff.atacarConAtaqueRapido(unSquirtle);
+		unJigglypuff.atacarCon("Ataque rapido",unSquirtle);
 		
 		assertEquals(unSquirtle.getPuntosVidaActuales(),vida-10);
 	}
@@ -84,7 +84,7 @@ public class JigglypuffTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVidaActuales();
-		unJigglypuff.atacarConAtaqueRapido(unCharmander);
+		unJigglypuff.atacarCon("Ataque rapido",unCharmander);
 		
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-10);
 	}
@@ -95,7 +95,7 @@ public class JigglypuffTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unJigglypuff.atacarConAtaqueRapido(unBulbasaur);
+		unJigglypuff.atacarCon("Ataque rapido",unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-10);
 	}
@@ -104,7 +104,7 @@ public class JigglypuffTest {
 	public void test09JigglypuffAtacaConCantoYElCharmanderQuedaEnEstadoDormido() throws AtaqueNoDisponibleException{
 		Jigglypuff unJigglypuff= new Jigglypuff();
 		Charmander unCharmander = new Charmander();	
-		unJigglypuff.atacarConCanto(unCharmander);
+		unJigglypuff.atacarCon("Canto",unCharmander);
 		assertEquals(unCharmander.estaDormido(), true);
 	}
 

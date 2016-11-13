@@ -14,13 +14,14 @@ public abstract class Algomon {
 	protected HashMap<String,Ataque> ataques = new HashMap<String,Ataque>();
 	
 	public Algomon(){
-		ataques.put("Ataque rapido",new AtaqueNormal(10,16));
+		ataques.put("Ataque rapido",new AtaqueNormal("Ataque rapido",10,16));
 	}	
 	
 	public int recibirAtaque(Ataque unAtaque) throws AtaqueNoDisponibleException {
 		if (!unAtaque.sePuedeUsarAtaque()){
 			throw new AtaqueNoDisponibleException();
 		}
+		unAtaque.modificarEstado(this);
 		int danio = this.calcularDanio(unAtaque);
 		this.recibirDanio(danio);
 		return danio;
@@ -42,8 +43,8 @@ public abstract class Algomon {
 		else puntosVidaActuales -= danio;
 	}
 	
-	public void atacarConAtaqueRapido(Algomon enemigo) throws AtaqueNoDisponibleException{
-		estado.atacar(ataques.get("Ataque rapido"), enemigo);
+	public void atacarCon(String ataque,Algomon enemigo) throws AtaqueNoDisponibleException{
+		estado.atacar(ataques.get(ataque), enemigo);
 	}
 
 	public void dormir(){

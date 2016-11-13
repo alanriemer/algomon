@@ -18,7 +18,7 @@ public class ChanseyTest {
 		Chansey otroChansey = new Chansey();
 		
 		int vida = otroChansey.getPuntosVidaActuales();
-		unChansey.atacarConLatigoCepa(otroChansey);
+		unChansey.atacarCon("Latigo Cepa",otroChansey);
 		
 		assertEquals(otroChansey.getPuntosVidaActuales(),vida-15);
 	}
@@ -29,7 +29,7 @@ public class ChanseyTest {
 		Squirtle unSquirtle = new Squirtle();
 		
 		int vida = unSquirtle.getPuntosVidaActuales();
-		unChansey.atacarConLatigoCepa(unSquirtle);
+		unChansey.atacarCon("Latigo Cepa",unSquirtle);
 		
 		assertEquals(unSquirtle.getPuntosVidaActuales(),vida-30);
 	}
@@ -40,7 +40,7 @@ public class ChanseyTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVidaActuales();
-		unChansey.atacarConLatigoCepa(unCharmander);
+		unChansey.atacarCon("Latigo Cepa",unCharmander);
 		
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-7);
 	}
@@ -51,7 +51,7 @@ public class ChanseyTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unChansey.atacarConLatigoCepa(unBulbasaur);
+		unChansey.atacarCon("Latigo Cepa",unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-7);
 	}
@@ -62,7 +62,7 @@ public class ChanseyTest {
 		Chansey otroChansey = new Chansey();
 		
 		int vida = otroChansey.getPuntosVidaActuales();
-		unChansey.atacarConAtaqueRapido(otroChansey);
+		unChansey.atacarCon("Ataque rapido",otroChansey);
 		
 		assertEquals(otroChansey.getPuntosVidaActuales(),vida-10);
 	}
@@ -73,7 +73,7 @@ public class ChanseyTest {
 		Squirtle unSquirtle = new Squirtle();
 		
 		int vida = unSquirtle.getPuntosVidaActuales();
-		unChansey.atacarConAtaqueRapido(unSquirtle);
+		unChansey.atacarCon("Ataque rapido",unSquirtle);
 		
 		assertEquals(unSquirtle.getPuntosVidaActuales(),vida-10);
 	}
@@ -84,7 +84,7 @@ public class ChanseyTest {
 		Charmander unCharmander = new Charmander();
 		
 		int vida = unCharmander.getPuntosVidaActuales();
-		unChansey.atacarConAtaqueRapido(unCharmander);
+		unChansey.atacarCon("Ataque rapido",unCharmander);
 		
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-10);
 	}
@@ -95,7 +95,7 @@ public class ChanseyTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unChansey.atacarConAtaqueRapido(unBulbasaur);
+		unChansey.atacarCon("Ataque rapido",unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida-10);
 	}
@@ -106,7 +106,7 @@ public class ChanseyTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		
 		int vida = unBulbasaur.getPuntosVidaActuales();
-		unChansey.atacarConCanto(unBulbasaur);
+		unChansey.atacarCon("Canto",unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida);
 		assertEquals(unBulbasaur.estaDormido(), true);

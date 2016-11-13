@@ -20,7 +20,7 @@ public class AtaquesConCambioDeEstado {
 		Jigglypuff unJigglypuff= new Jigglypuff();
 		Charmander unCharmander = new Charmander();	
 		unJigglypuff.atacarConCanto(unCharmander);
-		unCharmander.atacarConAtaqueRapido(unJigglypuff);
+		unCharmander.atacarCon("Ataque rapido",unJigglypuff);
 		assertEquals(unJigglypuff.getPuntosVida(), unJigglypuff.getPuntosVidaActuales());
 	}
 	
@@ -30,7 +30,7 @@ public class AtaquesConCambioDeEstado {
 		Charmander unCharmander = new Charmander();
 		int vidaCharmander = unCharmander.getPuntosVidaActuales();
 		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
-		unBulbasaur.atacarConChupavidas(unCharmander);
+		unBulbasaur.atacarCon("ChupaVidas",unCharmander);
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur);//Este test está mal en el TP.
 		assertEquals(unCharmander.getPuntosVidaActuales(),vidaCharmander -7);
 	}
@@ -42,7 +42,7 @@ public class AtaquesConCambioDeEstado {
 		
 		int vidaSquirtle = unSquirtle.getPuntosVidaActuales();
 		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
-		unSquirtle.atacarConAtaqueRapido(unBulbasaur);
+		unSquirtle.atacarCon("Ataque rapido",unBulbasaur);
 		unBulbasaur.atacarConChupavidas(unSquirtle);
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur -1);//Este test está mal en el TP.
 		assertEquals(unSquirtle.getPuntosVidaActuales(),vidaSquirtle -30);
@@ -54,7 +54,7 @@ public class AtaquesConCambioDeEstado {
 		Rattata unRattata = new Rattata();
 		
 		int vidaRattata = unRattata.getPuntosVidaActuales();
-		unRattata.atacarConAtaqueRapido(unBulbasaur);
+		unRattata.atacarCon("Ataque rapido",unBulbasaur);
 		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
 		unBulbasaur.atacarConChupavidas(unRattata);
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur + 4);
@@ -67,7 +67,7 @@ public class AtaquesConCambioDeEstado {
 		Jigglypuff unJigglypuff= new Jigglypuff();
 		Bulbasaur unBulbasaur = new Bulbasaur();	
 		unJigglypuff.atacarConCanto(unBulbasaur);
-		unBulbasaur.atacarConAtaqueRapido(unJigglypuff);
+		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		assertEquals(unJigglypuff.getPuntosVida(), unJigglypuff.getPuntosVidaActuales());
 	}
 	
@@ -76,7 +76,7 @@ public class AtaquesConCambioDeEstado {
 		Bulbasaur unBulbasaur = new Bulbasaur();	
 		unJigglypuff.atacarConCanto(unBulbasaur);
 		int vidaJigglypuff = unJigglypuff.getPuntosVidaActuales();
-		unBulbasaur.atacarConAtaqueRapido(unJigglypuff);
+		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		unBulbasaur.despertar();
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaJigglypuff + 10);
 	}	
