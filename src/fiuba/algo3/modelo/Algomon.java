@@ -44,11 +44,19 @@ public abstract class Algomon {
 	public void atacarConAtaqueRapido(Algomon enemigo) throws AtaqueNoDisponibleException{
 		estado.atacar(ataques.get("Ataque rapido"), enemigo);
 	}
-	
+	/*
 	public void nuevoEstado(Estado nuevoEstado){
 		this.estado = nuevoEstado;
+	}*/	
+	public void dormir(){
+		this.estado = new EstadoDormidoAlgomon(this);
+	}
+	public void quemar(){
+		this.estado = new EstadoQuemadoAlgomon(this);
+	}
+	public void despertar() {
+		this.estado = new EstadoNormalAlgomon(this);
 	}	
-	
 	public boolean estaDormido(){
 		return estado.estaDormido();
 	}
@@ -56,4 +64,6 @@ public abstract class Algomon {
 	public boolean estaQuemado(){
 		return estado.estaQuemado();
 	}
+
+
 }

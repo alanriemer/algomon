@@ -22,7 +22,7 @@ public class EstadoDormidoQuemadoAlgomon implements Estado {
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
 		turnos++;
 		if (turnos == 3) {
-			algomon.nuevoEstado(new EstadoQuemadoAlgomon(algomon));
+			algomon.quemar();
 		}
 //		throw new AtaqueNoDisponibleException();
 	}

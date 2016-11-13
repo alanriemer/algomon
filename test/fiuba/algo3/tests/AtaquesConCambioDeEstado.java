@@ -7,7 +7,6 @@ import org.junit.Test;
 
 import fiuba.algo3.modelo.Bulbasaur;
 import fiuba.algo3.modelo.Charmander;
-import fiuba.algo3.modelo.EstadoNormalAlgomon;
 import fiuba.algo3.modelo.Jigglypuff;
 //import fiuba.algo3.modelo.Jigglypuff;
 import fiuba.algo3.modelo.Rattata;
@@ -78,8 +77,7 @@ public class AtaquesConCambioDeEstado {
 		unJigglypuff.atacarConCanto(unBulbasaur);
 		int vidaJigglypuff = unJigglypuff.getPuntosVidaActuales();
 		unBulbasaur.atacarConAtaqueRapido(unJigglypuff);
-		EstadoNormalAlgomon estadoNuevo= new EstadoNormalAlgomon(unBulbasaur);
-		unBulbasaur.nuevoEstado(estadoNuevo);
+		unBulbasaur.despertar();
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaJigglypuff + 10);
 	}	
 

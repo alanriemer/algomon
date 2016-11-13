@@ -23,7 +23,7 @@ public class Charmander extends Algomon{
 	
 	public void atacarConFogonazo(Algomon enemigo) throws AtaqueNoDisponibleException{
 		this.estado.atacar(ataques.get("Fogonazo"), enemigo);
-		enemigo.nuevoEstado(new EstadoQuemadoAlgomon(enemigo));
+		enemigo.quemar();
 	}
 
 	@Override
