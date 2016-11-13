@@ -70,7 +70,7 @@ public class EstadoAlgomonTest {
 	}
 	
 	@Test
-	public void test06BulbasaurNoHaceDañoPor3TurnosAlEstarDormido() throws AtaqueNoDisponibleException{
+	public void test06BulbasaurNoHaceDanioPor3TurnosAlEstarDormido() throws AtaqueNoDisponibleException{
 		Bulbasaur unBulbasaur = new Bulbasaur();		
 		Chansey unChansey = new Chansey();
 		
