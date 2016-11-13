@@ -31,4 +31,9 @@ public class EstadoDormidoQuemadoAlgomon implements Estado {
 	public boolean estaQuemado() {
 		return true;
 	}
+
+	@Override
+	public boolean estaDormidoQuemado() {
+		return true;
+	}
 }

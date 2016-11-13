@@ -31,4 +31,10 @@ public class EstadoDormidoAlgomon implements Estado{
 	public boolean estaQuemado() {
 		return false;
 	}
+
+	@Override
+	public boolean estaDormidoQuemado() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

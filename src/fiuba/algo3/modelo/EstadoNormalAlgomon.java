@@ -22,4 +22,9 @@ public class EstadoNormalAlgomon implements Estado{
 	public void atacar(Ataque ataque, Algomon enemigo) throws AtaqueNoDisponibleException {
 		enemigo.recibirAtaque(ataque);
 	}
+
+	@Override
+	public boolean estaDormidoQuemado() {
+		return false;
+	}
 }

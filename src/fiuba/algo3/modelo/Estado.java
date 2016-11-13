@@ -7,4 +7,5 @@ public interface Estado {
 	public abstract boolean estaDormido();
 	public abstract boolean estaQuemado();
 	public abstract void atacar(Ataque ataque, Algomon enemigo) throws AtaqueNoDisponibleException;
+	public abstract boolean estaDormidoQuemado();
 }
