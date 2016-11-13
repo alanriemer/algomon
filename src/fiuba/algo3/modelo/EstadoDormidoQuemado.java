@@ -14,8 +14,13 @@ public class EstadoDormidoQuemado implements Estado {
 		}
 	}
 	
+	private void efecto() {
+		this.algomon.recibirDanio((int)Math.floor(this.algomon.getPuntosVida()*0.1));
+	}
+	
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
 		turnos++;
+		this.efecto();
 		if (turnos == 3) {
 			algomon.despertar();
 		}
