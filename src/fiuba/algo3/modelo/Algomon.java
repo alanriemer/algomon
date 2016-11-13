@@ -24,6 +24,11 @@ public abstract class Algomon {
 		this.recibirDanio(danio);
 		return danio;
 	}
+	public void aumentarPuntosDeVidaActuales(int puntos){
+		if(this.puntosVidaActuales + puntos > puntosVida)
+			this.puntosVidaActuales = puntosVida;
+		else this.puntosVidaActuales += puntos;
+	}
 	
 	public abstract int calcularDanio(Ataque unAtaque);
 	

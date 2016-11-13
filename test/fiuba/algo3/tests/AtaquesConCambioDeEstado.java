@@ -43,7 +43,7 @@ public class AtaquesConCambioDeEstado {
 		int vidaSquirtle = unSquirtle.getPuntosVidaActuales();
 		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
 		unSquirtle.atacarCon("Ataque rapido",unBulbasaur);
-		unBulbasaur.atacarConChupavidas(unSquirtle);
+		unBulbasaur.atacarCon("ChupaVidas",unSquirtle);
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur -1);//Este test está mal en el TP.
 		assertEquals(unSquirtle.getPuntosVidaActuales(),vidaSquirtle -30);
 	}	
@@ -56,7 +56,7 @@ public class AtaquesConCambioDeEstado {
 		int vidaRattata = unRattata.getPuntosVidaActuales();
 		unRattata.atacarCon("Ataque rapido",unBulbasaur);
 		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
-		unBulbasaur.atacarConChupavidas(unRattata);
+		unBulbasaur.atacarCon("ChupaVidas",unRattata);
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur + 4);
 		assertEquals(unRattata.getPuntosVidaActuales(),vidaRattata -15);		
 	}

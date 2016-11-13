@@ -118,7 +118,7 @@ public class BulbasaurTest {
 		
 		int vidaSquirtle = unSquirtle.getPuntosVidaActuales();
 		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
-		unBulbasaur.atacarConChupavidas(unSquirtle);
+		unBulbasaur.atacarCon("ChupaVidas",unSquirtle);
 				
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaBulbasaur);
 		assertEquals(unSquirtle.getPuntosVidaActuales(),vidaSquirtle-30);
@@ -132,7 +132,7 @@ public class BulbasaurTest {
 		otroBulbasaur.atacarCon("Ataque rapido",unBulbasaur);
 		int vidaOtroBulbasaur = otroBulbasaur.getPuntosVidaActuales();
 		int vidaBulbasaur = unBulbasaur.getPuntosVidaActuales();
-		unBulbasaur.atacarConChupavidas(otroBulbasaur);
+		unBulbasaur.atacarCon("ChupaVidas",otroBulbasaur);
 				
 		int nuevaVidaOtroBulbasaur = otroBulbasaur.getPuntosVidaActuales();
 		int puntosVidaASumar = (int)Math.floor((vidaOtroBulbasaur - nuevaVidaOtroBulbasaur)*0.30);
