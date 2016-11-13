@@ -3,11 +3,11 @@ package fiuba.algo3.modelo;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
-public class EstadoQuemadoAlgomon implements Estado {
+public class EstadoQuemado implements Estado {
 
 	Algomon pokemon;
 	
-	public EstadoQuemadoAlgomon(Algomon poke){
+	public EstadoQuemado(Algomon poke){
 		this.pokemon = poke;
 	}
 	

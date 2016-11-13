@@ -3,11 +3,11 @@ package fiuba.algo3.modelo;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
-public class EstadoNormalAlgomon implements Estado{
+public class EstadoNormal implements Estado{
 	
 	Algomon algomon;
 	
-	public EstadoNormalAlgomon(Algomon actual){
+	public EstadoNormal(Algomon actual){
 		algomon = actual;
 	}
 	

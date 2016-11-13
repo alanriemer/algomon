@@ -3,18 +3,18 @@ package fiuba.algo3.modelo;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
-public class EstadoDormidoQuemadoAlgomon implements Estado {
+
+
+public class EstadoDormido implements Estado{
+
 	Algomon algomon;
 	int turnos;
 	
-	public EstadoDormidoQuemadoAlgomon(Algomon actual){
+	public EstadoDormido(Algomon actual){
 		algomon = actual;
-		if (actual.estaDormido()){
-			
-		}
+		turnos = 0;
 	}
-	
-	@Override
+
 	public boolean estaDormido(){
 		return true;
 	}
@@ -22,18 +22,19 @@ public class EstadoDormidoQuemadoAlgomon implements Estado {
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
 		turnos++;
 		if (turnos == 3) {
-			algomon.quemar();
+			algomon.despertar();
 		}
 //		throw new AtaqueNoDisponibleException();
 	}
 
 	@Override
 	public boolean estaQuemado() {
-		return true;
+		return false;
 	}
 
 	@Override
 	public boolean estaDormidoQuemado() {
-		return true;
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
