@@ -1,7 +1,8 @@
 package fiuba.algo3.modelo;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Set;
+import java.util.List;
 
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueNormal;
@@ -74,8 +75,9 @@ public abstract class Algomon {
 		return estado.estaQuemado();
 	}
 
-	public Set<String> ataquesDisponibles() {
-		return this.ataques.keySet();
+	public List<String> ataquesDisponibles() {
+		return new ArrayList<String>(this.ataques.keySet());
+
 	}
 
 

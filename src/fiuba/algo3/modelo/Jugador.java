@@ -3,6 +3,8 @@ package fiuba.algo3.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
+
 
 public class Jugador {
 	List<Algomon> misAlgomones;
@@ -18,7 +20,11 @@ public class Jugador {
 	public List<Algomon> getAlgomones(){
 		return misAlgomones;
 	}
-	public Iterable<String> ataquesDisponibles() {
+	public List<String> ataquesDisponibles() {
 		return this.algomonActual().ataquesDisponibles();
+	}
+	public void atacarCon(String ataque, Algomon enemigo) throws AtaqueNoDisponibleException {
+		this.algomonActual().atacarCon(ataque, enemigo);
+		
 	}
 }
