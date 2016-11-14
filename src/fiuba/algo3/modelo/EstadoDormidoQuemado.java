@@ -11,14 +11,14 @@ public class EstadoDormidoQuemado implements Estado {
 		algomon = actual;
 		if (actual.estaDormido()){
 			turnos = actual.turnos();
-		}
+		}else turnos = 0;
 	}
 	
 	private void efecto() {
 		this.algomon.recibirDanio((int)Math.floor(this.algomon.getPuntosVida()*0.1));
 	}
 	
-	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
+	public void atacar(Ataque ataque, Algomon enemigo) throws AtaqueNoDisponibleException {
 		turnos++;
 		this.efecto();
 		if (turnos == 3) {
@@ -35,6 +35,7 @@ public class EstadoDormidoQuemado implements Estado {
 	public boolean estaDormidoQuemado() {
 		return true;
 	}
+	
 	@Override
 	public boolean estaDormido(){
 		return true;
@@ -42,7 +43,7 @@ public class EstadoDormidoQuemado implements Estado {
 
 	@Override
 	public int turnos() {
-		return 0;
+		return turnos;
 	}
 
 }
