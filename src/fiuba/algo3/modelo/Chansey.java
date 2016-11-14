@@ -8,8 +8,9 @@ public class Chansey extends Algomon {
 	public Chansey (){
 		puntosVida = 130;
 		puntosVidaActuales = 130;
-		Ataque latigoCepa = new AtaquePlanta("Latigo Cepa",15,10);
-		Ataque canto = new AtaqueNormal("Canto",0,6);
+		Ataque latigoCepa = new AtaquePlanta(15,10);
+		Ataque canto = new AtaqueNormal(0,6);
+		canto.puedeDormir();
 		ataques.put("Latigo Cepa",latigoCepa);
 		ataques.put("Canto",canto);
 	}

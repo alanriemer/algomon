@@ -15,15 +15,10 @@ public abstract class Algomon {
 	protected HashMap<String,Ataque> ataques = new HashMap<String,Ataque>();
 	
 	public Algomon(){
-		ataques.put("Ataque rapido",new AtaqueNormal("Ataque rapido",10,16));
+		ataques.put("Ataque rapido",new AtaqueNormal(10,16));
 	}	
 	
-	public int recibirAtaque(Ataque unAtaque){
-		unAtaque.modificarEstado(this);
-		int danio = this.calcularDanio(unAtaque);
-		this.recibirDanio(danio);
-		return danio;
-	}
+
 	public void aumentarPuntosDeVidaActuales(int puntos){
 		if(this.puntosVidaActuales + puntos > puntosVida)
 			this.puntosVidaActuales = puntosVida;

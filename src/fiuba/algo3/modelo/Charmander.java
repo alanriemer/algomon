@@ -8,8 +8,9 @@ public class Charmander extends Algomon{
 	public Charmander(){
 		puntosVida = 170;
 		puntosVidaActuales = 170;
-		Ataque brasas = new AtaqueFuego("Brasas",16,10);
-		Ataque fogonazo = new AtaqueFuego("Fogonazo",2,4);
+		Ataque brasas = new AtaqueFuego(16,10);
+		Ataque fogonazo = new AtaqueFuego(2,4);
+		fogonazo.puedeQuemar();
 		ataques.put("Brasas",brasas);
 		ataques.put("Fogonazo",fogonazo);
 

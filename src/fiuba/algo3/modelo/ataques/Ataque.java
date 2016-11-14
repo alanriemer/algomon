@@ -5,33 +5,50 @@ import fiuba.algo3.modelo.Algomon;
 
 
 
-public abstract class Ataque {
-	String nombre; 
+public abstract class Ataque { 
 	int potencia;
 	int cantidad;
+	Efecto efecto;
 
-	public Ataque(String nombre,int potencia, int cantidad){
+	public Ataque(int potencia, int cantidad){
 		this.potencia = potencia;
 		this.cantidad = cantidad;
-		this.nombre = nombre;
 	}
-	public void modificarEstado(Algomon enemigo) {
-		if (this.getNombre() == "Canto") enemigo.dormir();
-		if (this.getNombre() == "Fogonazo") enemigo.quemar();		
-	}	
-	public String getNombre(){
-		return this.nombre;
-	}
+	
 	public abstract int atacarPlanta();
 	public abstract int atacarFuego();
 	public abstract int atacarAgua();
 	public abstract int atacarNormal();
+	
 	public boolean sePuedeUsarAtaque(){
 		return (cantidad > 0);
 	}
-
 	
+	public int atacar(Algomon pokemon){
+		if(this.tieneEfecto())
+			this.efecto.aplicarEfecto(pokemon);
+		int danio = pokemon.calcularDanio(this);
+		pokemon.recibirDanio(danio);
+		return danio;
+	}
 
+	public void puedeDormir(){
+		this.efecto = new efectoDormir();
+	}
+	
+	public void puedeChuparVida(Ataque unAtaque, Algomon pokemon){
+		this.efecto = new efectoChupaVidas(unAtaque, pokemon);
+	}
+	
+	public void puedeQuemar(){
+		this.efecto = new efectoQuemar();
+	}
+	
+	public boolean tieneEfecto(){
+		return this.efecto != null;
+	}
+	
+	
 
 
 	

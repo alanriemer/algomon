@@ -16,10 +16,7 @@ public class EstadoQuemado implements Estado {
 	}
 	
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
-		int danioEnemigo = enemigo.recibirAtaque(ataque);
-		if (ataque.getNombre() == "ChupaVidas"){
-			algomon.aumentarPuntosDeVidaActuales((int)Math.floor(danioEnemigo*0.3));
-		}
+		ataque.atacar(enemigo);
 		this.efecto();
 	}
 
