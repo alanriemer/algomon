@@ -131,6 +131,7 @@ public class EstadoAlgomonTest {
 		Charmander unCharmander = new Charmander();
 		Chansey unChansey = new Chansey();
 		
+		assertEquals(unBulbasaur.estaDormidoQuemado(),false);
 		unChansey.atacarCon("Canto",unBulbasaur);			
 		unBulbasaur.atacarCon("Ataque rapido",unChansey);
 		unBulbasaur.atacarCon("Ataque rapido",unChansey);
@@ -138,6 +139,7 @@ public class EstadoAlgomonTest {
 		assertEquals(unBulbasaur.estaDormidoQuemado(),true);
 		int vidaAntes = unBulbasaur.getPuntosVidaActuales();
 		unBulbasaur.atacarCon("Latigo Cepa",unChansey);
+		assertEquals(unBulbasaur.estaDormidoQuemado(),false);
 		int vidaDespues = unBulbasaur.getPuntosVidaActuales();
 		//14 es el 10% de la vida de Bulbasaur (140)
 		assertEquals(vidaDespues, vidaAntes-14);
