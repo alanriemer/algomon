@@ -12,16 +12,17 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public class Jugador {
 	List<Algomon> misAlgomones;
 	ContenedorElementos contenedorDeElementos;
-
+	Algomon activo;
 	public Jugador(){
 		this.misAlgomones = new ArrayList<Algomon>();
 		this.contenedorDeElementos = new ContenedorElementos();
 	}
 	public void agregarAlgomon(Algomon algomon) {
 		this.misAlgomones.add(algomon);
+		activo = misAlgomones.get(0);
 	}
 	public Algomon algomonActual() {
-		return misAlgomones.get(0);
+		return this.activo;
 	}
 	public List<Algomon> getAlgomones(){
 		return misAlgomones;
