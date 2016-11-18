@@ -15,50 +15,54 @@ public class ElementosTest {
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unCharmander);
 		int vida = unCharmander.getPuntosVidaActuales();
 		unSquirtle.atacarCon("Burbuja",unCharmander);
-		unJugador.usarElemento(unJugador.sacarPocion(), unCharmander);
+		unJugador.usarElemento(unJugador.sacarPocion());
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida);
 	}
-	
+
 	@Test
 	public void test02ChamanderEstaDebilitado40puntosYseCura40PuntosDeVidaConUnaSuperPocion() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unCharmander);
 		int vida = unCharmander.getPuntosVidaActuales();
 		unSquirtle.atacarCon("Burbuja",unCharmander);
 		unSquirtle.atacarCon("Burbuja",unCharmander);
-		unJugador.usarElemento(unJugador.sacarSuperPocion(), unCharmander);
+		unJugador.usarElemento(unJugador.sacarSuperPocion());
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida);
 	}
-	
+
 	@Test
 	public void test03ChamanderEstaDebilitado60puntosYseCura60PuntosDeVidaConUnaSuperPocionYunaPocion() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unCharmander);
 		int vida = unCharmander.getPuntosVidaActuales();
 		unSquirtle.atacarCon("Burbuja",unCharmander);
 		unSquirtle.atacarCon("Burbuja",unCharmander);
 		unSquirtle.atacarCon("Burbuja",unCharmander);
-		unJugador.usarElemento(unJugador.sacarSuperPocion(), unCharmander);
-		unJugador.usarElemento(unJugador.sacarPocion(), unCharmander);
+		unJugador.usarElemento(unJugador.sacarSuperPocion());
+		unJugador.usarElemento(unJugador.sacarPocion());
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida);
 	}
-	
-	
+
+
 	@Test
 	public void test04ChamanderEstaDebilitado40puntosYseCura20PuntosDeVidaConUnaPocion() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unCharmander);
 		int vida = unCharmander.getPuntosVidaActuales();
 		unSquirtle.atacarCon("Burbuja",unCharmander);
 		unSquirtle.atacarCon("Burbuja",unCharmander);
-		unJugador.usarElemento(unJugador.sacarPocion(), unCharmander);
+		unJugador.usarElemento(unJugador.sacarPocion());
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-20);
 	}
-	
-	
+
+
 }
