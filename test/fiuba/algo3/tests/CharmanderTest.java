@@ -4,11 +4,11 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Bulbasaur;
-import fiuba.algo3.modelo.Squirtle;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
-import fiuba.algo3.modelo.Rattata;
-import fiuba.algo3.modelo.Charmander;
+import fiuba.algo3.modelo.algomones.Bulbasaur;
+import fiuba.algo3.modelo.algomones.Charmander;
+import fiuba.algo3.modelo.algomones.Rattata;
+import fiuba.algo3.modelo.algomones.Squirtle;
 
 public class CharmanderTest {
 	

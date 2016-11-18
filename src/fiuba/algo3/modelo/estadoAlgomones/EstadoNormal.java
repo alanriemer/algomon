@@ -1,5 +1,6 @@
-package fiuba.algo3.modelo;
+package fiuba.algo3.modelo.estadoAlgomones;
 
+import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 

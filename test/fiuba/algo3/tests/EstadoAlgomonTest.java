@@ -4,9 +4,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Bulbasaur;
-import fiuba.algo3.modelo.Chansey;
-import fiuba.algo3.modelo.Charmander;
+import fiuba.algo3.modelo.algomones.Bulbasaur;
+import fiuba.algo3.modelo.algomones.Chansey;
+import fiuba.algo3.modelo.algomones.Charmander;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class EstadoAlgomonTest {

@@ -7,11 +7,11 @@ import  java.util.List;
 
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Algomon;
-import fiuba.algo3.modelo.Bulbasaur;
-import fiuba.algo3.modelo.Charmander;
 import fiuba.algo3.modelo.Jugador;
-import fiuba.algo3.modelo.Squirtle;
+import fiuba.algo3.modelo.algomones.Algomon;
+import fiuba.algo3.modelo.algomones.Bulbasaur;
+import fiuba.algo3.modelo.algomones.Charmander;
+import fiuba.algo3.modelo.algomones.Squirtle;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class JugadorTest {

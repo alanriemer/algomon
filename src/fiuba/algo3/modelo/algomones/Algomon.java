@@ -1,4 +1,4 @@
-package fiuba.algo3.modelo;
+package fiuba.algo3.modelo.algomones;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,6 +6,11 @@ import java.util.List;
 
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueNormal;
+import fiuba.algo3.modelo.estadoAlgomones.Estado;
+import fiuba.algo3.modelo.estadoAlgomones.EstadoDormido;
+import fiuba.algo3.modelo.estadoAlgomones.EstadoDormidoQuemado;
+import fiuba.algo3.modelo.estadoAlgomones.EstadoNormal;
+import fiuba.algo3.modelo.estadoAlgomones.EstadoQuemado;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public abstract class Algomon {

@@ -1,4 +1,4 @@
-package fiuba.algo3.modelo;
+package fiuba.algo3.modelo.algomones;
 
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaquePlanta;

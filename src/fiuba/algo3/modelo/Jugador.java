@@ -3,6 +3,9 @@ package fiuba.algo3.modelo;
 import java.util.ArrayList; 
 import java.util.List;
 
+import fiuba.algo3.modelo.algomones.Algomon;
+import fiuba.algo3.modelo.elementos.ContenedorElementos;
+import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 

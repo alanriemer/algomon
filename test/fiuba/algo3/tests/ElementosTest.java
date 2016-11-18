@@ -3,9 +3,9 @@ package fiuba.algo3.tests;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-import fiuba.algo3.modelo.Charmander;
 import fiuba.algo3.modelo.Jugador;
-import fiuba.algo3.modelo.Squirtle;
+import fiuba.algo3.modelo.algomones.Charmander;
+import fiuba.algo3.modelo.algomones.Squirtle;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class ElementosTest {
