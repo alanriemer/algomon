@@ -101,7 +101,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test08JigglypuffUsa2VecesCantoyUsandoUnaVitaminaRestauraLos2Ataques() throws AtaqueNoDisponibleException{
+	public void test08JigglypuffUsa2VecesCantoyUsandoUnaVitaminaRestauraLos2AtaquesCanto() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
@@ -112,4 +112,43 @@ public class ElementosTest {
 		assertEquals(unJigglypuff.cantidadAtaquesDisponibles("Canto"), 6);
 	}
 
+	@Test
+	public void test09igglypuffUsaCantoyUsandoUnaVitaminaRestaura1AtaqueCantoYaQueNoPuedePasarElMaximo() throws AtaqueNoDisponibleException{
+		Charmander unCharmander = new Charmander();
+		Jigglypuff unJigglypuff = new Jigglypuff();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unJigglypuff);
+		unJigglypuff.atacarCon("Canto", unCharmander);
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		assertEquals(unJigglypuff.cantidadAtaquesDisponibles("Canto"), 6);
+	}
+
+	@Test
+	public void test10CharmanderSeQuedaSinFogonazoYRestaura2UsandoVitamina() throws AtaqueNoDisponibleException{
+		Charmander unCharmander = new Charmander();
+		Jigglypuff unJigglypuff = new Jigglypuff();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unCharmander);
+		unCharmander.atacarCon("Fogonazo", unJigglypuff);
+		unCharmander.atacarCon("Fogonazo", unJigglypuff);
+		unCharmander.atacarCon("Fogonazo", unJigglypuff);
+		unCharmander.atacarCon("Fogonazo", unJigglypuff);
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		assertEquals(unCharmander.cantidadAtaquesDisponibles("Fogonazo"), 2);
+	}
+	
+	@Test
+	public void test11CharmanderUsa2FogonazosYAtaquesRapidosYSeRestauranUsandoVitamina() throws AtaqueNoDisponibleException{
+		Charmander unCharmander = new Charmander();
+		Jigglypuff unJigglypuff = new Jigglypuff();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unCharmander);
+		unCharmander.atacarCon("Fogonazo", unJigglypuff);
+		unCharmander.atacarCon("Fogonazo", unJigglypuff);
+		unCharmander.atacarCon("Ataque rapido", unJigglypuff);
+		unCharmander.atacarCon("Ataque rapido", unJigglypuff);
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		assertEquals(unCharmander.cantidadAtaquesDisponibles("Fogonazo"), 4);
+		assertEquals(unCharmander.cantidadAtaquesDisponibles("Ataque rapido"), 16);
+	}
 }
