@@ -43,4 +43,11 @@ public class Jugador {
 	public Elemento sacarSuperPocion() {
 		return contenedorDeElementos.sacarSuperPocion();
 	}
+	public void cambiarAlgomon(Algomon algomon) {
+		if (this.misAlgomones.contains(algomon)){
+			//Lanza excepcion
+		}
+		this.activo = algomon;
+
+	}
 }
