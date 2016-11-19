@@ -12,6 +12,7 @@ import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.algomones.Bulbasaur;
 import fiuba.algo3.modelo.algomones.Charmander;
 import fiuba.algo3.modelo.algomones.Squirtle;
+import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class JugadorTest {
@@ -51,7 +52,7 @@ public class JugadorTest {
 
 	}
 	@Test
-	public void test04JugadorCambiaAlgomonActivo() throws AtaqueNoDisponibleException{
+	public void test04JugadorCambiaAlgomonActivo() throws AtaqueNoDisponibleException, AlgomonInvalidoException{
 		Jugador unJugador = new Jugador();
 		Algomon unBulbasaur = new Bulbasaur();
 		Algomon unCharmander = new Charmander();

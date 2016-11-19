@@ -6,6 +6,7 @@ import java.util.List;
 import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.elementos.ContenedorElementos;
 import fiuba.algo3.modelo.elementos.Elemento;
+import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 
@@ -43,9 +44,9 @@ public class Jugador {
 	public Elemento sacarSuperPocion() {
 		return contenedorDeElementos.sacarSuperPocion();
 	}
-	public void cambiarAlgomon(Algomon algomon) {
+	public void cambiarAlgomon(Algomon algomon) throws AlgomonInvalidoException {
 		if (this.misAlgomones.contains(algomon)){
-			//Lanza excepcion
+			throw new AlgomonInvalidoException();
 		}
 		this.activo = algomon;
 
