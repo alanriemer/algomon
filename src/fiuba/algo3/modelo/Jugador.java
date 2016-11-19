@@ -45,7 +45,7 @@ public class Jugador {
 		return contenedorDeElementos.sacarSuperPocion();
 	}
 	public void cambiarAlgomon(Algomon algomon) throws AlgomonInvalidoException {
-		if (this.misAlgomones.contains(algomon)){
+		if (!this.misAlgomones.contains(algomon)){
 			throw new AlgomonInvalidoException();
 		}
 		this.activo = algomon;
