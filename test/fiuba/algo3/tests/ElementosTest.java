@@ -151,4 +151,13 @@ public class ElementosTest {
 		assertEquals(unCharmander.cantidadAtaquesDisponibles("Fogonazo"), 4);
 		assertEquals(unCharmander.cantidadAtaquesDisponibles("Ataque rapido"), 16);
 	}
+	
+	@Test
+	public void test12CharmanderNoUsoAtaquesYUsaVitamina() throws AtaqueNoDisponibleException{
+		Charmander unCharmander = new Charmander();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unCharmander);
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		assertEquals(unCharmander.cantidadAtaquesDisponibles("Fogonazo"), 4);
+	}
 }
