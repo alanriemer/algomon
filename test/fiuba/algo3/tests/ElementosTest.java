@@ -100,5 +100,16 @@ public class ElementosTest {
 		assertEquals(unJigglypuff.estaDormidoQuemado(), false);
 	}
 
+	@Test
+	public void test08JigglypuffUsa2VecesCantoyUsandoUnaVitaminaRestauraLos2Ataques() throws AtaqueNoDisponibleException{
+		Charmander unCharmander = new Charmander();
+		Jigglypuff unJigglypuff = new Jigglypuff();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unJigglypuff);
+		unJigglypuff.atacarCon("Canto", unCharmander);
+		unJigglypuff.atacarCon("Canto", unCharmander);
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		assertEquals(unJigglypuff.cantidadAtaquesDisponibles("Canto"), 6);
+	}
 
 }

@@ -7,12 +7,14 @@ import fiuba.algo3.modelo.algomones.Algomon;
 
 public abstract class Ataque { 
 	int potencia;
+	int cantidadMaxima;
 	int cantidad;
 	Efecto efecto;
 
 	public Ataque(int potencia, int cantidad){
 		this.potencia = potencia;
 		this.cantidad = cantidad;
+		this.cantidadMaxima = cantidad;
 	}
 	
 	public abstract int atacarPlanta();
@@ -29,6 +31,7 @@ public abstract class Ataque {
 			this.efecto.aplicarEfecto(pokemon);
 		int danio = pokemon.calcularDanio(this);
 		pokemon.recibirDanio(danio);
+		cantidad--;
 		return danio;
 	}
 
@@ -46,6 +49,16 @@ public abstract class Ataque {
 	
 	public boolean tieneEfecto(){
 		return this.efecto != null;
+	}
+
+	public void restaurarAtaque(int cant) {
+		if(this.cantidad + cant > this.cantidadMaxima)
+			this.cantidad = this.cantidadMaxima;
+		else this.cantidad += cant;
+	}
+
+	public int cantidadDisponible() {
+		return cantidad;
 	}
 	
 	

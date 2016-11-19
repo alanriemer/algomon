@@ -3,6 +3,7 @@ package fiuba.algo3.modelo.algomones;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueNormal;
@@ -87,6 +88,16 @@ public abstract class Algomon {
 
 	public int turnos() {
 		return estado.turnos();
+	}
+
+	public void restaurarAtaques(int cantidad) {
+		for(Map.Entry<String, Ataque> datos : ataques.entrySet()){
+			datos.getValue().restaurarAtaque(cantidad);
+		}
+	}
+	
+	public int cantidadAtaquesDisponibles(String ataque) {
+		return ataques.get(ataque).cantidadDisponible();
 	}
 
 }

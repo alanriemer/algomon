@@ -10,25 +10,21 @@ public class AtaqueNormal extends Ataque{
 
 	@Override
 	public int atacarPlanta() {
-		this.cantidad--;
 		return this.potencia;
 	}
 
 	@Override
 	public int atacarFuego() {
-		this.cantidad--;
 		return this.potencia;
 	}
 
 	@Override
 	public int atacarAgua() {
-		this.cantidad--;
 		return this.potencia;
 	}
 
 	@Override
 	public int atacarNormal() {
-		this.cantidad--;
 		return this.potencia;
 	}
 

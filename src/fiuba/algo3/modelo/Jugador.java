@@ -54,4 +54,7 @@ public class Jugador {
 	public Elemento sacarRestaurador() {
 		return contenedorDeElementos.sacarRestaurador();
 	}
+	public Elemento sacarVitamina() {
+		return contenedorDeElementos.sacarVitamina();
+	}
 }

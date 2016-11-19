@@ -20,4 +20,6 @@ public class Jigglypuff extends Algomon{
 	public int calcularDanio(Ataque unAtaque) {
 		return unAtaque.atacarNormal();
 	}
+
+	
 }
