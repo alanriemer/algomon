@@ -6,6 +6,7 @@ public class ContenedorElementos {
 	
 	Stack<Elemento> misPociones;
 	Stack<Elemento> miSuperPociones;
+	Stack<Elemento> misRestauradores;
 	
 	public ContenedorElementos(){
 		this.misPociones = new Stack<Elemento>();
@@ -13,9 +14,15 @@ public class ContenedorElementos {
 		this.misPociones.push(new Pocion());
 		this.misPociones.push(new Pocion());
 		this.misPociones.push(new Pocion());
+		
 		this.miSuperPociones = new Stack<Elemento>();
 		this.miSuperPociones.push(new SuperPocion());
 		this.miSuperPociones.push(new SuperPocion());
+		
+		this.misRestauradores = new Stack<Elemento>();
+		this.misRestauradores.push(new Restaurador());
+		this.misRestauradores.push(new Restaurador());
+		this.misRestauradores.push(new Restaurador());
 	}
 
 	public Elemento sacarPocion() {
@@ -24,6 +31,10 @@ public class ContenedorElementos {
 
 	public Elemento sacarSuperPocion() {
 		return this.miSuperPociones.pop();
+	}
+
+	public Elemento sacarRestaurador() {
+		return this.misRestauradores.pop();
 	}
 
 

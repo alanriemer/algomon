@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.algomones.Charmander;
+import fiuba.algo3.modelo.algomones.Jigglypuff;
 import fiuba.algo3.modelo.algomones.Squirtle;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
@@ -62,6 +63,41 @@ public class ElementosTest {
 		unSquirtle.atacarCon("Burbuja",unCharmander);
 		unJugador.usarElemento(unJugador.sacarPocion());
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-20);
+	}
+	
+	@Test
+	public void test05ChamanderEstaDormidoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException{
+		Charmander unCharmander = new Charmander();
+		Jigglypuff unJigglypuff = new Jigglypuff();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unCharmander);
+		unJigglypuff.atacarCon("Canto",unCharmander);
+		unJugador.usarElemento(unJugador.sacarRestaurador());
+		assertEquals(unCharmander.estaDormido(), false);
+	}
+	
+	@Test
+	public void test06JigglypuffEstaQuemadoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException{
+		Charmander unCharmander = new Charmander();
+		Jigglypuff unJigglypuff = new Jigglypuff();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unJigglypuff);
+		unCharmander.atacarCon("Fogonazo",unJigglypuff);
+		unJugador.usarElemento(unJugador.sacarRestaurador());
+		assertEquals(unJigglypuff.estaQuemado(), false);
+	}
+	
+	@Test
+	public void test07JigglypuffEstaQuemadoYDormidoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException{
+		Charmander unCharmander = new Charmander();
+		Jigglypuff unJigglypuff = new Jigglypuff();
+		Jigglypuff otroJigglypuff = new Jigglypuff();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unJigglypuff);
+		unCharmander.atacarCon("Fogonazo",unJigglypuff);
+		otroJigglypuff.atacarCon("Canto", unJigglypuff);
+		unJugador.usarElemento(unJugador.sacarRestaurador());
+		assertEquals(unJigglypuff.estaDormidoQuemado(), false);
 	}
 
 

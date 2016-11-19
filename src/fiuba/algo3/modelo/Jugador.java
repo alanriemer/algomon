@@ -51,4 +51,7 @@ public class Jugador {
 		this.activo = algomon;
 
 	}
+	public Elemento sacarRestaurador() {
+		return contenedorDeElementos.sacarRestaurador();
+	}
 }
