@@ -20,8 +20,8 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("Algomon - La aventura recien comienza");
 
         initRootLayout();
-        
-        mostrarEscenario();
+
+        mostrarVistaInicial();
     }
 
     /**
@@ -31,7 +31,7 @@ public class MainApp extends Application {
         try {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("../vistas/VistaPrincipal.fxml"));
+            loader.setLocation(MainApp.class.getResource("../vistas/MenuPrincipal.fxml"));
             rootLayout = (BorderPane) loader.load();
 
             // Show the scene containing the root layout.
@@ -42,6 +42,24 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Shows the person overview inside the root layout.
+     */
+    public void mostrarVistaInicial() {
+        try {
+            // Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("../vistas/VistaInicial.fxml"));
+            AnchorPane aboutVista = (AnchorPane) loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(aboutVista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     /**
      * Shows the person overview inside the root layout.
