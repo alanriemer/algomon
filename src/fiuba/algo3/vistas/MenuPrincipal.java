@@ -6,6 +6,8 @@ import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.fxml.Initializable;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 public class MenuPrincipal implements Initializable {
 
 	@Override
@@ -17,4 +19,18 @@ public class MenuPrincipal implements Initializable {
 	public void doExit(){
 		Platform.exit();
 	}
+
+	  public void showAbout(){
+	    Alert alert = new Alert(AlertType.INFORMATION);
+	    alert.setTitle("Acerca de nosotros");
+	    alert.setHeaderText(null);
+	    alert.setContentText(
+	        "Juego creado para la materia 75.07"
+	        +"\n Autores:"
+	        +"\n - Cotarelo, Rodrigo"
+	        +"\n - Denis, Leandro"
+	        +"\n - Riemer, Alan");
+
+	    alert.showAndWait();
+	  }
 }
