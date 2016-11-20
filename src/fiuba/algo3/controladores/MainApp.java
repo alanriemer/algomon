@@ -20,8 +20,8 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("Algomon - La aventura recien comienza");
 
         initRootLayout();
-
-        mostrarAbout();
+        
+        mostrarEscenario();
     }
 
     /**
@@ -46,11 +46,11 @@ public class MainApp extends Application {
     /**
      * Shows the person overview inside the root layout.
      */
-    public void mostrarAbout() {
+    public void mostrarEscenario() {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("../vistas/About.fxml"));
+            loader.setLocation(MainApp.class.getResource("../vistas/EscenarioPelea.fxml"));
             AnchorPane aboutVista = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.

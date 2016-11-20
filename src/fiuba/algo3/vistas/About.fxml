@@ -5,9 +5,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextArea prefHeight="200.0" prefWidth="200.0" text="&#10;&#10;&#10;Leandro Denis&#10;Rodrigo Cotarello&#10;Alan Riemer" />
+      <TextArea layoutX="166.0" layoutY="89.0" prefHeight="121.0" prefWidth="153.0" text="&#10;&#10;&#10;Leandro Denis&#10;Rodrigo Cotarello&#10;Alan Riemer" />
    </children>
 </AnchorPane>
