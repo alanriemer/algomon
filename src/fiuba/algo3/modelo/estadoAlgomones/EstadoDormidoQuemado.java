@@ -10,8 +10,8 @@ public class EstadoDormidoQuemado implements Estado {
 	
 	public EstadoDormidoQuemado(Algomon actual){
 		algomon = actual;
-		if (actual.estaDormido()){
-			turnos = actual.turnos();
+		if (actual.estado().estaDormido()){
+			turnos = actual.estado().turnos();
 		}else turnos = 0;
 	}
 	
@@ -23,7 +23,7 @@ public class EstadoDormidoQuemado implements Estado {
 		turnos++;
 		this.efecto();
 		if (turnos == 3) {
-			algomon.despertar();
+			algomon.estado().despertar();
 		}
 	}
 
@@ -45,6 +45,21 @@ public class EstadoDormidoQuemado implements Estado {
 	@Override
 	public int turnos() {
 		return turnos;
+	}
+
+	@Override
+	public void dormir() {
+		this.algomon.nuevoEstado(new EstadoDormidoQuemado(this.algomon));
+	}
+
+	@Override
+	public void quemar() {
+		this.algomon.nuevoEstado(new EstadoDormidoQuemado(this.algomon));
+	}
+
+	@Override
+	public void despertar() {
+		this.algomon.nuevoEstado(new EstadoQuemado(this.algomon));
 	}
 
 }

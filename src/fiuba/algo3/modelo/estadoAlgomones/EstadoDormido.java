@@ -11,7 +11,9 @@ public class EstadoDormido implements Estado{
 	
 	public EstadoDormido(Algomon actual){
 		algomon = actual;
-		turnos = 0;
+		if (actual.estado().estaDormido()){
+			turnos = actual.estado().turnos();
+		}else turnos = 0;
 	}
 
 	public boolean estaDormido(){
@@ -21,7 +23,7 @@ public class EstadoDormido implements Estado{
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
 		turnos++;
 		if (turnos == 3) {
-			algomon.despertar();
+			algomon.estado().despertar();
 		}
 //		throw new AtaqueNoDisponibleException();
 	}
@@ -40,6 +42,21 @@ public class EstadoDormido implements Estado{
 	@Override
 	public int turnos() {
 		return turnos;
+	}
+
+	@Override
+	public void dormir() {
+		this.algomon.nuevoEstado(new EstadoDormido(this.algomon));
+	}
+
+	@Override
+	public void quemar() {
+		this.algomon.nuevoEstado(new EstadoDormidoQuemado(this.algomon));
+	}
+
+	@Override
+	public void despertar() {
+		this.algomon.nuevoEstado(new EstadoNormal(this.algomon));
 	}
 
 

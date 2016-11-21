@@ -1,6 +1,6 @@
 package fiuba.algo3.modelo.algomones;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,10 +8,7 @@ import java.util.Map;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueNormal;
 import fiuba.algo3.modelo.estadoAlgomones.Estado;
-import fiuba.algo3.modelo.estadoAlgomones.EstadoDormido;
-import fiuba.algo3.modelo.estadoAlgomones.EstadoDormidoQuemado;
 import fiuba.algo3.modelo.estadoAlgomones.EstadoNormal;
-import fiuba.algo3.modelo.estadoAlgomones.EstadoQuemado;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public abstract class Algomon {
@@ -54,41 +51,17 @@ public abstract class Algomon {
 		estado.atacar(ataques.get(ataque), enemigo);
 	}
 
-	public void dormir(){
-		this.estado = (this.estaQuemado())?
-			new EstadoDormidoQuemado(this): new EstadoDormido(this);
-	}
-	public void quemar(){
-		this.estado = (this.estaDormido())?
-			new EstadoDormidoQuemado(this): new EstadoQuemado(this);
-	}
-	public void despertar() {
-		this.estado = (this.estaDormidoQuemado())? 
-			new EstadoQuemado(this): new EstadoNormal(this);
-	}	
+		
 	public void normalizar(){
 		this.estado = new EstadoNormal(this);
 	}
-	public boolean estaDormidoQuemado() {
-		return estado.estaDormidoQuemado();
-	}
-
-	public boolean estaDormido(){
-		return estado.estaDormido();
-	}
 	
-	public boolean estaQuemado(){
-		return estado.estaQuemado();
-	}
 
 	public List<String> ataquesDisponibles() {
 		return new ArrayList<String>(this.ataques.keySet());
 
 	}
 
-	public int turnos() {
-		return estado.turnos();
-	}
 
 	public void restaurarAtaques(int cantidad) {
 		for(Map.Entry<String, Ataque> datos : ataques.entrySet()){
@@ -98,6 +71,16 @@ public abstract class Algomon {
 	
 	public int cantidadAtaquesDisponibles(String ataque) {
 		return ataques.get(ataque).cantidadDisponible();
+	}
+
+
+	public void nuevoEstado(Estado nuevoEstado) {
+		this.estado = nuevoEstado;
+	}
+
+
+	public Estado estado() {
+		return this.estado;
 	}
 
 }

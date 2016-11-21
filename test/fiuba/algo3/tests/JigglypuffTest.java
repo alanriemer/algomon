@@ -105,7 +105,7 @@ public class JigglypuffTest {
 		Jigglypuff unJigglypuff= new Jigglypuff();
 		Charmander unCharmander = new Charmander();	
 		unJigglypuff.atacarCon("Canto",unCharmander);
-		assertEquals(unCharmander.estaDormido(), true);
+		assertEquals(unCharmander.estado().estaDormido(), true);
 	}
 
 }
