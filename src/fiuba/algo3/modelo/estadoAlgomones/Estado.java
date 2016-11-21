@@ -10,4 +10,7 @@ public interface Estado {
 	public abstract boolean estaQuemado();
 	public abstract boolean estaDormidoQuemado();
 	public abstract int turnos();
+	public abstract void dormir();
+	public abstract void quemar();
+	public abstract void despertar();
 }

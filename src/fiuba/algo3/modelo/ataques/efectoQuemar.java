@@ -6,7 +6,7 @@ public class efectoQuemar implements Efecto {
 
 	@Override
 	public void aplicarEfecto(Algomon enemigo) {
-		enemigo.quemar();
+		enemigo.estado().quemar();
 	}
 
 

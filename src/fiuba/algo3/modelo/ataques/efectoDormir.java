@@ -6,7 +6,7 @@ public class efectoDormir implements Efecto{
 
 	@Override
 	public void aplicarEfecto(Algomon enemigo) {
-		enemigo.dormir();
+		enemigo.estado().dormir();
 	}
 
 

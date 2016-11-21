@@ -109,7 +109,7 @@ public class ChanseyTest {
 		unChansey.atacarCon("Canto",unBulbasaur);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vida);
-		assertEquals(unBulbasaur.estaDormido(), true);
+		assertEquals(unBulbasaur.estado().estaDormido(), true);
 	}
 
 }

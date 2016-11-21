@@ -32,5 +32,22 @@ public class EstadoNormal implements Estado{
 		return 0;
 	}
 
+	@Override
+	public void dormir() {
+		this.algomon.nuevoEstado(new EstadoDormido(this.algomon));
+	}
+
+	@Override
+	public void quemar() {
+		this.algomon.nuevoEstado(new EstadoQuemado(this.algomon));
+	}
+
+	@Override
+	public void despertar() {
+		this.algomon.nuevoEstado(new EstadoNormal(this.algomon));
+	}
+	
+	
+
 
 }

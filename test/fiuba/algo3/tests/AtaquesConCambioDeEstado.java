@@ -76,7 +76,7 @@ public class AtaquesConCambioDeEstado {
 		unJigglypuff.atacarCon("Canto",unBulbasaur);
 		int vidaJigglypuff = unJigglypuff.getPuntosVidaActuales();
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
-		unBulbasaur.despertar();
+		
 		assertEquals(unBulbasaur.getPuntosVidaActuales(),vidaJigglypuff + 10);
 	}	
 	
@@ -88,7 +88,7 @@ public class AtaquesConCambioDeEstado {
 		unJigglypuff.atacarCon("Canto",unBulbasaur);
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		unCharmander.atacarCon("Fogonazo", unBulbasaur);
-		assertEquals(unBulbasaur.estaDormidoQuemado(), true);
+		assertEquals(unBulbasaur.estado().estaDormidoQuemado(), true);
 	}
 	
 	
@@ -103,7 +103,7 @@ public class AtaquesConCambioDeEstado {
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		
-		assertEquals(unBulbasaur.estaDormido(), false);
+		assertEquals(unBulbasaur.estado().estaDormido(), false);
 	}
 
 	
@@ -120,5 +120,17 @@ public class AtaquesConCambioDeEstado {
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		
 		assertEquals(unBulbasaur.getPuntosVidaActuales() , vidaBulbasaur-32);
+	}
+	
+	
+	@Test
+	public void test09BulbasaurEstaQuemadoYdormidoYvuelveArecibirCantoYquedaEnEstadoQuemadoDormido() throws AtaqueNoDisponibleException{
+		Jigglypuff unJigglypuff= new Jigglypuff();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Charmander unCharmander = new Charmander();
+		unJigglypuff.atacarCon("Canto",unBulbasaur);
+		unCharmander.atacarCon("Fogonazo", unBulbasaur);
+		unJigglypuff.atacarCon("Canto",unBulbasaur);
+		assertEquals(unBulbasaur.estado().estaDormidoQuemado(), true);
 	}
 }
