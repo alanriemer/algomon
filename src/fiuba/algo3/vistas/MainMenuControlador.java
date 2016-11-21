@@ -7,12 +7,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
 public class MainMenuControlador {
-	
 	Main main;
 	
-	@SuppressWarnings("static-access")
 	public void doNuevo() throws IOException{
-		main.showNuevo();
+		Main.showNuevo();
 	}
 	
 	public void doExit(){

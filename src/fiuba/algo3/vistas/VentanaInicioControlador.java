@@ -6,11 +6,10 @@ import fiuba.algo3.controladores.Main;
 import javafx.fxml.FXML;
 
 public class VentanaInicioControlador {
-	private Main main;
+	Main main;
 	
-	@SuppressWarnings("static-access")
 	@FXML
 	public void goEscenarioPelea() throws IOException{
-		main.showEscenarioPelea();
+		Main.showEscenarioPelea();
 	}
 }
