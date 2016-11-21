@@ -21,12 +21,12 @@ public class JuegoTest {
 		
 		
 		List<String> ataquesDisponibles = juego.ataquesDisponiblesAlgomonActual(); //Esta lista se muestra en la vista
-		juego.atacarCon(ataquesDisponibles.get(1)); // Lo que se devuelve, entra acá
+		juego.atacarCon(ataquesDisponibles.get(1)); // Lo que se devuelve, entra aca
 		
-		juego.atacarCon(ataquesDisponibles.get(1)); // Lo que se devuelve, entra acá
+		juego.atacarCon(ataquesDisponibles.get(1)); // Lo que se devuelve, entra aca
 		
 		juego.getJugador1().algomonActual().getPuntosVidaActuales(); //Mostrar la vida del algomon actua de Jugador 1.
 		juego.getJugador2().algomonActual().getPuntosVidaActuales(); //Mostrar la vida del algomon actua de Jugador 1.
-		assertEquals(1,1);//PAra que no pinche la integración continua
+		assertEquals(1,1);//PAra que no pinche la integracion continua
 	}
 }
