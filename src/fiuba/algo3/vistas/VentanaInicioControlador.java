@@ -1,7 +1,6 @@
 package fiuba.algo3.vistas;
 
 import java.io.IOException;
-
 import fiuba.algo3.controladores.Main;
 import javafx.fxml.FXML;
 

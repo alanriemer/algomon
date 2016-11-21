@@ -1,6 +1,10 @@
 package fiuba.algo3.controladores;
 
 import java.io.IOException;
+
+import fiuba.algo3.modelo.JuegoAlgomon;
+import fiuba.algo3.modelo.algomones.Charmander;
+import fiuba.algo3.modelo.algomones.Squirtle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,7 +12,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
 	private Stage primaryStage;
 	private static BorderPane mainLayout;	
 	
@@ -18,6 +21,11 @@ public class Main extends Application {
 		this.primaryStage.setTitle("Algomon - La aventura recien comienza");
 		showMainView();
 		showMainItems();
+		Squirtle squirtle = new Squirtle();
+		Charmander charmander = new Charmander();
+		JuegoAlgomon nuevo = new JuegoAlgomon();
+		nuevo.getJugador1().agregarAlgomon(squirtle);
+		nuevo.getJugador2().agregarAlgomon(charmander);
 	}
 
 	private void showMainView() throws IOException{

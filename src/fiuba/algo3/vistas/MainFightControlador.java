@@ -11,6 +11,18 @@ public class MainFightControlador implements Initializable {
 	
 	@FXML
 	private Button nombreAlgo1;
+	
+	@FXML
+	private Button nombreAlgo2;
+
+	@FXML
+	private Button fightAtaque;
+
+	@FXML
+	private Button fightItems;
+	
+	@FXML
+	private Button fightCambio;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

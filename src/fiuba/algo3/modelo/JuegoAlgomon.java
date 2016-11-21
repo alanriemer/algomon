@@ -21,6 +21,8 @@ public class JuegoAlgomon {
 	}
 	private Jugador sortearTurnoInicial(){
 		List<Jugador> jugadores = new ArrayList<Jugador>();
+		jugadores.add(jugador1);
+		jugadores.add(jugador2);
 		return jugadores.get((int)Math.random() * jugadores.size());
 	}
 	public void atacar(){
