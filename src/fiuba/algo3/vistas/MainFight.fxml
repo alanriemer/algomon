@@ -10,13 +10,15 @@
    <center>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="fightAtaque" alignment="CENTER" mnemonicParsing="false" text="Atacar">
+            <Label fx:id="vidaJ1" text="Label" />
+            <Button fx:id="fightAtaque" alignment="CENTER" mnemonicParsing="false" onAction="#goAtaquesView" text="Atacar">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
             <Button fx:id="fightItems" mnemonicParsing="false" text="Items" />
             <Button fx:id="fightCambio" mnemonicParsing="false" text="Cambio" />
+            <Label fx:id="vidaJ2" text="Label" />
          </children>
          <BorderPane.margin>
             <Insets />
@@ -24,9 +26,15 @@
       </HBox>
    </center>
    <top>
-      <Button fx:id="nombreAlgo1" mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
+      <Button fx:id="nombreAlgo1" mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin></Button>
    </top>
    <bottom>
-      <Button fx:id="nombreAlgo2" mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
+      <Button fx:id="nombreAlgo2" mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin></Button>
    </bottom>
 </BorderPane>

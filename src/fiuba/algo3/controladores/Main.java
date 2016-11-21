@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	private Stage primaryStage;
 	private static BorderPane mainLayout;	
+	public final static JuegoAlgomon nuevo = new JuegoAlgomon();
 	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
@@ -22,8 +23,7 @@ public class Main extends Application {
 		showMainView();
 		showMainItems();
 		Squirtle squirtle = new Squirtle();
-		Charmander charmander = new Charmander();
-		JuegoAlgomon nuevo = new JuegoAlgomon();
+		Charmander charmander = new Charmander();	
 		nuevo.getJugador1().agregarAlgomon(squirtle);
 		nuevo.getJugador2().agregarAlgomon(charmander);
 	}
@@ -54,6 +54,13 @@ public class Main extends Application {
 	public static void showEscenarioPelea() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("../vistas/MainFight.fxml"));
+		BorderPane escenarioPelea = loader.load();
+		mainLayout.setCenter(escenarioPelea);
+	}
+	
+	public static void showAtaquesView() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("../vistas/AtaquesView.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
