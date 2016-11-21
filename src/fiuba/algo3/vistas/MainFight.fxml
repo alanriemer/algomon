@@ -10,7 +10,6 @@
    <center>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="vidaJ1" text="Label" />
             <Button fx:id="fightAtaque" alignment="CENTER" mnemonicParsing="false" onAction="#goAtaquesView" text="Atacar">
                <HBox.margin>
                   <Insets />
@@ -18,7 +17,6 @@
             </Button>
             <Button fx:id="fightItems" mnemonicParsing="false" text="Items" />
             <Button fx:id="fightCambio" mnemonicParsing="false" text="Cambio" />
-            <Label fx:id="vidaJ2" text="Label" />
          </children>
          <BorderPane.margin>
             <Insets />
@@ -37,4 +35,20 @@
             <Insets bottom="10.0" />
          </BorderPane.margin></Button>
    </bottom>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Vida J1" />
+            <Label fx:id="vidaJ1" text="Label" />
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Vida J2" />
+            <Label fx:id="vidaJ2" text="Label" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>
