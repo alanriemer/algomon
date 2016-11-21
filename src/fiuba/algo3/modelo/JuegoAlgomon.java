@@ -4,35 +4,51 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fiuba.algo3.modelo.algomones.Algomon;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class JuegoAlgomon {
 	private Jugador jugador1;
 	private Jugador jugador2;
 	private Jugador jugadorActual;
+	private Jugador enemigoActual;
+	
 
-	public JuegoAlgomon(){
-		jugador1 = new Jugador();
-		jugador2 = new Jugador();
-		jugadorActual = this.sortearTurnoInicial();
+	public JuegoAlgomon(){ //Lo recibimos por parámetro inicialmente, después lo cambiamos.
+		this.jugador1 = new Jugador();
+		this.jugador2 = new Jugador();
+		this.cargarTurnos();
 	}
 
 	private void siguienteTurno(){
-		jugadorActual = (jugadorActual == jugador1)? jugador2:jugador1;
+		this.jugadorActual = (jugadorActual == jugador1)? jugador2:jugador1;
+		this.cambiarEnemigo();
 	}
-	private Jugador sortearTurnoInicial(){
+	private void cargarTurnos(){
 		List<Jugador> jugadores = new ArrayList<Jugador>();
 		jugadores.add(jugador1);
 		jugadores.add(jugador2);
-		return jugadores.get((int)Math.random() * jugadores.size());
+		this.jugadorActual =  jugadores.get((int)Math.random() * jugadores.size());
+		this.cambiarEnemigo();
 	}
-	public void atacar(){
-		//LoQueDebeHacer.
+	private void cambiarEnemigo(){
+		this.enemigoActual = (enemigoActual == jugador1)? jugador2:jugador1;
+	}
+	public void atacarCon(String ataque){
+		try {
+			this.jugadorActual.atacarCon(ataque, this.enemigoActual.algomonActual());
+		} catch (AtaqueNoDisponibleException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		this.siguienteTurno();
 	}
-	public void cambiarAlgomon(){
+	public void cambiarAlgomon(String algomones){
 		this.algomonesDisponibles();
 		this.siguienteTurno();
 
+	}
+	public List<String> ataquesDisponiblesAlgomonActual(){
+		return jugadorActual.ataquesDisponibles();
 	}
 	private List<Algomon> algomonesDisponibles() {
 		return this.jugadorActual.getAlgomones();
