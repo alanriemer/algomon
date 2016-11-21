@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class AtaquesController implements Initializable {
-	private List<String> ataques = Main.nuevo.ataquesDisponiblesAlgomonActual();
+	
 	
 	@FXML
 	private Button atacar1;	
@@ -20,6 +20,7 @@ public class AtaquesController implements Initializable {
 	private Button atacar2;
 	@FXML
 	private Button atacar3;
+	
 	@FXML
 	private Label nombreAta1;
 	@FXML
@@ -29,6 +30,7 @@ public class AtaquesController implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		List<String> ataques = Main.nuevo.ataquesDisponiblesAlgomonActual();
 		nombreAta1.setText(ataques.get(0));
 		nombreAta2.setText(ataques.get(1));
 		nombreAta3.setText(ataques.get(2));
@@ -38,16 +40,19 @@ public class AtaquesController implements Initializable {
 	}
 	
 	public void usarAtaque1() throws IOException{
+		List<String> ataques = Main.nuevo.ataquesDisponiblesAlgomonActual();
 		Main.nuevo.atacarCon(ataques.get(0));
 		Main.showEscenarioPelea();
 	}
 	
 	public void usarAtaque2() throws IOException{
+		List<String> ataques = Main.nuevo.ataquesDisponiblesAlgomonActual();
 		Main.nuevo.atacarCon(ataques.get(1));
 		Main.showEscenarioPelea();
 	}
 	
 	public void usarAtaque3() throws IOException{
+		List<String> ataques = Main.nuevo.ataquesDisponiblesAlgomonActual();
 		Main.nuevo.atacarCon(ataques.get(2));
 		Main.showEscenarioPelea();
 	}

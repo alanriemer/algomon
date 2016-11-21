@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	private Stage primaryStage;
 	private static BorderPane mainLayout;	
-	public final static JuegoAlgomon nuevo = new JuegoAlgomon();
+	public static JuegoAlgomon nuevo = new JuegoAlgomon();
 	
 	@Override
 	public void start(Stage primaryStage) throws IOException {

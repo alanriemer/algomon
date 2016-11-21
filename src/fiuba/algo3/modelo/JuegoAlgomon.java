@@ -27,8 +27,10 @@ public class JuegoAlgomon {
 		List<Jugador> jugadores = new ArrayList<Jugador>();
 		jugadores.add(jugador1);
 		jugadores.add(jugador2);
-		this.jugadorActual =  jugadores.get((int)Math.random() * jugadores.size());
-		this.cambiarEnemigo();
+		this.jugadorActual = jugador1;
+		enemigoActual = jugador2;
+//		this.jugadorActual =  jugadores.get((int)Math.random() * jugadores.size());
+//		this.cambiarEnemigo();
 	}
 	private void cambiarEnemigo(){
 		this.enemigoActual = (enemigoActual == jugador1)? jugador2:jugador1;
