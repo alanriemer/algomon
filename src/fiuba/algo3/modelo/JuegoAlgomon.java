@@ -13,7 +13,7 @@ public class JuegoAlgomon {
 	private Jugador enemigoActual;
 	
 
-	public JuegoAlgomon(){ //Lo recibimos por parámetro inicialmente, después lo cambiamos.
+	public JuegoAlgomon(){ //Lo recibimos por parametro inicialmente, despues lo cambiamos.
 		this.jugador1 = new Jugador();
 		this.jugador2 = new Jugador();
 		this.cargarTurnos();
