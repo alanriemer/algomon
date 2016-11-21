@@ -7,9 +7,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
 public class MainMenuControlador {
-	Main main;
 	
 	public void doNuevo() throws IOException{
+		Main.restart();
 		Main.showNuevo();
 	}
 	

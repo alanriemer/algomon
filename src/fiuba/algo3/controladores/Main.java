@@ -16,6 +16,14 @@ public class Main extends Application {
 	private static BorderPane mainLayout;	
 	public static JuegoAlgomon nuevo = new JuegoAlgomon();
 	
+	public static void restart(){
+		Main.nuevo = new JuegoAlgomon();
+		Squirtle squirtle = new Squirtle();
+		Charmander charmander = new Charmander();	
+		nuevo.getJugador1().agregarAlgomon(squirtle);
+		nuevo.getJugador2().agregarAlgomon(charmander);
+	}
+	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		this.primaryStage = primaryStage;
