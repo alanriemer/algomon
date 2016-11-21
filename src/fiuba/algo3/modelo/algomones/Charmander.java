@@ -6,6 +6,7 @@ import fiuba.algo3.modelo.ataques.AtaqueFuego;
 
 public class Charmander extends Algomon{
 	public Charmander(){
+		nombre = "Charmander";
 		puntosVida = 170;
 		puntosVidaActuales = 170;
 		Ataque brasas = new AtaqueFuego(16,10);

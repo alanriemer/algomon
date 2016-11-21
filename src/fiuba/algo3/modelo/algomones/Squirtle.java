@@ -5,6 +5,7 @@ import fiuba.algo3.modelo.ataques.AtaqueAgua;
 
 public class Squirtle extends Algomon{	
 	public Squirtle (){
+		nombre = "Squirtle";
 		puntosVida = 150;
 		puntosVidaActuales = 150;
 		Ataque burbuja = new AtaqueAgua(10,15);

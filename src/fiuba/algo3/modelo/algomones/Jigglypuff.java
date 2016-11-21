@@ -6,6 +6,7 @@ import fiuba.algo3.modelo.ataques.AtaqueNormal;
 
 public class Jigglypuff extends Algomon{
 	public Jigglypuff(){
+		nombre = "Jigglypuff";
 		puntosVida = 130;
 		puntosVidaActuales = 130;
 		Ataque burbuja = new AtaqueAgua(10,15);

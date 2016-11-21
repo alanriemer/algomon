@@ -12,6 +12,7 @@ import fiuba.algo3.modelo.estadoAlgomones.EstadoNormal;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public abstract class Algomon {
+	protected String nombre;
 	protected int puntosVida;
 	protected int puntosVidaActuales; 
 	protected Estado estado = new EstadoNormal(this);
@@ -21,7 +22,10 @@ public abstract class Algomon {
 		ataques.put("Ataque rapido",new AtaqueNormal(10,16));
 	}	
 	
-
+	public String getNombre(){
+		return nombre;
+	}
+	
 	public void aumentarPuntosDeVidaActuales(int puntos){
 		if(this.puntosVidaActuales + puntos > puntosVida)
 			this.puntosVidaActuales = puntosVida;

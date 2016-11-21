@@ -40,5 +40,13 @@ public class JuegoAlgomon {
 		//LoQueDebeHacer.
 		this.siguienteTurno();
 	}
+	
+	public Jugador getJugador1(){
+		return jugador1;
+	}
+	
+	public Jugador getJugador2(){
+		return jugador2;
+	}
 }
 

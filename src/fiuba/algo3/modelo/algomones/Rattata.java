@@ -6,6 +6,7 @@ import fiuba.algo3.modelo.ataques.AtaqueFuego;
 
 public class Rattata extends Algomon{
 	public Rattata(){
+		nombre = "Rattata";
 		puntosVida = 170;
 		puntosVidaActuales = 170;
 		Ataque fogonazo = new AtaqueFuego(2,4);

@@ -5,6 +5,7 @@ import fiuba.algo3.modelo.ataques.AtaquePlanta;
 
 public class Bulbasaur extends Algomon{
 	public Bulbasaur(){
+		nombre = "Bulbasaur";
 		puntosVida = 140;
 		puntosVidaActuales = 140;
 		Ataque latigoCepa = new AtaquePlanta(15,10);

@@ -6,6 +6,7 @@ import fiuba.algo3.modelo.ataques.AtaquePlanta;
 
 public class Chansey extends Algomon {
 	public Chansey (){
+		nombre = "Chansey";
 		puntosVida = 130;
 		puntosVidaActuales = 130;
 		Ataque latigoCepa = new AtaquePlanta(15,10);
