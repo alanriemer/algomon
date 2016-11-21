@@ -30,7 +30,14 @@ public class Main extends Application {
 		primaryStage.show();
 	}
 	
-	private void showMainItems() throws IOException{
+	public void showMainItems() throws IOException{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("../vistas/VentanaInicio.fxml"));
+		BorderPane mainItems = loader.load();
+		mainLayout.setCenter(mainItems);
+	}
+	
+	public static void showNuevo() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("../vistas/VentanaInicio.fxml"));
 		BorderPane mainItems = loader.load();
