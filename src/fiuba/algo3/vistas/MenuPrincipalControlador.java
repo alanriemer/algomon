@@ -2,15 +2,15 @@ package fiuba.algo3.vistas;
 
 import java.io.IOException;
 
-import fiuba.algo3.controladores.Main;
+import fiuba.algo3.controladores.Aplicacion;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
 public class MenuPrincipalControlador {
 	
 	public void doNuevo() throws IOException{
-		Main.restart();
-		Main.showNuevo();
+		Aplicacion.restart();
+		Aplicacion.showNuevo();
 	}
 	
 	public void doExit(){

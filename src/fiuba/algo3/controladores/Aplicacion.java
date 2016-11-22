@@ -11,13 +11,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Aplicacion extends Application {
 	private Stage primaryStage;
 	private static BorderPane mainLayout;	
 	public static JuegoAlgomon nuevoJuego = new JuegoAlgomon();
 	
 	public static void restart(){
-		Main.nuevoJuego = new JuegoAlgomon();
+		Aplicacion.nuevoJuego = new JuegoAlgomon();
 		Squirtle squirtle = new Squirtle();
 		Charmander charmander = new Charmander();	
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
@@ -38,7 +38,7 @@ public class Main extends Application {
 
 	private void showMainView() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/MenuPrincipalVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("../vistas/MenuPrincipalVista.fxml"));
 		mainLayout = loader.load();
 		Scene scene = new Scene(mainLayout);
 		primaryStage.setScene(scene);
@@ -47,28 +47,28 @@ public class Main extends Application {
 	
 	public void showMainItems() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/VentanaInicioVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("../vistas/VentanaInicioVista.fxml"));
 		BorderPane mainItems = loader.load();
 		mainLayout.setCenter(mainItems);
 	}
 	
 	public static void showNuevo() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/VentanaInicioVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("../vistas/VentanaInicioVista.fxml"));
 		BorderPane mainItems = loader.load();
 		mainLayout.setCenter(mainItems);
 	}
 	
 	public static void showEscenarioPelea() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/PeleaVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("../vistas/PeleaVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
 	
 	public static void showAtaquesView() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/AtaquesVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("../vistas/AtaquesVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}

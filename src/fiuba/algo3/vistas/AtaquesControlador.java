@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import fiuba.algo3.controladores.Main;
+import fiuba.algo3.controladores.Aplicacion;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -30,7 +30,7 @@ public class AtaquesControlador implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		List<String> ataques = Main.nuevoJuego.ataquesDisponiblesAlgomonActual();
+		List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
 		nombreAta1.setText(ataques.get(0));
 		nombreAta2.setText(ataques.get(1));
 		nombreAta3.setText(ataques.get(2));
@@ -40,20 +40,20 @@ public class AtaquesControlador implements Initializable {
 	}
 	
 	public void usarAtaque1() throws IOException{
-		List<String> ataques = Main.nuevoJuego.ataquesDisponiblesAlgomonActual();
-		Main.nuevoJuego.atacarCon(ataques.get(0));
-		Main.showEscenarioPelea();
+		List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
+		Aplicacion.nuevoJuego.atacarCon(ataques.get(0));
+		Aplicacion.showEscenarioPelea();
 	}
 	
 	public void usarAtaque2() throws IOException{
-		List<String> ataques = Main.nuevoJuego.ataquesDisponiblesAlgomonActual();
-		Main.nuevoJuego.atacarCon(ataques.get(1));
-		Main.showEscenarioPelea();
+		List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
+		Aplicacion.nuevoJuego.atacarCon(ataques.get(1));
+		Aplicacion.showEscenarioPelea();
 	}
 	
 	public void usarAtaque3() throws IOException{
-		List<String> ataques = Main.nuevoJuego.ataquesDisponiblesAlgomonActual();
-		Main.nuevoJuego.atacarCon(ataques.get(2));
-		Main.showEscenarioPelea();
+		List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
+		Aplicacion.nuevoJuego.atacarCon(ataques.get(2));
+		Aplicacion.showEscenarioPelea();
 	}
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.input.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
@@ -15,8 +16,14 @@
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#doNuevo" text="Nuevo Juego" />
-                  <MenuItem mnemonicParsing="false" onAction="#doExit" text="Salir" />
+              <MenuItem mnemonicParsing="false" onAction="#doNuevo" text="Nuevo Juego">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#doExit" text="Salir">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Acerca">
