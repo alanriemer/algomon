@@ -19,6 +19,8 @@ public class Aplicacion extends Application {
 	
 	public static void restart(){
 		Aplicacion.nuevoJuego = new JuegoAlgomon();
+		nuevoJuego.setNombreJugador1("Ash");
+		nuevoJuego.setNombreJugador1("Gary");
 		Squirtle squirtle = new Squirtle();
 		Charmander charmander = new Charmander();	
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
@@ -31,6 +33,8 @@ public class Aplicacion extends Application {
 		this.primaryStage.setTitle("Algomon - La aventura recien comienza");
 		showMainView();
 		showMainItems();
+		nuevoJuego.setNombreJugador1("Ash");
+		nuevoJuego.setNombreJugador1("Gary");
 		Rattata squirtle = new Rattata();
 		Charmander charmander = new Charmander();	
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);

@@ -118,7 +118,7 @@
                   <Insets bottom="180.0" top="-235.0" />
                </VBox.margin>
             </Button>
-            <Label text="Vida J2">
+            <Label fx:id="_nombre2" text="Vida J2">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -17,7 +18,10 @@
                   <Button fx:id="atacar1" mnemonicParsing="false" onAction="#usarAtaque1" text="Button" wrapText="true">
                      <effect>
                         <DropShadow />
-                     </effect></Button>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
@@ -29,7 +33,10 @@
                   <Button fx:id="atacar2" mnemonicParsing="false" onAction="#usarAtaque2" text="Button">
                      <effect>
                         <DropShadow />
-                     </effect></Button>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
@@ -41,7 +48,10 @@
                   <Button fx:id="atacar3" mnemonicParsing="false" onAction="#usarAtaque3" text="Button">
                      <effect>
                         <DropShadow />
-                     </effect></Button>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />

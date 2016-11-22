@@ -30,17 +30,24 @@ public class PeleaControlador implements Initializable {
 	private Button nombreAlgo1;
 	@FXML
 	private Button nombreAlgo2;
+	
+	@FXML
+	private Label _nombre1;
+	@FXML
+	private Label _nombre2;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		_nombre1.setText(Aplicacion.nuevoJuego.getJugador1().algomonActual().getNombre());
+		_nombre2.setText(Aplicacion.nuevoJuego.getJugador2().algomonActual().getNombre());
         Image image = new Image(Aplicacion.nuevoJuego.getJugador1().algomonActual().getImagen().toURI().toString());
         img1.setImage(image);
         Image image2 = new Image(Aplicacion.nuevoJuego.getJugador2().algomonActual().getImagen().toURI().toString());
         img2.setImage(image2);
 		vidaJ1.setText(String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaActualJugador1())+"/"+String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaOriginalJugador1()));
 		vidaJ2.setText(String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaActualJugador2())+"/"+String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaOriginalJugador2()));
-		nombreAlgo1.setText(Aplicacion.nuevoJuego.getJugador1().algomonActual().getNombre());
-		nombreAlgo2.setText(Aplicacion.nuevoJuego.getJugador2().algomonActual().getNombre());
+		nombreAlgo1.setText(Aplicacion.nuevoJuego.getNombreJugador1());
+		nombreAlgo2.setText(Aplicacion.nuevoJuego.getNombreJugador2());
 		if (Aplicacion.nuevoJuego.getJugador1().algomonActual().getPuntosVidaActuales() == 0){
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle(null);
