@@ -3,6 +3,7 @@ package fiuba.algo3.controladores;
 import java.io.IOException;
 
 import fiuba.algo3.modelo.JuegoAlgomon;
+import fiuba.algo3.modelo.algomones.Bulbasaur;
 import fiuba.algo3.modelo.algomones.Charmander;
 import fiuba.algo3.modelo.algomones.Rattata;
 import fiuba.algo3.modelo.algomones.Squirtle;
@@ -35,14 +36,18 @@ public class Aplicacion extends Application {
 		showMainItems();
 		nuevoJuego.setNombreJugador1("Ash");
 		nuevoJuego.setNombreJugador2("Gary");
-		Rattata squirtle = new Rattata();
-		Charmander charmander = new Charmander();
-		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
-		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
-		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
-		nuevoJuego.getJugador2().agregarAlgomon(charmander);
-		nuevoJuego.getJugador2().agregarAlgomon(charmander);
-		nuevoJuego.getJugador2().agregarAlgomon(charmander);
+		Rattata squirtle1 = new Rattata();
+		Rattata squirtle2 = new Rattata();
+		Charmander charmander1 = new Charmander();
+		Charmander charmander2 = new Charmander();
+		Bulbasaur bulbasaur1 = new Bulbasaur();
+		Bulbasaur bulbasaur2 = new Bulbasaur();
+		nuevoJuego.getJugador1().agregarAlgomon(squirtle1);
+		nuevoJuego.getJugador1().agregarAlgomon(charmander1);
+		nuevoJuego.getJugador1().agregarAlgomon(bulbasaur1);
+		nuevoJuego.getJugador2().agregarAlgomon(squirtle2);
+		nuevoJuego.getJugador2().agregarAlgomon(charmander2);
+		nuevoJuego.getJugador2().agregarAlgomon(bulbasaur2);
 	}
 
 	private void showMainView() throws IOException{
@@ -85,6 +90,12 @@ public class Aplicacion extends Application {
 	public static void showCambioAlgomonView() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Aplicacion.class.getResource("../vistas/CambioAlgomonVista.fxml"));
+		BorderPane escenarioPelea = loader.load();
+		mainLayout.setCenter(escenarioPelea);
+	}
+	public static void showAplicarItemView() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Aplicacion.class.getResource("../vistas/AplicarItemVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}

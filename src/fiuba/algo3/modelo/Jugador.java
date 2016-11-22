@@ -60,8 +60,11 @@ public class Jugador {
 	}
 	public String setNombre(String nombre) {
 		return this.nombre = nombre;
-	}	
+	}
 	public String getNombre() {
 		return this.nombre;
+	}
+	public List<Elemento> elementosDisponibles() {
+		return null;
 	}
 }

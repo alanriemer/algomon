@@ -74,4 +74,8 @@ public class PeleaControlador implements Initializable {
 	public void goCambioAlgomonView() throws IOException{
 		Aplicacion.showCambioAlgomonView();
 	}
+	@FXML
+	public void goAplicarItemView() throws IOException{
+		Aplicacion.showAplicarItemView();
+	}
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fiuba.algo3.modelo.algomones.Algomon;
+import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
@@ -12,7 +13,7 @@ public class JuegoAlgomon {
 	private Jugador jugador2;
 	private Jugador jugadorActual;
 	private Jugador enemigoActual;
-	
+
 
 	public JuegoAlgomon(){ //Lo recibimos por parametro inicialmente, despues lo cambiamos.
 		this.jugador1 = new Jugador();
@@ -42,7 +43,7 @@ public class JuegoAlgomon {
 		}
 		this.siguienteTurno();
 	}
-	
+
 	private void cambiarEnemigo(){
 		this.enemigoActual = (enemigoActual == jugador1)? jugador2:jugador1;
 	}
@@ -63,20 +64,22 @@ public class JuegoAlgomon {
 		return this.jugadorActual.getAlgomones();
 	}
 
-	public void aplicarElemento(){
-		//LoQueDebeHacer.
+	public void aplicarElemento(Elemento elemento){
+		this.jugadorActual.usarElemento(elemento);
 		this.siguienteTurno();
 	}
-	
+	public List<Elemento> elementosDisponibles() {
+		return this.jugadorActual.elementosDisponibles();
+	}
 	public Jugador getJugador1(){
 		return jugador1;
 	}
-	
+
 	public Jugador getJugador2(){
 		return jugador2;
 	}
 
-	
+
 	public void agregarAlgomonJugador1(Algomon algomon) {
 		this.jugador1.agregarAlgomon(algomon);
 
@@ -90,8 +93,8 @@ public class JuegoAlgomon {
 		return this.jugador1.algomonActual().getPuntosVidaActuales();
 	}
 	public int getPuntosVidaActualJugador2() {
-		return this.jugador2.algomonActual().getPuntosVidaActuales();	
-	}	
+		return this.jugador2.algomonActual().getPuntosVidaActuales();
+	}
 
 	public int getPuntosVidaOriginalJugador1() {
 		return this.jugador1.algomonActual().getPuntosVida();
@@ -104,17 +107,19 @@ public class JuegoAlgomon {
 		return this.jugadorActual.getNombre();
 	}
 	public void setNombreJugador1(String nombre) {
-		 this.jugador1.setNombre(nombre);	
+		 this.jugador1.setNombre(nombre);
 	}
 	public void setNombreJugador2(String nombre) {
-		 this.jugador2.setNombre(nombre);	
-	}	
+		 this.jugador2.setNombre(nombre);
+	}
 	public String getNombreJugador1() {
 		 return this.jugador1.getNombre();
-	}	
+	}
 	public String getNombreJugador2() {
 		 return this.jugador2.getNombre();
-	}	
+	}
+
+
 
 }
 
