@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fiuba.algo3.modelo.algomones.Algomon;
+import fiuba.algo3.modelo.algomones.Charmander;
+import fiuba.algo3.modelo.algomones.Squirtle;
+import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class JuegoAlgomon {
@@ -32,9 +35,6 @@ public class JuegoAlgomon {
 //		this.jugadorActual =  jugadores.get((int)Math.random() * jugadores.size());
 //		this.cambiarEnemigo();
 	}
-	private void cambiarEnemigo(){
-		this.enemigoActual = (enemigoActual == jugador1)? jugador2:jugador1;
-	}
 	public void atacarCon(String ataque){
 		try {
 			this.jugadorActual.atacarCon(ataque, this.enemigoActual.algomonActual());
@@ -44,15 +44,24 @@ public class JuegoAlgomon {
 		}
 		this.siguienteTurno();
 	}
-	public void cambiarAlgomon(String algomones){
-		this.algomonesDisponibles();
-		this.siguienteTurno();
+	
+	private void cambiarEnemigo(){
+		this.enemigoActual = (enemigoActual == jugador1)? jugador2:jugador1;
+	}
 
+	public void cambiarAlgomonJugadorActual(Algomon algomon){
+		try {
+			this.jugadorActual.cambiarAlgomon(algomon);
+		} catch (AlgomonInvalidoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		this.siguienteTurno();
 	}
 	public List<String> ataquesDisponiblesAlgomonActual(){
 		return jugadorActual.ataquesDisponibles();
 	}
-	private List<Algomon> algomonesDisponibles() {
+	public List<Algomon> algomonesDisponibles() {
 		return this.jugadorActual.getAlgomones();
 	}
 
@@ -68,5 +77,46 @@ public class JuegoAlgomon {
 	public Jugador getJugador2(){
 		return jugador2;
 	}
+
+	
+	public void agregarAlgomonJugador1(Algomon algomon) {
+		this.jugador1.agregarAlgomon(algomon);
+
+	}
+
+	public void agregarAlgomonJugador2(Algomon algomon) {
+		this.jugador2.agregarAlgomon(algomon);
+	}
+
+	public int getPuntosVidaActualJugador1() {
+		return this.jugador1.algomonActual().getPuntosVidaActuales();
+	}
+	public int getPuntosVidaActualJugador2() {
+		return this.jugador2.algomonActual().getPuntosVidaActuales();	
+	}	
+
+	public int getPuntosVidaOriginalJugador1() {
+		return this.jugador1.algomonActual().getPuntosVida();
+	}
+	public int getPuntosVidaOriginalJugador2() {
+		return this.jugador2.algomonActual().getPuntosVida();
+	}
+
+	public String getNombreJugadorActual() {
+		return this.jugadorActual.getNombre();
+	}
+	public void setNombreJugador1(String nombre) {
+		 this.jugador1.setNombre(nombre);	
+	}
+	public void setNombreJugador2(String nombre) {
+		 this.jugador2.setNombre(nombre);	
+	}	
+	public String getNombreJugador1() {
+		 return this.jugador1.getNombre();
+	}	
+	public String getNombreJugador2() {
+		 return this.jugador2.getNombre();
+	}	
+
 }
 

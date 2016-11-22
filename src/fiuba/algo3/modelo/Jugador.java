@@ -14,6 +14,7 @@ public class Jugador {
 	List<Algomon> misAlgomones;
 	ContenedorElementos contenedorDeElementos;
 	Algomon activo;
+	private String nombre;
 	public Jugador(){
 		this.misAlgomones = new ArrayList<Algomon>();
 		this.contenedorDeElementos = new ContenedorElementos();
@@ -56,5 +57,11 @@ public class Jugador {
 	}
 	public Elemento sacarVitamina() {
 		return contenedorDeElementos.sacarVitamina();
+	}
+	public String setNombre(String nombre) {
+		return this.nombre = nombre;
+	}	
+	public String getNombre() {
+		return this.nombre;
 	}
 }
