@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -34,10 +35,29 @@
       </HBox>
    </center>
    <top>
-      <Button fx:id="nombreAlgo1" mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER">
+      <HBox prefHeight="62.0" prefWidth="248.0">
+         <children>
+            <Button fx:id="nombreAlgo1" mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+               <HBox.margin>
+                  <Insets left="150.0" top="30.0" />
+               </HBox.margin>
+            </Button>
+            <ImageView fx:id="img1" fitHeight="75.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="45.0" top="15.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
          <BorderPane.margin>
-            <Insets top="10.0" />
-         </BorderPane.margin></Button>
+            <Insets right="50.0" />
+         </BorderPane.margin>
+      </HBox>
    </top>
    <bottom>
       <Button fx:id="nombreAlgo2" mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER">

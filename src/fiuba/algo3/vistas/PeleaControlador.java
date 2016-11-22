@@ -10,9 +10,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert.AlertType;
 
 public class PeleaControlador implements Initializable {
+	
+	@FXML
+	private ImageView img1;
 	
 	@FXML
 	private Label vidaJ1;
@@ -26,6 +31,8 @@ public class PeleaControlador implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+        Image image = new Image(Aplicacion.nuevoJuego.getJugador1().algomonActual().getImagen().toURI().toString());
+        img1.setImage(image);
 		vidaJ1.setText(String.valueOf(Aplicacion.nuevoJuego.getJugador1().algomonActual().getPuntosVidaActuales()));
 		vidaJ2.setText(String.valueOf(Aplicacion.nuevoJuego.getJugador2().algomonActual().getPuntosVidaActuales()));
 		nombreAlgo1.setText(Aplicacion.nuevoJuego.getJugador1().algomonActual().getNombre());
