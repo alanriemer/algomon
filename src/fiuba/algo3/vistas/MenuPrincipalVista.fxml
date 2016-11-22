@@ -11,7 +11,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.MenuPrincipalControlador">
    <top>
-      <MenuBar BorderPane.alignment="CENTER">
+      <MenuBar opacity="0.62" BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
@@ -25,6 +25,9 @@
             </items>
           </Menu>
         </menus>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
       </MenuBar>
    </top>
 </BorderPane>

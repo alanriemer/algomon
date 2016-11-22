@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -14,9 +15,18 @@
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect>
             </Button>
-            <Button fx:id="fightItems" mnemonicParsing="false" text="Items" />
-            <Button fx:id="fightCambio" mnemonicParsing="false" text="Cambio" />
+            <Button fx:id="fightItems" mnemonicParsing="false" text="Items">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect></Button>
+            <Button fx:id="fightCambio" mnemonicParsing="false" text="Cambio">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect></Button>
          </children>
          <BorderPane.margin>
             <Insets />

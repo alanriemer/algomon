@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -9,25 +11,46 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
                <children>
-                  <Label fx:id="nombreAta1" text="Label" />
-                  <Button fx:id="atacar1" mnemonicParsing="false" onAction="#usarAtaque1" text="Button" />
+                  <Label fx:id="nombreAta1" minWidth="100.0" text="Label" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="atacar1" mnemonicParsing="false" onAction="#usarAtaque1" text="Button" wrapText="true">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
                </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
                <children>
-                  <Label fx:id="nombreAta2" text="Label" />
-                  <Button fx:id="atacar2" mnemonicParsing="false" onAction="#usarAtaque2" text="Button" />
+                  <Label fx:id="nombreAta2" minWidth="100.0" text="Label" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="atacar2" mnemonicParsing="false" onAction="#usarAtaque2" text="Button">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
                </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
                <children>
-                  <Label fx:id="nombreAta3" text="Label" />
-                  <Button fx:id="atacar3" mnemonicParsing="false" onAction="#usarAtaque3" text="Button" />
+                  <Label fx:id="nombreAta3" minWidth="100.0" text="Label" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="atacar3" mnemonicParsing="false" onAction="#usarAtaque3" text="Button">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
                </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
             </HBox>
          </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
       </VBox>
    </center>
 </BorderPane>
