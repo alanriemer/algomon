@@ -24,10 +24,6 @@ public class Aplicacion extends Application {
 		Squirtle squirtle = new Squirtle();
 		Charmander charmander = new Charmander();
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
-		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
-		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
-		nuevoJuego.getJugador2().agregarAlgomon(charmander);
-		nuevoJuego.getJugador2().agregarAlgomon(charmander);
 		nuevoJuego.getJugador2().agregarAlgomon(charmander);
 	}
 
@@ -42,6 +38,10 @@ public class Aplicacion extends Application {
 		Rattata squirtle = new Rattata();
 		Charmander charmander = new Charmander();
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
+		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
+		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
+		nuevoJuego.getJugador2().agregarAlgomon(charmander);
+		nuevoJuego.getJugador2().agregarAlgomon(charmander);
 		nuevoJuego.getJugador2().agregarAlgomon(charmander);
 	}
 

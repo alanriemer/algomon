@@ -32,6 +32,7 @@ public class CambioAlgomonControlador implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		List<Algomon> algomones = Aplicacion.nuevoJuego.algomonesDisponibles();
+
 		nombreAlgomon1.setText(algomones.get(0).getNombre());
 		nombreAlgomon2.setText(algomones.get(1).getNombre());
 		nombreAlgomon3.setText(algomones.get(2).getNombre());
