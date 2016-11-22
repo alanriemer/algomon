@@ -32,7 +32,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="fightCambio" defaultButton="true" minWidth="75.0" mnemonicParsing="false" text="Cambio">
+            <Button fx:id="fightCambio" defaultButton="true" minWidth="75.0" mnemonicParsing="false" text="Cambio"  onAction="#goCambioAlgomonView" >
                <effect>
                   <DropShadow blurType="GAUSSIAN" />
                </effect>

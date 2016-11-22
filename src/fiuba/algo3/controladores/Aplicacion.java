@@ -14,19 +14,23 @@ import javafx.stage.Stage;
 
 public class Aplicacion extends Application {
 	private Stage primaryStage;
-	private static BorderPane mainLayout;	
+	private static BorderPane mainLayout;
 	public static JuegoAlgomon nuevoJuego = new JuegoAlgomon();
-	
+
 	public static void restart(){
 		Aplicacion.nuevoJuego = new JuegoAlgomon();
 		nuevoJuego.setNombreJugador1("Ash");
 		nuevoJuego.setNombreJugador1("Gary");
 		Squirtle squirtle = new Squirtle();
-		Charmander charmander = new Charmander();	
+		Charmander charmander = new Charmander();
+		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
+		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
 		nuevoJuego.getJugador2().agregarAlgomon(charmander);
+		nuevoJuego.getJugador2().agregarAlgomon(charmander);
+		nuevoJuego.getJugador2().agregarAlgomon(charmander);
 	}
-	
+
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		this.primaryStage = primaryStage;
@@ -36,7 +40,7 @@ public class Aplicacion extends Application {
 		nuevoJuego.setNombreJugador1("Ash");
 		nuevoJuego.setNombreJugador2("Gary");
 		Rattata squirtle = new Rattata();
-		Charmander charmander = new Charmander();	
+		Charmander charmander = new Charmander();
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
 		nuevoJuego.getJugador2().agregarAlgomon(charmander);
 	}
@@ -49,35 +53,42 @@ public class Aplicacion extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
-	
+
 	public void showMainItems() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Aplicacion.class.getResource("../vistas/VentanaInicioVista.fxml"));
 		BorderPane mainItems = loader.load();
 		mainLayout.setCenter(mainItems);
 	}
-	
+
 	public static void showNuevo() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Aplicacion.class.getResource("../vistas/VentanaInicioVista.fxml"));
 		BorderPane mainItems = loader.load();
 		mainLayout.setCenter(mainItems);
 	}
-	
+
 	public static void showEscenarioPelea() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Aplicacion.class.getResource("../vistas/PeleaVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
-	
+
 	public static void showAtaquesView() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Aplicacion.class.getResource("../vistas/AtaquesVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
-	
+
+	public static void showCambioAlgomonView() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Aplicacion.class.getResource("../vistas/CambioAlgomonVista.fxml"));
+		BorderPane escenarioPelea = loader.load();
+		mainLayout.setCenter(escenarioPelea);
+	}
+
 	public static void main(String[] args) {
 		launch(args);
 	}

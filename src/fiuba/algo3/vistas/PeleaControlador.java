@@ -15,12 +15,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert.AlertType;
 
 public class PeleaControlador implements Initializable {
-	
+
 	@FXML
 	private ImageView img1;
 	@FXML
 	private ImageView img2;
-	
+
 	@FXML
 	private Label vidaJ1;
 	@FXML
@@ -30,7 +30,7 @@ public class PeleaControlador implements Initializable {
 	private Button nombreAlgo1;
 	@FXML
 	private Button nombreAlgo2;
-	
+
 	@FXML
 	private Label _nombre1;
 	@FXML
@@ -65,9 +65,13 @@ public class PeleaControlador implements Initializable {
 			Aplicacion.restart();
 		}
 	}
-	
+
 	@FXML
 	public void goAtaquesView() throws IOException{
 		Aplicacion.showAtaquesView();
+	}
+	@FXML
+	public void goCambioAlgomonView() throws IOException{
+		Aplicacion.showCambioAlgomonView();
 	}
 }
