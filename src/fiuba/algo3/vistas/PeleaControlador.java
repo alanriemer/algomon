@@ -18,6 +18,8 @@ public class PeleaControlador implements Initializable {
 	
 	@FXML
 	private ImageView img1;
+	@FXML
+	private ImageView img2;
 	
 	@FXML
 	private Label vidaJ1;
@@ -33,8 +35,10 @@ public class PeleaControlador implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
         Image image = new Image(Aplicacion.nuevoJuego.getJugador1().algomonActual().getImagen().toURI().toString());
         img1.setImage(image);
-		vidaJ1.setText(String.valueOf(Aplicacion.nuevoJuego.getJugador1().algomonActual().getPuntosVidaActuales()));
-		vidaJ2.setText(String.valueOf(Aplicacion.nuevoJuego.getJugador2().algomonActual().getPuntosVidaActuales()));
+        Image image2 = new Image(Aplicacion.nuevoJuego.getJugador2().algomonActual().getImagen().toURI().toString());
+        img2.setImage(image2);
+		vidaJ1.setText(String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaActualJugador1())+"/"+String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaOriginalJugador1()));
+		vidaJ2.setText(String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaActualJugador2())+"/"+String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaOriginalJugador2()));
 		nombreAlgo1.setText(Aplicacion.nuevoJuego.getJugador1().algomonActual().getNombre());
 		nombreAlgo2.setText(Aplicacion.nuevoJuego.getJugador2().algomonActual().getNombre());
 		if (Aplicacion.nuevoJuego.getJugador1().algomonActual().getPuntosVidaActuales() == 0){

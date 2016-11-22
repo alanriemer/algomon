@@ -10,7 +10,6 @@ import fiuba.algo3.modelo.JuegoAlgomon;
 import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.algomones.Charmander;
 import fiuba.algo3.modelo.algomones.Squirtle;
-import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 
 public class JuegoTest {
 	@Test

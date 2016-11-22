@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import fiuba.algo3.modelo.JuegoAlgomon;
 import fiuba.algo3.modelo.algomones.Charmander;
+import fiuba.algo3.modelo.algomones.Rattata;
 import fiuba.algo3.modelo.algomones.Squirtle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -30,7 +31,7 @@ public class Aplicacion extends Application {
 		this.primaryStage.setTitle("Algomon - La aventura recien comienza");
 		showMainView();
 		showMainItems();
-		Squirtle squirtle = new Squirtle();
+		Rattata squirtle = new Rattata();
 		Charmander charmander = new Charmander();	
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
 		nuevoJuego.getJugador2().agregarAlgomon(charmander);
