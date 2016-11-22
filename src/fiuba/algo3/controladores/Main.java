@@ -38,7 +38,7 @@ public class Main extends Application {
 
 	private void showMainView() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/MainMenu.fxml"));
+		loader.setLocation(Main.class.getResource("../vistas/MenuPrincipalVista.fxml"));
 		mainLayout = loader.load();
 		Scene scene = new Scene(mainLayout);
 		primaryStage.setScene(scene);
@@ -47,28 +47,28 @@ public class Main extends Application {
 	
 	public void showMainItems() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/VentanaInicio.fxml"));
+		loader.setLocation(Main.class.getResource("../vistas/VentanaInicioVista.fxml"));
 		BorderPane mainItems = loader.load();
 		mainLayout.setCenter(mainItems);
 	}
 	
 	public static void showNuevo() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/VentanaInicio.fxml"));
+		loader.setLocation(Main.class.getResource("../vistas/VentanaInicioVista.fxml"));
 		BorderPane mainItems = loader.load();
 		mainLayout.setCenter(mainItems);
 	}
 	
 	public static void showEscenarioPelea() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/MainFight.fxml"));
+		loader.setLocation(Main.class.getResource("../vistas/PeleaVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
 	
 	public static void showAtaquesView() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("../vistas/AtaquesView.fxml"));
+		loader.setLocation(Main.class.getResource("../vistas/AtaquesVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
