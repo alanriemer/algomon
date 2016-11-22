@@ -34,7 +34,7 @@ public class Aplicacion extends Application {
 		showMainView();
 		showMainItems();
 		nuevoJuego.setNombreJugador1("Ash");
-		nuevoJuego.setNombreJugador1("Gary");
+		nuevoJuego.setNombreJugador2("Gary");
 		Rattata squirtle = new Rattata();
 		Charmander charmander = new Charmander();	
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
