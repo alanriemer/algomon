@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Alert.AlertType;
 
-public class MainFightControlador implements Initializable {
+public class PeleaControlador implements Initializable {
 	
 	@FXML
 	private Label vidaJ1;
@@ -26,11 +26,11 @@ public class MainFightControlador implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		vidaJ1.setText(String.valueOf(Main.nuevo.getJugador1().algomonActual().getPuntosVidaActuales()));
-		vidaJ2.setText(String.valueOf(Main.nuevo.getJugador2().algomonActual().getPuntosVidaActuales()));
-		nombreAlgo1.setText(Main.nuevo.getJugador1().algomonActual().getNombre());
-		nombreAlgo2.setText(Main.nuevo.getJugador2().algomonActual().getNombre());
-		if (Main.nuevo.getJugador1().algomonActual().getPuntosVidaActuales() == 0){
+		vidaJ1.setText(String.valueOf(Main.nuevoJuego.getJugador1().algomonActual().getPuntosVidaActuales()));
+		vidaJ2.setText(String.valueOf(Main.nuevoJuego.getJugador2().algomonActual().getPuntosVidaActuales()));
+		nombreAlgo1.setText(Main.nuevoJuego.getJugador1().algomonActual().getNombre());
+		nombreAlgo2.setText(Main.nuevoJuego.getJugador2().algomonActual().getNombre());
+		if (Main.nuevoJuego.getJugador1().algomonActual().getPuntosVidaActuales() == 0){
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle(null);
 			alert.setHeaderText(null);
@@ -38,7 +38,7 @@ public class MainFightControlador implements Initializable {
 			alert.showAndWait();
 			Main.restart();
 		}
-		if (Main.nuevo.getJugador2().algomonActual().getPuntosVidaActuales() == 0){
+		if (Main.nuevoJuego.getJugador2().algomonActual().getPuntosVidaActuales() == 0){
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle(null);
 			alert.setHeaderText(null);

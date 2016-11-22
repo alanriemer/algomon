@@ -6,7 +6,7 @@ import fiuba.algo3.controladores.Main;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-public class MainMenuControlador {
+public class MenuPrincipalControlador {
 	
 	public void doNuevo() throws IOException{
 		Main.restart();

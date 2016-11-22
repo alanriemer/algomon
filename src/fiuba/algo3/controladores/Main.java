@@ -14,14 +14,14 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	private Stage primaryStage;
 	private static BorderPane mainLayout;	
-	public static JuegoAlgomon nuevo = new JuegoAlgomon();
+	public static JuegoAlgomon nuevoJuego = new JuegoAlgomon();
 	
 	public static void restart(){
-		Main.nuevo = new JuegoAlgomon();
+		Main.nuevoJuego = new JuegoAlgomon();
 		Squirtle squirtle = new Squirtle();
 		Charmander charmander = new Charmander();	
-		nuevo.getJugador1().agregarAlgomon(squirtle);
-		nuevo.getJugador2().agregarAlgomon(charmander);
+		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
+		nuevoJuego.getJugador2().agregarAlgomon(charmander);
 	}
 	
 	@Override
@@ -32,8 +32,8 @@ public class Main extends Application {
 		showMainItems();
 		Squirtle squirtle = new Squirtle();
 		Charmander charmander = new Charmander();	
-		nuevo.getJugador1().agregarAlgomon(squirtle);
-		nuevo.getJugador2().agregarAlgomon(charmander);
+		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
+		nuevoJuego.getJugador2().agregarAlgomon(charmander);
 	}
 
 	private void showMainView() throws IOException{

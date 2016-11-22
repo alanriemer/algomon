@@ -11,7 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class AtaquesController implements Initializable {
+public class AtaquesControlador implements Initializable {
 	
 	
 	@FXML
@@ -30,7 +30,7 @@ public class AtaquesController implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		List<String> ataques = Main.nuevo.ataquesDisponiblesAlgomonActual();
+		List<String> ataques = Main.nuevoJuego.ataquesDisponiblesAlgomonActual();
 		nombreAta1.setText(ataques.get(0));
 		nombreAta2.setText(ataques.get(1));
 		nombreAta3.setText(ataques.get(2));
@@ -40,20 +40,20 @@ public class AtaquesController implements Initializable {
 	}
 	
 	public void usarAtaque1() throws IOException{
-		List<String> ataques = Main.nuevo.ataquesDisponiblesAlgomonActual();
-		Main.nuevo.atacarCon(ataques.get(0));
+		List<String> ataques = Main.nuevoJuego.ataquesDisponiblesAlgomonActual();
+		Main.nuevoJuego.atacarCon(ataques.get(0));
 		Main.showEscenarioPelea();
 	}
 	
 	public void usarAtaque2() throws IOException{
-		List<String> ataques = Main.nuevo.ataquesDisponiblesAlgomonActual();
-		Main.nuevo.atacarCon(ataques.get(1));
+		List<String> ataques = Main.nuevoJuego.ataquesDisponiblesAlgomonActual();
+		Main.nuevoJuego.atacarCon(ataques.get(1));
 		Main.showEscenarioPelea();
 	}
 	
 	public void usarAtaque3() throws IOException{
-		List<String> ataques = Main.nuevo.ataquesDisponiblesAlgomonActual();
-		Main.nuevo.atacarCon(ataques.get(2));
+		List<String> ataques = Main.nuevoJuego.ataquesDisponiblesAlgomonActual();
+		Main.nuevoJuego.atacarCon(ataques.get(2));
 		Main.showEscenarioPelea();
 	}
 }
