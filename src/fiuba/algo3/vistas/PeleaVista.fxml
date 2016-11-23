@@ -101,7 +101,7 @@
                   <Insets bottom="50.0" />
                </padding>
             </Label>
-            <Label minWidth="150.0" text="El jugador actual es ">
+            <Label minWidth="150.0" text="Es turno de ">
                <VBox.margin>
                   <Insets left="-15.0" top="-80.0" />
                </VBox.margin>
