@@ -64,7 +64,7 @@ public class JuegoAlgomon {
 		this.jugadorActual.usarElemento(elemento);
 		this.siguienteTurno();
 	}
-	public List<Elemento> elementosDisponibles() {
+	public List<String> elementosDisponibles() {
 		return this.jugadorActual.elementosDisponibles();
 	}
 	public Jugador getJugador1(){

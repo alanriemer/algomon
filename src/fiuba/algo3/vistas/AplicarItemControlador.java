@@ -34,11 +34,11 @@ public class AplicarItemControlador implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		List<Elemento> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		nombreItem1.setText(elementos.get(0).getNombre());
-		nombreItem2.setText(elementos.get(1).getNombre());
-		nombreItem3.setText(elementos.get(2).getNombre());
-		nombreItem4.setText(elementos.get(3).getNombre());
+		List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
+		nombreItem1.setText(elementos.get(0));
+		nombreItem2.setText(elementos.get(1));
+		nombreItem3.setText(elementos.get(2));
+		nombreItem4.setText(elementos.get(3));
 		aplicar1.setText("Usar");
 		aplicar2.setText("Usar");
 		aplicar3.setText("Usar");
@@ -46,26 +46,30 @@ public class AplicarItemControlador implements Initializable {
 	}
 
 	public void usarItem1() throws IOException{
-		List<Elemento> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		Aplicacion.nuevoJuego.aplicarElemento(elementos.get(0));
+		//List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
+		Elemento elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarPocion();
+		Aplicacion.nuevoJuego.aplicarElemento(elemento);
 		Aplicacion.showEscenarioPelea();
 	}
 
 	public void usarItem2() throws IOException{
-		List<Elemento> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		Aplicacion.nuevoJuego.aplicarElemento(elementos.get(1));
+		//List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
+		Elemento elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarSuperPocion();
+		Aplicacion.nuevoJuego.aplicarElemento(elemento);
 		Aplicacion.showEscenarioPelea();
 	}
 
 	public void usarItem3() throws IOException{
-		List<Elemento> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		Aplicacion.nuevoJuego.aplicarElemento(elementos.get(2));
+		//List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
+		Elemento elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarVitamina();
+		Aplicacion.nuevoJuego.aplicarElemento(elemento);
 		Aplicacion.showEscenarioPelea();
 	}
-	
+
 	public void usarItem4() throws IOException{
-		List<Elemento> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		Aplicacion.nuevoJuego.aplicarElemento(elementos.get(3));
+		//List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
+		Elemento elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarRestaurador();
+		Aplicacion.nuevoJuego.aplicarElemento(elemento);
 		Aplicacion.showEscenarioPelea();
 	}
 }

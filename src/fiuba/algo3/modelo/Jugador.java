@@ -65,8 +65,13 @@ public class Jugador {
 	public String getNombre() {
 		return this.nombre;
 	}
-	public List<Elemento> elementosDisponibles() {
-		return null;
+	public List<String> elementosDisponibles() {
+		List<String> elementos = new ArrayList<String>();
+		elementos.add("Pocion");
+		elementos.add("SuperPocion");
+		elementos.add("Vitamina");
+		elementos.add("Restaurador");
+		return elementos;
 	}
 	public boolean eligioTodosLosAlgomon() {
 		return this.misAlgomones.size() == 3;
