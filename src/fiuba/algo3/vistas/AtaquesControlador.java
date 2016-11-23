@@ -28,6 +28,9 @@ public class AtaquesControlador implements Initializable {
 	@FXML
 	private Label nombreAta3;
 	
+	@FXML
+	private Button volver;
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
@@ -54,6 +57,10 @@ public class AtaquesControlador implements Initializable {
 	public void usarAtaque3() throws IOException{
 		List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
 		Aplicacion.nuevoJuego.atacarCon(ataques.get(2));
+		Aplicacion.showEscenarioPelea();
+	}
+	
+	public void volver() throws IOException{
 		Aplicacion.showEscenarioPelea();
 	}
 }

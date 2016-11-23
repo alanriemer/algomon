@@ -14,7 +14,7 @@
    <center>
       <HBox alignment="CENTER" fillHeight="false" minWidth="250.0" prefHeight="25.0" prefWidth="0.0" spacing="30.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="fightAtaque" alignment="CENTER" defaultButton="true" minWidth="75.0" mnemonicParsing="false" onAction="#goAtaquesView" text="Atacar">
+            <Button alignment="CENTER" defaultButton="true" minWidth="75.0" mnemonicParsing="false" onAction="#goAtaquesView" text="Atacar">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -25,14 +25,14 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="fightItems" defaultButton="true" minWidth="75.0" mnemonicParsing="false" onAction="#goAplicarItemView" text="Items">
+            <Button defaultButton="true" minWidth="75.0" mnemonicParsing="false" onAction="#goAplicarItemView" text="Items">
                <effect>
                   <DropShadow blurType="GAUSSIAN" />
                </effect>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="fightCambio" defaultButton="true" minWidth="75.0" mnemonicParsing="false" onAction="#goCambioAlgomonView" text="Cambio">
+            <Button defaultButton="true" minWidth="75.0" mnemonicParsing="false" onAction="#goCambioAlgomonView" text="Cambio">
                <effect>
                   <DropShadow blurType="GAUSSIAN" />
                </effect>

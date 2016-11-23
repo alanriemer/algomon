@@ -14,7 +14,6 @@ import javafx.scene.control.Label;
 
 public class AplicarItemControlador implements Initializable {
 
-
 	@FXML
 	private Button aplicar1;
 	@FXML
@@ -30,6 +29,8 @@ public class AplicarItemControlador implements Initializable {
 	private Label nombreItem2;
 	@FXML
 	private Label nombreItem3;
+	@FXML
+	private Label nombreItem4;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -37,9 +38,11 @@ public class AplicarItemControlador implements Initializable {
 		nombreItem1.setText(elementos.get(0).getNombre());
 		nombreItem2.setText(elementos.get(1).getNombre());
 		nombreItem3.setText(elementos.get(2).getNombre());
-		aplicar1.setText("Cambiar");
-		aplicar2.setText("Cambiar");
-		aplicar3.setText("Cambiar");
+		nombreItem4.setText(elementos.get(3).getNombre());
+		aplicar1.setText("Usar");
+		aplicar2.setText("Usar");
+		aplicar3.setText("Usar");
+		aplicar4.setText("Usar");
 	}
 
 	public void usarItem1() throws IOException{
@@ -57,6 +60,12 @@ public class AplicarItemControlador implements Initializable {
 	public void usarItem3() throws IOException{
 		List<Elemento> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
 		Aplicacion.nuevoJuego.aplicarElemento(elementos.get(2));
+		Aplicacion.showEscenarioPelea();
+	}
+	
+	public void usarItem4() throws IOException{
+		List<Elemento> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
+		Aplicacion.nuevoJuego.aplicarElemento(elementos.get(3));
 		Aplicacion.showEscenarioPelea();
 	}
 }
