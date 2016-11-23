@@ -36,9 +36,9 @@ public class CambioAlgomonControlador implements Initializable {
 		nombreAlgomon1.setText(algomones.get(0).getNombre());
 		nombreAlgomon2.setText(algomones.get(1).getNombre());
 		nombreAlgomon3.setText(algomones.get(2).getNombre());
-		cambiar1.setText("Usar");
-		cambiar2.setText("Usar");
-		cambiar3.setText("Usar");
+		cambiar1.setText("Cambiar");
+		cambiar2.setText("Cambiar");
+		cambiar3.setText("Cambiar");
 	}
 
 	public void cambiarAlgomon1() throws IOException{

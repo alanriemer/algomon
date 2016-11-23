@@ -35,9 +35,12 @@ public class PeleaControlador implements Initializable {
 	private Label _nombre1;
 	@FXML
 	private Label _nombre2;
+	@FXML
+	private Label actual;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		actual.setText(Aplicacion.nuevoJuego.getNombreJugadorActual());
 		_nombre1.setText(Aplicacion.nuevoJuego.getJugador1().algomonActual().getNombre());
 		_nombre2.setText(Aplicacion.nuevoJuego.getJugador2().algomonActual().getNombre());
         Image image = new Image(Aplicacion.nuevoJuego.getJugador1().algomonActual().getImagen().toURI().toString());

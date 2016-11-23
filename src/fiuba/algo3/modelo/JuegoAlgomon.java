@@ -34,13 +34,8 @@ public class JuegoAlgomon {
 //		this.jugadorActual =  jugadores.get((int)Math.random() * jugadores.size());
 //		this.cambiarEnemigo();
 	}
-	public void atacarCon(String ataque){
-		try {
-			this.jugadorActual.atacarCon(ataque, this.enemigoActual.algomonActual());
-		} catch (AtaqueNoDisponibleException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void atacarCon(String ataque)throws AtaqueNoDisponibleException{
+		this.jugadorActual.atacarCon(ataque, this.enemigoActual.algomonActual());
 		this.siguienteTurno();
 	}
 

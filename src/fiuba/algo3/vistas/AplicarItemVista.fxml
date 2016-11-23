@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.AplicarItemControlador">
+<BorderPane prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.AplicarItemControlador">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -52,6 +52,29 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="70.0">
+               <children>
+                  <Label fx:id="nombreItem4" minWidth="100.0" text="Label" textAlignment="CENTER" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="185.0" top="30.0" />
+                     </HBox.margin>
+        nombreItem1.setText(elementos.get(0).getNombre());          </Label>
+                  <Button fx:id="aplicar4" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#usarItem4" text="Button">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="24.0" />
+                     </HBox.margin>
+                  </Button>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
