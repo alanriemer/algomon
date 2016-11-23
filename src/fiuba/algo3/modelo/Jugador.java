@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import fiuba.algo3.modelo.algomones.Algomon;
@@ -65,13 +66,13 @@ public class Jugador {
 	public String getNombre() {
 		return this.nombre;
 	}
-	public List<String> elementosDisponibles() {
-		List<String> elementos = new ArrayList<String>();
-		elementos.add("Pocion");
-		elementos.add("SuperPocion");
-		elementos.add("Vitamina");
-		elementos.add("Restaurador");
-		return elementos;
+	public HashMap<String, Integer> cantElementos() {
+		HashMap<String, Integer> cantElementos = new HashMap<String, Integer>();
+		cantElementos.put("Pocion", this.contenedorDeElementos.cantPocion());
+		cantElementos.put("SuperPocion", this.contenedorDeElementos.cantSuperPocion());
+		cantElementos.put("Vitamina", this.contenedorDeElementos.cantVitamina());
+		cantElementos.put("Restaurador", this.contenedorDeElementos.cantRestaurador());
+		return cantElementos;
 	}
 	public boolean eligioTodosLosAlgomon() {
 		return this.misAlgomones.size() == 3;

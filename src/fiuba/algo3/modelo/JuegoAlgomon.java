@@ -1,6 +1,7 @@
 package fiuba.algo3.modelo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import fiuba.algo3.modelo.algomones.Algomon;
@@ -64,8 +65,8 @@ public class JuegoAlgomon {
 		this.jugadorActual.usarElemento(elemento);
 		this.siguienteTurno();
 	}
-	public List<String> elementosDisponibles() {
-		return this.jugadorActual.elementosDisponibles();
+	public HashMap<String, Integer> cantElementos() {
+		return this.jugadorActual.cantElementos();
 	}
 	public Jugador getJugador1(){
 		return jugador1;

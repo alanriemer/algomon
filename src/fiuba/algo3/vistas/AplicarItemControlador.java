@@ -2,7 +2,7 @@ package fiuba.algo3.vistas;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 import fiuba.algo3.controladores.Aplicacion;
@@ -34,11 +34,11 @@ public class AplicarItemControlador implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		nombreItem1.setText(elementos.get(0));
-		nombreItem2.setText(elementos.get(1));
-		nombreItem3.setText(elementos.get(2));
-		nombreItem4.setText(elementos.get(3));
+		HashMap<String, Integer> cantElementos = Aplicacion.nuevoJuego.cantElementos();
+		nombreItem1.setText("Pocion Cant: "+ cantElementos.get("Pocion"));
+		nombreItem2.setText("SuperPocion Cant: " + cantElementos.get("SuperPocion"));
+		nombreItem3.setText("Vitamina Cant: " + cantElementos.get("Vitamina"));
+		nombreItem4.setText("Restaurador Cant:"+cantElementos.get("Restaurador"));
 		aplicar1.setText("Usar");
 		aplicar2.setText("Usar");
 		aplicar3.setText("Usar");
