@@ -8,6 +8,6 @@ public class VentanaInicioControlador {
 
 	@FXML
 	public void goEscenarioPelea() throws IOException{
-		Aplicacion.showEscenarioPelea();
+		Aplicacion.showEleccionAlgomones();
 	}
 }

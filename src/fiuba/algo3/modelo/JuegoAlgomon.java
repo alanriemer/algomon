@@ -78,6 +78,10 @@ public class JuegoAlgomon {
 	public Jugador getJugador2(){
 		return jugador2;
 	}
+	
+	public Jugador getJugadorActual(){
+		return jugadorActual;
+	}
 
 
 	public void agregarAlgomonJugador1(Algomon algomon) {
@@ -117,6 +121,18 @@ public class JuegoAlgomon {
 	}
 	public String getNombreJugador2() {
 		 return this.jugador2.getNombre();
+	}
+
+	public boolean faltaQueEligaAlgunaJugador() {
+		if(this.jugador1.eligioTodosLosAlgomon() && this.jugador2.eligioTodosLosAlgomon())
+			return false;
+		return true;
+	}
+
+	public void jugadorActualYaEligio() {
+		//HACE LO MISMO QUE SIGUIENTE TURNO PERO ES PUBLICO.
+		this.jugadorActual = (jugadorActual == jugador1)? jugador2:jugador1;
+		this.cambiarEnemigo();
 	}
 
 

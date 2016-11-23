@@ -67,4 +67,7 @@ public class Jugador {
 	public List<Elemento> elementosDisponibles() {
 		return null;
 	}
+	public boolean eligioTodosLosAlgomon() {
+		return this.misAlgomones.size() == 3;
+	}
 }
