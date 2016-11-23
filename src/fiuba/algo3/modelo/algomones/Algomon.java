@@ -8,6 +8,7 @@ import java.util.Map;
 
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueNormal;
+import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.estadoAlgomones.Estado;
 import fiuba.algo3.modelo.estadoAlgomones.EstadoNormal;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
@@ -90,5 +91,9 @@ public abstract class Algomon {
 	
 	public File getImagen(){
 		return this.imagen;
+	}
+
+	public void aplicarElemento(Elemento elemento) {
+		estado.aplicarElemento(elemento);
 	}
 }

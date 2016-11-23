@@ -2,6 +2,7 @@ package fiuba.algo3.modelo.estadoAlgomones;
 
 import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class EstadoDormido implements Estado{
@@ -21,11 +22,21 @@ public class EstadoDormido implements Estado{
 	}
 
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
+		this.verificarSiTieneQueDespertar();
+	}
+	
+	@Override
+	public void aplicarElemento(Elemento elemento) {
+		elemento.utilizar(algomon);
+		this.verificarSiTieneQueDespertar();
+	}
+	
+	public void verificarSiTieneQueDespertar(){
 		turnos++;
 		if (turnos == 3) {
 			algomon.estado().despertar();
 		}
-//		throw new AtaqueNoDisponibleException();
+		
 	}
 
 	@Override

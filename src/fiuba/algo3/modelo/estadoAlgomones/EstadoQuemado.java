@@ -2,6 +2,7 @@ package fiuba.algo3.modelo.estadoAlgomones;
 
 import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class EstadoQuemado implements Estado {
@@ -18,6 +19,12 @@ public class EstadoQuemado implements Estado {
 	
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
 		ataque.atacar(enemigo);
+		this.efecto();
+	}
+	
+	@Override
+	public void aplicarElemento(Elemento elemento) {
+		elemento.utilizar(algomon);
 		this.efecto();
 	}
 
@@ -53,4 +60,6 @@ public class EstadoQuemado implements Estado {
 	public void despertar() {
 		this.algomon.nuevoEstado(new EstadoQuemado(this.algomon));
 	}
+
+	
 }

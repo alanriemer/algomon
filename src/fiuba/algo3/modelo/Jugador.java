@@ -37,7 +37,7 @@ public class Jugador {
 
 	}
 	public void usarElemento(Elemento elemento) {
-		elemento.utilizar(this.algomonActual());
+		this.algomonActual().aplicarElemento(elemento);
 	}
 	public Elemento sacarPocion() {
 		return contenedorDeElementos.sacarPocion();
