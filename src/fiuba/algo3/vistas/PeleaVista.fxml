@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.PeleaControlador">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.PeleaControlador">
    <center>
       <HBox alignment="CENTER" fillHeight="false" minWidth="250.0" prefHeight="25.0" prefWidth="0.0" spacing="30.0" BorderPane.alignment="CENTER">
          <children>
@@ -25,14 +25,14 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="fightItems" defaultButton="true" minWidth="75.0" mnemonicParsing="false" text="Items" onAction="#goAplicarItemView">
+            <Button fx:id="fightItems" defaultButton="true" minWidth="75.0" mnemonicParsing="false" onAction="#goAplicarItemView" text="Items">
                <effect>
                   <DropShadow blurType="GAUSSIAN" />
                </effect>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="fightCambio" defaultButton="true" minWidth="75.0" mnemonicParsing="false" text="Cambio"  onAction="#goCambioAlgomonView" >
+            <Button fx:id="fightCambio" defaultButton="true" minWidth="75.0" mnemonicParsing="false" onAction="#goCambioAlgomonView" text="Cambio">
                <effect>
                   <DropShadow blurType="GAUSSIAN" />
                </effect>
@@ -49,11 +49,11 @@
       </HBox>
    </center>
    <top>
-      <HBox prefHeight="62.0" prefWidth="248.0">
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="143.0" prefWidth="322.0">
          <children>
             <ImageView fx:id="img1" fitHeight="147.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
-                  <Insets bottom="30.0" left="225.0" top="-30.0" />
+                  <Insets bottom="30.0" left="120.0" top="-30.0" />
                </HBox.margin>
             </ImageView>
          </children>
@@ -61,7 +61,7 @@
             <Insets />
          </opaqueInsets>
          <BorderPane.margin>
-            <Insets right="50.0" />
+            <Insets left="100.0" />
          </BorderPane.margin>
       </HBox>
    </top>
@@ -70,7 +70,7 @@
          <children>
             <ImageView fx:id="img2" fitHeight="183.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
-                  <Insets left="200.0" />
+                  <Insets bottom="20.0" left="200.0" />
                </HBox.margin>
             </ImageView>
          </children>
@@ -84,21 +84,42 @@
          <children>
             <Label fx:id="_nombre1" text="Vida J1">
                <VBox.margin>
-                  <Insets left="38.0" top="280.0" />
+                  <Insets left="38.0" top="-90.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="13.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="vidaJ1" text="Label">
                <VBox.margin>
-                  <Insets bottom="150.0" left="39.0" />
+                  <Insets bottom="110.0" left="39.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="13.0" />
-               </font></Label>
+               </font>
+               <padding>
+                  <Insets bottom="50.0" />
+               </padding>
+            </Label>
+            <Label minWidth="150.0" text="El jugador actual es ">
+               <VBox.margin>
+                  <Insets left="-15.0" top="-80.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </Label>
+            <Label fx:id="actual" text="Label">
+               <VBox.margin>
+                  <Insets bottom="110.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="-10.0" left="15.0" />
+               </padding>
+            </Label>
             <Button fx:id="nombreAlgo2" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="120.0" text="Button" wrapText="true">
                <VBox.margin>
-                  <Insets bottom="220.0" left="10.0" top="60.0" />
+                  <Insets bottom="-50.0" top="20.0" />
                </VBox.margin>
             </Button>
          </children>
@@ -106,7 +127,7 @@
             <Insets left="30.0" />
          </padding>
          <BorderPane.margin>
-            <Insets left="5.0" />
+            <Insets left="5.0" top="70.0" />
          </BorderPane.margin>
       </VBox>
    </left>
@@ -115,19 +136,19 @@
          <children>
             <Button fx:id="nombreAlgo1" minWidth="120.0" mnemonicParsing="false" prefWidth="120.0" text="Button">
                <VBox.margin>
-                  <Insets bottom="180.0" top="-235.0" />
+                  <Insets bottom="240.0" top="-235.0" />
                </VBox.margin>
             </Button>
             <Label fx:id="_nombre2" text="Vida J2">
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets left="35.0" top="20.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Label>
             <Label fx:id="vidaJ2" text="Label">
                <VBox.margin>
-                  <Insets />
+                  <Insets left="40.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="13.0" />

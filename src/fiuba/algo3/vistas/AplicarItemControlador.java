@@ -37,9 +37,9 @@ public class AplicarItemControlador implements Initializable {
 		nombreItem1.setText(elementos.get(0).getNombre());
 		nombreItem2.setText(elementos.get(1).getNombre());
 		nombreItem3.setText(elementos.get(2).getNombre());
-		aplicar1.setText("Usar");
-		aplicar2.setText("Usar");
-		aplicar3.setText("Usar");
+		aplicar1.setText("Cambiar");
+		aplicar2.setText("Cambiar");
+		aplicar3.setText("Cambiar");
 	}
 
 	public void usarItem1() throws IOException{
