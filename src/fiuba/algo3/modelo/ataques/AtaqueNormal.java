@@ -4,8 +4,8 @@ package fiuba.algo3.modelo.ataques;
 
 public class AtaqueNormal extends Ataque{
 
-	public AtaqueNormal(int potencia, int cantidad) {
-		super(potencia, cantidad);
+	public AtaqueNormal(int potencia, int cantidad, String nombre) {
+		super(potencia, cantidad, nombre);
 	}
 
 	@Override

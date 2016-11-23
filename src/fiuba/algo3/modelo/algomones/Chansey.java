@@ -12,13 +12,13 @@ public class Chansey extends Algomon {
 		imagen = new File("src/resources/chansey.png");
 		puntosVida = 130;
 		puntosVidaActuales = 130;
-		Ataque latigoCepa = new AtaquePlanta(15,10);
-		Ataque canto = new AtaqueNormal(0,6);
+		Ataque latigoCepa = new AtaquePlanta(15,10,"Latigo Cepa");
+		Ataque canto = new AtaqueNormal(0,6, "Canto");
 		canto.puedeDormir();
 		ataques.put("Latigo Cepa",latigoCepa);
 		ataques.put("Canto",canto);
 	}
-	
+
 	@Override
 	public int calcularDanio(Ataque unAtaque) {
 		return unAtaque.atacarNormal();

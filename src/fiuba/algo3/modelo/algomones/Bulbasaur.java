@@ -11,14 +11,14 @@ public class Bulbasaur extends Algomon{
 		imagen = new File("src/resources/Bulbasaur_XY.gif");
 		puntosVida = 140;
 		puntosVidaActuales = 140;
-		Ataque latigoCepa = new AtaquePlanta(15,10);
-		Ataque chupaVidas = new AtaquePlanta(15,8);
+		Ataque latigoCepa = new AtaquePlanta(15,10, "Latigo Cepa");
+		Ataque chupaVidas = new AtaquePlanta(15,8, " ChupaVidas");
 		chupaVidas.puedeChuparVida(chupaVidas, this);
 		ataques.put("Latigo Cepa",latigoCepa);
 		ataques.put("ChupaVidas",chupaVidas);
-		
+
 	}
-	 
+
 	@Override
 	public int calcularDanio(Ataque unAtaque) {
 		return unAtaque.atacarPlanta();

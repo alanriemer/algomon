@@ -12,6 +12,7 @@ import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.algomones.Bulbasaur;
 import fiuba.algo3.modelo.algomones.Charmander;
 import fiuba.algo3.modelo.algomones.Squirtle;
+import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
@@ -46,8 +47,8 @@ public class JugadorTest {
 		Algomon unCharmander = new Charmander();
 		jugador1.agregarAlgomon(unBulbasaur);
 		jugador2.agregarAlgomon(unCharmander);
-		List<String> ataquesDisponibles= jugador1.ataquesDisponibles();
-		String ataqueAUtilizar = ataquesDisponibles.get(0);
+		List<Ataque> ataquesDisponibles= jugador1.ataquesDisponibles();
+		String ataqueAUtilizar = ataquesDisponibles.get(0).getNombre();
 		jugador1.atacarCon(ataqueAUtilizar,jugador2.algomonActual());
 
 	}

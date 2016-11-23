@@ -12,12 +12,12 @@ public class Jigglypuff extends Algomon{
 		imagen = new File("src/resources/Jigglypuff_XY.gif");
 		puntosVida = 130;
 		puntosVidaActuales = 130;
-		Ataque burbuja = new AtaqueAgua(10,15);
-		Ataque canto = new AtaqueNormal(0,6);
+		Ataque burbuja = new AtaqueAgua(10,15, "Burbuja");
+		Ataque canto = new AtaqueNormal(0,6, "Canto");
 		canto.puedeDormir();
 		ataques.put("Burbuja",burbuja);
 		ataques.put("Canto",canto);
-	
+
 	}
 
 	@Override
@@ -25,5 +25,5 @@ public class Jigglypuff extends Algomon{
 		return unAtaque.atacarNormal();
 	}
 
-	
+
 }

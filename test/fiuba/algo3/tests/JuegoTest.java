@@ -10,6 +10,7 @@ import fiuba.algo3.modelo.JuegoAlgomon;
 import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.algomones.Charmander;
 import fiuba.algo3.modelo.algomones.Squirtle;
+import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class JuegoTest {
@@ -22,12 +23,12 @@ public class JuegoTest {
 
 		juego.agregarAlgomonJugador1(squirtle);
 		juego.agregarAlgomonJugador2(charmander);
-		
-		List<String> ataquesDisponibles = juego.ataquesDisponiblesAlgomonActual(); //Esta lista se muestra en la vista
-		juego.atacarCon(ataquesDisponibles.get(1)); // Lo que se devuelve, entra aca.		
+
+		List<Ataque> ataquesDisponibles = juego.ataquesDisponiblesAlgomonActual(); //Esta lista se muestra en la vista
+		juego.atacarCon(ataquesDisponibles.get(1).getNombre()); // Lo que se devuelve, entra aca.
 		List<Algomon> algomonesDisponibles= juego.algomonesDisponibles(); //En la lista, a cada algomon hacele ".getName" para mostrarlo.
 		juego.cambiarAlgomonJugadorActual(algomonesDisponibles.get(0)); //Hacer un test para que no se vaya de rango.
-		
+
 		juego.getPuntosVidaActualJugador1();
 		juego.getPuntosVidaActualJugador2();
 		juego.getPuntosVidaOriginalJugador1();
@@ -37,7 +38,7 @@ public class JuegoTest {
 		juego.getNombreJugador1(); //Para ponerlo en la pantalla principal.
 		juego.getNombreJugador2();
 		juego.getNombreJugadorActual(); //Esto te va a servir para identificar quien esta atacando actualmente.
-		
+
 		assertEquals(1,1);//PAra que no pinche la integracion continua
 	}
 }

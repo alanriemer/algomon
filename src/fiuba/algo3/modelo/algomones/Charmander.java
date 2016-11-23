@@ -12,8 +12,8 @@ public class Charmander extends Algomon{
 		imagen = new File("src/resources/Charmander_XY.gif");
 		puntosVida = 170;
 		puntosVidaActuales = 170;
-		Ataque brasas = new AtaqueFuego(16,10);
-		Ataque fogonazo = new AtaqueFuego(2,4);
+		Ataque brasas = new AtaqueFuego(16,10, "Brasas");
+		Ataque fogonazo = new AtaqueFuego(2,4, "Fogonazo");
 		fogonazo.puedeQuemar();
 		ataques.put("Brasas",brasas);
 		ataques.put("Fogonazo",fogonazo);
@@ -23,5 +23,5 @@ public class Charmander extends Algomon{
 	public int calcularDanio(Ataque unAtaque) {
 		return unAtaque.atacarFuego();
 	}
-	
+
 }
