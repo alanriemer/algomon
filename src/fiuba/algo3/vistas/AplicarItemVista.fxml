@@ -63,7 +63,7 @@
                      <HBox.margin>
                         <Insets left="185.0" top="30.0" />
                      </HBox.margin>
-                  </Label>
+        nombreItem1.setText(elementos.get(0).getNombre());          </Label>
                   <Button fx:id="aplicar4" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#usarItem4" text="Button">
                      <cursor>
                         <Cursor fx:constant="HAND" />

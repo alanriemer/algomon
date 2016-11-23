@@ -6,10 +6,13 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import fiuba.algo3.controladores.Aplicacion;
+import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 
 public class AtaquesControlador implements Initializable {
 	
@@ -43,21 +46,48 @@ public class AtaquesControlador implements Initializable {
 	}
 	
 	public void usarAtaque1() throws IOException{
-		List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
-		Aplicacion.nuevoJuego.atacarCon(ataques.get(0));
-		Aplicacion.showEscenarioPelea();
+		try{
+			List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
+			Aplicacion.nuevoJuego.atacarCon(ataques.get(0));
+			Aplicacion.showEscenarioPelea();
+		}
+		catch(AtaqueNoDisponibleException e){
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no pudo atacar!");
+			alert.setHeaderText(null);
+			alert.setContentText("Ya no quedan movimientos de este ataque");
+			alert.showAndWait();
+		}	
 	}
 	
 	public void usarAtaque2() throws IOException{
-		List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
-		Aplicacion.nuevoJuego.atacarCon(ataques.get(1));
-		Aplicacion.showEscenarioPelea();
+		try{
+			List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
+			Aplicacion.nuevoJuego.atacarCon(ataques.get(1));
+			Aplicacion.showEscenarioPelea();
+		}
+		catch(AtaqueNoDisponibleException e){
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no pudo atacar!");
+			alert.setHeaderText(null);
+			alert.setContentText("Ya no quedan movimientos de este ataque");
+			alert.showAndWait();
+		}
 	}
 	
 	public void usarAtaque3() throws IOException{
-		List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
-		Aplicacion.nuevoJuego.atacarCon(ataques.get(2));
-		Aplicacion.showEscenarioPelea();
+		try{
+			List<String> ataques = Aplicacion.nuevoJuego.ataquesDisponiblesAlgomonActual();
+			Aplicacion.nuevoJuego.atacarCon(ataques.get(2));
+			Aplicacion.showEscenarioPelea();
+		}
+		catch(AtaqueNoDisponibleException e){
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no pudo atacar!");
+			alert.setHeaderText(null);
+			alert.setContentText("Ya no quedan movimientos de este ataque");
+			alert.showAndWait();
+		}
 	}
 	
 	public void volver() throws IOException{
