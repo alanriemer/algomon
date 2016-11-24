@@ -9,7 +9,7 @@ import fiuba.algo3.modelo.ataques.AtaquePlanta;
 public class Chansey extends Algomon {
 	public Chansey (){
 		nombre = "Chansey";
-		imagen = new File("src/resources/chansey.png");
+		imagen = new File("src/resources/Chansey_XY.gif");
 		puntosVida = 130;
 		puntosVidaActuales = 130;
 		Ataque latigoCepa = new AtaquePlanta(15,10,"Latigo Cepa");

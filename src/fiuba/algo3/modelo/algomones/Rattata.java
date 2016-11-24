@@ -9,7 +9,7 @@ import fiuba.algo3.modelo.ataques.AtaqueFuego;
 public class Rattata extends Algomon{
 	public Rattata(){
 		nombre = "Rattata";
-		imagen = new File("src/resources/rattata.png");
+		imagen = new File("src/resources/Rattata_XY.gif");
 		puntosVida = 170;
 		puntosVidaActuales = 170;
 		Ataque fogonazo = new AtaqueFuego(2,4, "Fogonazo");

@@ -1,4 +1,4 @@
-package fiuba.algo3.vistas;
+	package fiuba.algo3.vistas;
 
 import java.io.IOException; 
 import java.net.URL;

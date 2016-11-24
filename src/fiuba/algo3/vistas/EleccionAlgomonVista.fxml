@@ -22,7 +22,7 @@
    <bottom>
       <AnchorPane prefHeight="91.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="43.0" layoutY="33.0" spacing="160.0">
+            <HBox layoutX="41.0" layoutY="33.0" spacing="160.0">
                <children>
                   <Button fx:id="rattata" layoutX="43.0" layoutY="33.0" mnemonicParsing="false" onAction="#agregarRattataJugadorActual" text="Rattata" />
                   <Button fx:id="jigglypuff" layoutX="274.0" layoutY="33.0" mnemonicParsing="false" onAction="#agregarJigglypuffJugadorActual" text="Jigglypuff" />
