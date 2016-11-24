@@ -12,7 +12,7 @@ public class Bulbasaur extends Algomon{
 		puntosVida = 140;
 		puntosVidaActuales = 140;
 		Ataque latigoCepa = new AtaquePlanta(15,10, "Latigo Cepa");
-		Ataque chupaVidas = new AtaquePlanta(15,8, " ChupaVidas");
+		Ataque chupaVidas = new AtaquePlanta(15,8, "ChupaVidas");
 		chupaVidas.puedeChuparVida(chupaVidas, this);
 		ataques.put("Latigo Cepa",latigoCepa);
 		ataques.put("ChupaVidas",chupaVidas);

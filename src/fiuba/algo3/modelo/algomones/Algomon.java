@@ -52,9 +52,10 @@ public abstract class Algomon {
 	}
 
 	public void atacarCon(String ataque,Algomon enemigo) throws AtaqueNoDisponibleException{
-		if (!ataques.get(ataque).sePuedeUsarAtaque()){
+		if (!this.ataques.get(ataque).sePuedeUsarAtaque()){
 			throw new AtaqueNoDisponibleException();
 		}
+		System.out.println(ataque);
 		estado.atacar(ataques.get(ataque), enemigo);
 	}
 
