@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -7,36 +8,42 @@
 
 <BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.EleccionAlgomonControlador">
    <top>
-      <AnchorPane prefHeight="101.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="80.0" layoutY="38.0" spacing="150.0">
+            <HBox layoutX="47.0" layoutY="38.0" spacing="150.0">
                <children>
-                  <Button fx:id="bulbasaur" layoutX="47.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarBulbasaurJugadorActual" text="Bulba" />
-                  <Button fx:id="squirtle" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarSquirtleJugadorActual" text="Squir" />
-                  <Button fx:id="charmander" layoutX="478.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarCharmanderJugadorActual" text="Charm" />
+                  <Button fx:id="bulbasaur" layoutX="62.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarBulbasaurJugadorActual" text="Bulbasaur" />
+                  <Button fx:id="squirtle" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarSquirtleJugadorActual" text="Squirtle" />
+                  <Button fx:id="charmander" layoutX="471.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarCharmanderJugadorActual" text="Charmander" />
                </children>
             </HBox>
          </children>
-      </AnchorPane>
+      </Pane>
    </top>
    <bottom>
-      <AnchorPane prefHeight="91.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="78.0" layoutY="33.0" spacing="150.0">
+            <HBox layoutX="59.0" layoutY="38.0" spacing="150.0">
                <children>
-                  <Button fx:id="rattata" layoutX="47.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarRattataJugadorActual" text="Ratta" />
-                  <Button fx:id="jigglypuff" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarJigglypuffJugadorActual" text="Jiggl" />
-                  <Button fx:id="chansey" layoutX="478.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarChanseyJugadorActual" text="Chan" />
+                  <Button fx:id="rattata" layoutX="62.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarRattataJugadorActual" text="Rattata" />
+                  <Button fx:id="jigglypuff" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarJigglypuffJugadorActual" text="Jigglypuff" />
+                  <Button fx:id="chansey" layoutX="471.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarChanseyJugadorActual" text="Chansey" />
                </children>
             </HBox>
          </children>
-      </AnchorPane>
+      </Pane>
    </bottom>
+   <left>
+      <Pane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
    <center>
-      <AnchorPane prefHeight="208.0" prefWidth="604.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="jugadorActual" layoutX="255.0" layoutY="139.0" prefHeight="1.0" prefWidth="91.0" text="Nombre Jugador" />
+            <Label fx:id="jugadorActual" layoutX="162.0" layoutY="148.0" text="JugadorActual" />
          </children>
-      </AnchorPane>
+      </Pane>
    </center>
 </BorderPane>

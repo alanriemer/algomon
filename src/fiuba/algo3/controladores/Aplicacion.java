@@ -36,18 +36,7 @@ public class Aplicacion extends Application {
 		nuevoJuego.setNombreJugador1("Ash");
 		nuevoJuego.setNombreJugador2("Gary");
 		showMainItems();
-		/*Rattata squirtle1 = new Rattata();
-		Rattata squirtle2 = new Rattata();
-		Charmander charmander1 = new Charmander();
-		Charmander charmander2 = new Charmander();
-		Bulbasaur bulbasaur1 = new Bulbasaur();
-		Bulbasaur bulbasaur2 = new Bulbasaur();
-		nuevoJuego.getJugador1().agregarAlgomon(squirtle1);
-		nuevoJuego.getJugador1().agregarAlgomon(charmander1);
-		nuevoJuego.getJugador1().agregarAlgomon(bulbasaur1);
-		nuevoJuego.getJugador2().agregarAlgomon(squirtle2);
-		nuevoJuego.getJugador2().agregarAlgomon(charmander2);
-		nuevoJuego.getJugador2().agregarAlgomon(bulbasaur2);*/
+		
 	}
 
 	private void showMainView() throws IOException{
