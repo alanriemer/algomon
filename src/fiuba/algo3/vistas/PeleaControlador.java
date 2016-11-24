@@ -70,15 +70,15 @@ public class PeleaControlador implements Initializable {
 	}
 
 	@FXML
-	public void goAtaquesView() throws IOException{
+	private void goAtaquesView() throws IOException{
 		Aplicacion.showAtaquesView();
 	}
 	@FXML
-	public void goCambioAlgomonView() throws IOException{
+	private void goCambioAlgomonView() throws IOException{
 		Aplicacion.showCambioAlgomonView();
 	}
 	@FXML
-	public void goAplicarItemView() throws IOException{
+	private void goAplicarItemView() throws IOException{
 		Aplicacion.showAplicarItemView();
 	}
 }
