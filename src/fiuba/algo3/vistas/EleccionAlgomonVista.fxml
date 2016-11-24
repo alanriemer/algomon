@@ -9,11 +9,11 @@
    <top>
       <AnchorPane prefHeight="101.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="47.0" layoutY="38.0" spacing="150.0">
+            <HBox layoutX="80.0" layoutY="38.0" spacing="150.0">
                <children>
-                  <Button fx:id="bulbasaur" layoutX="47.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarBulbasaurJugadorActual" text="Bulbasaur" />
-                  <Button fx:id="squirtle" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarSquirtleJugadorActual" text="Squirtle" />
-                  <Button fx:id="charmander" layoutX="478.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarCharmanderJugadorActual" text="Charmander" />
+                  <Button fx:id="bulbasaur" layoutX="47.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarBulbasaurJugadorActual" text="Bulba" />
+                  <Button fx:id="squirtle" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarSquirtleJugadorActual" text="Squir" />
+                  <Button fx:id="charmander" layoutX="478.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarCharmanderJugadorActual" text="Charm" />
                </children>
             </HBox>
          </children>
@@ -22,11 +22,11 @@
    <bottom>
       <AnchorPane prefHeight="91.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="41.0" layoutY="33.0" spacing="160.0">
+            <HBox layoutX="78.0" layoutY="33.0" spacing="150.0">
                <children>
-                  <Button fx:id="rattata" layoutX="43.0" layoutY="33.0" mnemonicParsing="false" onAction="#agregarRattataJugadorActual" text="Rattata" />
-                  <Button fx:id="jigglypuff" layoutX="274.0" layoutY="33.0" mnemonicParsing="false" onAction="#agregarJigglypuffJugadorActual" text="Jigglypuff" />
-                  <Button fx:id="chansey" layoutX="481.0" layoutY="33.0" mnemonicParsing="false" onAction="#agregarChanseyJugadorActual" text="Chansey" />
+                  <Button fx:id="rattata" layoutX="47.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarRattataJugadorActual" text="Ratta" />
+                  <Button fx:id="jigglypuff" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarJigglypuffJugadorActual" text="Jiggl" />
+                  <Button fx:id="chansey" layoutX="478.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarChanseyJugadorActual" text="Chan" />
                </children>
             </HBox>
          </children>
