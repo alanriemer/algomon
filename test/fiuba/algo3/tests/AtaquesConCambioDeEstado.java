@@ -88,7 +88,7 @@ public class AtaquesConCambioDeEstado {
 		unJigglypuff.atacarCon("Canto",unBulbasaur);
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		unCharmander.atacarCon("Fogonazo", unBulbasaur);
-		assertEquals(unBulbasaur.estado().estaDormidoQuemado(), true);
+		assertEquals(unBulbasaur.estaDormidoQuemado(), true);
 	}
 	
 	
@@ -103,7 +103,7 @@ public class AtaquesConCambioDeEstado {
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		unBulbasaur.atacarCon("Ataque rapido",unJigglypuff);
 		
-		assertEquals(unBulbasaur.estado().estaDormido(), false);
+		assertEquals(unBulbasaur.estaDormido(), false);
 	}
 
 	
@@ -131,6 +131,6 @@ public class AtaquesConCambioDeEstado {
 		unJigglypuff.atacarCon("Canto",unBulbasaur);
 		unCharmander.atacarCon("Fogonazo", unBulbasaur);
 		unJigglypuff.atacarCon("Canto",unBulbasaur);
-		assertEquals(unBulbasaur.estado().estaDormidoQuemado(), true);
+		assertEquals(unBulbasaur.estaDormidoQuemado(), true);
 	}
 }

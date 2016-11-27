@@ -139,7 +139,7 @@ public class CharmanderTest {
 		Bulbasaur unBulbasaur = new Bulbasaur();
 		unCharmander.atacarCon("Fogonazo",unBulbasaur);
 		
-		assertEquals(unBulbasaur.estado().estaQuemado(), true);
+		assertEquals(unBulbasaur.estaQuemado(), true);
 	}
 	
 

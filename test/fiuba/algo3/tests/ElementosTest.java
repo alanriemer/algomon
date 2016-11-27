@@ -73,7 +73,7 @@ public class ElementosTest {
 		unJugador.agregarAlgomon(unCharmander);
 		unJigglypuff.atacarCon("Canto",unCharmander);
 		unJugador.usarElemento(unJugador.sacarRestaurador());
-		assertEquals(unCharmander.estado().estaDormido(), false);
+		assertEquals(unCharmander.estaDormido(), false);
 	}
 	
 	@Test
@@ -84,7 +84,7 @@ public class ElementosTest {
 		unJugador.agregarAlgomon(unJigglypuff);
 		unCharmander.atacarCon("Fogonazo",unJigglypuff);
 		unJugador.usarElemento(unJugador.sacarRestaurador());
-		assertEquals(unJigglypuff.estado().estaQuemado(), false);
+		assertEquals(unJigglypuff.estaQuemado(), false);
 	}
 	
 	@Test
@@ -97,7 +97,7 @@ public class ElementosTest {
 		unCharmander.atacarCon("Fogonazo",unJigglypuff);
 		otroJigglypuff.atacarCon("Canto", unJigglypuff);
 		unJugador.usarElemento(unJugador.sacarRestaurador());
-		assertEquals(unJigglypuff.estado().estaDormidoQuemado(), false);
+		assertEquals(unJigglypuff.estaDormidoQuemado(), false);
 	}
 
 	@Test

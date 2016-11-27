@@ -86,9 +86,7 @@ public abstract class Algomon {
 		this.estado = nuevoEstado;
 	}
 
-	public Estado estado() {
-		return this.estado;
-	}
+
 
 	public File getImagen(){
 		return this.imagen;
@@ -97,4 +95,35 @@ public abstract class Algomon {
 	public void aplicarElemento(Elemento elemento) {
 		estado.aplicarElemento(elemento);
 	}
+
+	public void dormir() {
+		estado.dormir();
+	}
+
+	public void quemar() {
+		estado.quemar();
+	}
+
+	public void despertar() {
+		estado.despertar();
+	}
+
+	public boolean estaDormido() {
+		return estado.estaDormido();
+	}
+	
+	public boolean estaQuemado() {
+		return estado.estaQuemado();
+	}
+	
+	public boolean estaDormidoQuemado() {
+		return estado.estaDormidoQuemado();
+	}
+
+	public int turnosEstadoActual() {
+		return estado.turnos();
+	}
+
+
+	
 }

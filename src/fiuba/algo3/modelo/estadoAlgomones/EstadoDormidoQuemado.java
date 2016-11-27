@@ -11,8 +11,8 @@ public class EstadoDormidoQuemado implements Estado {
 	
 	public EstadoDormidoQuemado(Algomon actual){
 		algomon = actual;
-		if (actual.estado().estaDormido()){
-			turnos = actual.estado().turnos();
+		if (actual.estaDormido()){
+			turnos = actual.turnosEstadoActual();
 		}else turnos = 0;
 	}
 	
@@ -35,7 +35,7 @@ public class EstadoDormidoQuemado implements Estado {
 	public void verificarSiTieneQueDespertar(){
 		turnos++;
 		if (turnos == 3) {
-			algomon.estado().despertar();
+			algomon.despertar();
 		}
 		
 	}
