@@ -1,6 +1,6 @@
 	package fiuba.algo3.vistas;
 
-import java.io.IOException; 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -50,24 +50,34 @@ public class PeleaControlador implements Initializable {
 		vidaJ2.setText(String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaActualJugador2())+"/"+String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaOriginalJugador2()));
 		nombreAlgo1.setText(Aplicacion.nuevoJuego.getNombreJugador1());
 		nombreAlgo2.setText(Aplicacion.nuevoJuego.getNombreJugador2());
-		if (Aplicacion.nuevoJuego.getJugador1().algomonActual().getPuntosVidaActuales() == 0){
+		this.algomonMuerto();
+		if (Aplicacion.nuevoJuego.getJugador1().algomonesMuertos()){
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle(null);
 			alert.setHeaderText(null);
 			alert.setContentText("El Algomon del jugador 1 ha muerto, el jugador 2 gana!");
 			alert.showAndWait();
-			Aplicacion.restart();
+			//Aplicacion.restart();
 		}
-		if (Aplicacion.nuevoJuego.getJugador2().algomonActual().getPuntosVidaActuales() == 0){
+		if (Aplicacion.nuevoJuego.getJugador2().algomonesMuertos()){
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle(null);
 			alert.setHeaderText(null);
 			alert.setContentText("El Algomon del jugador 2 ha muerto, el jugador 1 gana!");
 			alert.showAndWait();
-			Aplicacion.restart();
+			//Aplicacion.restart();
 		}
 	}
-
+	private void algomonMuerto(){
+		if (Aplicacion.nuevoJuego.getJugadorActual().algomonActual().estaMuerto()){
+			String algomonMuerto = Aplicacion.nuevoJuego.getJugadorActual().algomonActual().getNombre();
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle(null);
+			alert.setHeaderText(null);
+			alert.setContentText(algomonMuerto + " ha muerto, debe cambiarlo para Continuar.!");
+			alert.showAndWait();
+		}
+	}
 	@FXML
 	private void goAtaquesView() throws IOException{
 		Aplicacion.showAtaquesView();

@@ -123,6 +123,7 @@ public abstract class Algomon {
 		return estado.turnos();
 	}
 
-
-
+	public boolean estaMuerto() {
+		return (this.puntosVidaActuales <= 0);
+	}
 }

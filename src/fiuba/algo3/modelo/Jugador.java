@@ -77,4 +77,13 @@ public class Jugador {
 	public boolean eligioTodosLosAlgomon() {
 		return this.misAlgomones.size() == 3;
 	}
+	public boolean algomonesMuertos() {
+		boolean todosMuertos = true;
+		for (Algomon algomon : this.misAlgomones) {
+			if (!algomon.estaMuerto()){
+				todosMuertos = false;
+			}
+		}
+		return todosMuertos;
+	}
 }
