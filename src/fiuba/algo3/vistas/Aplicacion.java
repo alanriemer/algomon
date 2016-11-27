@@ -1,4 +1,4 @@
-package fiuba.algo3.controladores;
+package fiuba.algo3.vistas;
 
 import java.io.IOException;
 import java.nio.file.Paths;

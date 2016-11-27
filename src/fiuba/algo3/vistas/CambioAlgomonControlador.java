@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import fiuba.algo3.controladores.Aplicacion;
 import fiuba.algo3.modelo.algomones.Algomon;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

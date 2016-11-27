@@ -2,7 +2,6 @@ package fiuba.algo3.vistas;
 
 import java.io.IOException;
 
-import fiuba.algo3.controladores.Aplicacion;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
