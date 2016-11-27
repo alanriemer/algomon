@@ -55,7 +55,6 @@ public abstract class Algomon {
 		if (!this.ataques.get(ataque).sePuedeUsarAtaque()){
 			throw new AtaqueNoDisponibleException();
 		}
-		System.out.println(ataque);
 		estado.atacar(ataques.get(ataque), enemigo);
 	}
 
@@ -111,11 +110,11 @@ public abstract class Algomon {
 	public boolean estaDormido() {
 		return estado.estaDormido();
 	}
-	
+
 	public boolean estaQuemado() {
 		return estado.estaQuemado();
 	}
-	
+
 	public boolean estaDormidoQuemado() {
 		return estado.estaDormidoQuemado();
 	}
@@ -125,5 +124,5 @@ public abstract class Algomon {
 	}
 
 
-	
+
 }
