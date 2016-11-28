@@ -5,6 +5,7 @@ import java.io.File;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueAgua;
 import fiuba.algo3.modelo.ataques.AtaqueFuego;
+import fiuba.algo3.modelo.ataques.TipoAtaque;
 
 public class Rattata extends Algomon{
 	public Rattata(){
@@ -12,10 +13,10 @@ public class Rattata extends Algomon{
 		imagen = new File("src/resources/Rattata_XY.gif");
 		puntosVida = 170;
 		puntosVidaActuales = 170;
-		Ataque fogonazo = new AtaqueFuego(2,4, "Fogonazo");
-		Ataque burbuja = new AtaqueAgua(10,15, "Burbuja");
-		ataques.put("Fogonazo",fogonazo);
-		ataques.put("Burbuja",burbuja);
+		Ataque fogonazo = new AtaqueFuego(2,4, TipoAtaque.Fogonazo);
+		Ataque burbuja = new AtaqueAgua(10,15, TipoAtaque.Burbuja);
+		ataques.put(TipoAtaque.Fogonazo,fogonazo);
+		ataques.put(TipoAtaque.Burbuja,burbuja);
 
 	}
 

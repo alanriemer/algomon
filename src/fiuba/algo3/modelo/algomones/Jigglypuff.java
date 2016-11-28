@@ -5,6 +5,7 @@ import java.io.File;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueAgua;
 import fiuba.algo3.modelo.ataques.AtaqueNormal;
+import fiuba.algo3.modelo.ataques.TipoAtaque;
 
 public class Jigglypuff extends Algomon{
 	public Jigglypuff(){
@@ -12,11 +13,11 @@ public class Jigglypuff extends Algomon{
 		imagen = new File("src/resources/Jigglypuff_XY.gif");
 		puntosVida = 130;
 		puntosVidaActuales = 130;
-		Ataque burbuja = new AtaqueAgua(10,15, "Burbuja");
-		Ataque canto = new AtaqueNormal(0,6, "Canto");
+		Ataque burbuja = new AtaqueAgua(10,15, TipoAtaque.Burbuja);
+		Ataque canto = new AtaqueNormal(0,6, TipoAtaque.Canto);
 		canto.puedeDormir();
-		ataques.put("Burbuja",burbuja);
-		ataques.put("Canto",canto);
+		ataques.put(TipoAtaque.Burbuja,burbuja);
+		ataques.put(TipoAtaque.Canto,canto);
 
 	}
 

@@ -5,6 +5,7 @@ import java.io.File;
 import fiuba.algo3.modelo.ataques.Ataque;
 
 import fiuba.algo3.modelo.ataques.AtaqueFuego;
+import fiuba.algo3.modelo.ataques.TipoAtaque;
 
 public class Charmander extends Algomon{
 	public Charmander(){
@@ -12,11 +13,11 @@ public class Charmander extends Algomon{
 		imagen = new File("src/resources/Charmander_XY.gif");
 		puntosVida = 170;
 		puntosVidaActuales = 170;
-		Ataque brasas = new AtaqueFuego(16,10, "Brasas");
-		Ataque fogonazo = new AtaqueFuego(2,4, "Fogonazo");
+		Ataque brasas = new AtaqueFuego(16,10, TipoAtaque.Brasas);
+		Ataque fogonazo = new AtaqueFuego(2,4, TipoAtaque.Fogonazo);
 		fogonazo.puedeQuemar();
-		ataques.put("Brasas",brasas);
-		ataques.put("Fogonazo",fogonazo);
+		ataques.put(TipoAtaque.Brasas,brasas);
+		ataques.put(TipoAtaque.Fogonazo,fogonazo);
 
 	}
 	@Override

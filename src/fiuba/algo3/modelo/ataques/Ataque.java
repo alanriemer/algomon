@@ -9,12 +9,12 @@ public abstract class Ataque {
 	int potencia;
 	int cantidadMaxima;
 	int cantidad;
-	String nombre;
+	TipoAtaque tipo;
 	Efecto efecto;
 
 
-	public Ataque(int potencia, int cantidad, String nombre){
-		this.nombre = nombre;
+	public Ataque(int potencia, int cantidad, TipoAtaque tipo){
+		this.tipo = tipo;
 		this.potencia = potencia;
 		this.cantidad = cantidad;
 		this.cantidadMaxima = cantidad;
@@ -63,8 +63,8 @@ public abstract class Ataque {
 	public int cantidadDisponible() {
 		return cantidad;
 	}
-	public String getNombre(){
-		return this.nombre;
+	public TipoAtaque getNombre(){
+		return this.tipo;
 	}
 
 }

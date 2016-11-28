@@ -7,6 +7,7 @@ import fiuba.algo3.modelo.Jugador;
 import fiuba.algo3.modelo.algomones.Charmander;
 import fiuba.algo3.modelo.algomones.Jigglypuff;
 import fiuba.algo3.modelo.algomones.Squirtle;
+import fiuba.algo3.modelo.ataques.TipoAtaque;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class ElementosTest {
@@ -18,7 +19,7 @@ public class ElementosTest {
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unCharmander);
 		int vida = unCharmander.getPuntosVidaActuales();
-		unSquirtle.atacarCon("Burbuja",unCharmander);
+		unSquirtle.atacarCon(TipoAtaque.Burbuja,unCharmander);
 		unJugador.usarElemento(unJugador.sacarPocion());
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida);
 	}
@@ -30,8 +31,8 @@ public class ElementosTest {
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unCharmander);
 		int vida = unCharmander.getPuntosVidaActuales();
-		unSquirtle.atacarCon("Burbuja",unCharmander);
-		unSquirtle.atacarCon("Burbuja",unCharmander);
+		unSquirtle.atacarCon(TipoAtaque.Burbuja,unCharmander);
+		unSquirtle.atacarCon(TipoAtaque.Burbuja,unCharmander);
 		unJugador.usarElemento(unJugador.sacarSuperPocion());
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida);
 	}
@@ -43,9 +44,9 @@ public class ElementosTest {
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unCharmander);
 		int vida = unCharmander.getPuntosVidaActuales();
-		unSquirtle.atacarCon("Burbuja",unCharmander);
-		unSquirtle.atacarCon("Burbuja",unCharmander);
-		unSquirtle.atacarCon("Burbuja",unCharmander);
+		unSquirtle.atacarCon(TipoAtaque.Burbuja,unCharmander);
+		unSquirtle.atacarCon(TipoAtaque.Burbuja,unCharmander);
+		unSquirtle.atacarCon(TipoAtaque.Burbuja,unCharmander);
 		unJugador.usarElemento(unJugador.sacarSuperPocion());
 		unJugador.usarElemento(unJugador.sacarPocion());
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida);
@@ -59,34 +60,34 @@ public class ElementosTest {
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unCharmander);
 		int vida = unCharmander.getPuntosVidaActuales();
-		unSquirtle.atacarCon("Burbuja",unCharmander);
-		unSquirtle.atacarCon("Burbuja",unCharmander);
+		unSquirtle.atacarCon(TipoAtaque.Burbuja,unCharmander);
+		unSquirtle.atacarCon(TipoAtaque.Burbuja,unCharmander);
 		unJugador.usarElemento(unJugador.sacarPocion());
 		assertEquals(unCharmander.getPuntosVidaActuales(),vida-20);
 	}
-	
+
 	@Test
 	public void test05ChamanderEstaDormidoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unCharmander);
-		unJigglypuff.atacarCon("Canto",unCharmander);
+		unJigglypuff.atacarCon(TipoAtaque.Canto,unCharmander);
 		unJugador.usarElemento(unJugador.sacarRestaurador());
 		assertEquals(unCharmander.estaDormido(), false);
 	}
-	
+
 	@Test
 	public void test06JigglypuffEstaQuemadoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unJigglypuff);
-		unCharmander.atacarCon("Fogonazo",unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.Fogonazo,unJigglypuff);
 		unJugador.usarElemento(unJugador.sacarRestaurador());
 		assertEquals(unJigglypuff.estaQuemado(), false);
 	}
-	
+
 	@Test
 	public void test07JigglypuffEstaQuemadoYDormidoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
@@ -94,8 +95,8 @@ public class ElementosTest {
 		Jigglypuff otroJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unJigglypuff);
-		unCharmander.atacarCon("Fogonazo",unJigglypuff);
-		otroJigglypuff.atacarCon("Canto", unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.Fogonazo,unJigglypuff);
+		otroJigglypuff.atacarCon(TipoAtaque.Canto, unJigglypuff);
 		unJugador.usarElemento(unJugador.sacarRestaurador());
 		assertEquals(unJigglypuff.estaDormidoQuemado(), false);
 	}
@@ -106,10 +107,10 @@ public class ElementosTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unJigglypuff);
-		unJigglypuff.atacarCon("Canto", unCharmander);
-		unJigglypuff.atacarCon("Canto", unCharmander);
+		unJigglypuff.atacarCon(TipoAtaque.Canto, unCharmander);
+		unJigglypuff.atacarCon(TipoAtaque.Canto, unCharmander);
 		unJugador.usarElemento(unJugador.sacarVitamina());
-		assertEquals(unJigglypuff.cantidadAtaquesDisponibles("Canto"), 6);
+		assertEquals(unJigglypuff.cantidadAtaquesDisponibles(TipoAtaque.Canto), 6);
 	}
 
 	@Test
@@ -118,9 +119,9 @@ public class ElementosTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unJigglypuff);
-		unJigglypuff.atacarCon("Canto", unCharmander);
+		unJigglypuff.atacarCon(TipoAtaque.Canto, unCharmander);
 		unJugador.usarElemento(unJugador.sacarVitamina());
-		assertEquals(unJigglypuff.cantidadAtaquesDisponibles("Canto"), 6);
+		assertEquals(unJigglypuff.cantidadAtaquesDisponibles(TipoAtaque.Canto), 6);
 	}
 
 	@Test
@@ -129,35 +130,35 @@ public class ElementosTest {
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unCharmander);
-		unCharmander.atacarCon("Fogonazo", unJigglypuff);
-		unCharmander.atacarCon("Fogonazo", unJigglypuff);
-		unCharmander.atacarCon("Fogonazo", unJigglypuff);
-		unCharmander.atacarCon("Fogonazo", unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.Fogonazo, unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.Fogonazo, unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.Fogonazo, unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.Fogonazo, unJigglypuff);
 		unJugador.usarElemento(unJugador.sacarVitamina());
-		assertEquals(unCharmander.cantidadAtaquesDisponibles("Fogonazo"), 2);
+		assertEquals(unCharmander.cantidadAtaquesDisponibles(TipoAtaque.Fogonazo), 2);
 	}
-	
+
 	@Test
 	public void test11CharmanderUsa2FogonazosYAtaquesRapidosYSeRestauranUsandoVitamina() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unCharmander);
-		unCharmander.atacarCon("Fogonazo", unJigglypuff);
-		unCharmander.atacarCon("Fogonazo", unJigglypuff);
-		unCharmander.atacarCon("Ataque rapido", unJigglypuff);
-		unCharmander.atacarCon("Ataque rapido", unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.Fogonazo, unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.Fogonazo, unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.AtaqueRapido, unJigglypuff);
+		unCharmander.atacarCon(TipoAtaque.AtaqueRapido, unJigglypuff);
 		unJugador.usarElemento(unJugador.sacarVitamina());
-		assertEquals(unCharmander.cantidadAtaquesDisponibles("Fogonazo"), 4);
-		assertEquals(unCharmander.cantidadAtaquesDisponibles("Ataque rapido"), 16);
+		assertEquals(unCharmander.cantidadAtaquesDisponibles(TipoAtaque.Fogonazo), 4);
+		assertEquals(unCharmander.cantidadAtaquesDisponibles(TipoAtaque.AtaqueRapido), 16);
 	}
-	
+
 	@Test
 	public void test12CharmanderNoUsoAtaquesYUsaVitamina() throws AtaqueNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unCharmander);
 		unJugador.usarElemento(unJugador.sacarVitamina());
-		assertEquals(unCharmander.cantidadAtaquesDisponibles("Fogonazo"), 4);
+		assertEquals(unCharmander.cantidadAtaquesDisponibles(TipoAtaque.Fogonazo), 4);
 	}
 }

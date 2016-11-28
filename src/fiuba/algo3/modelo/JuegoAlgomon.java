@@ -6,6 +6,7 @@ import java.util.List;
 
 import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.ataques.TipoAtaque;
 import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
@@ -36,7 +37,7 @@ public class JuegoAlgomon {
 //		this.jugadorActual =  jugadores.get((int)Math.random() * jugadores.size());
 //		this.cambiarEnemigo();
 	}
-	public void atacarCon(String ataque)throws AtaqueNoDisponibleException{
+	public void atacarCon(TipoAtaque ataque)throws AtaqueNoDisponibleException{
 		this.jugadorActual.atacarCon(ataque, this.enemigoActual.algomonActual());
 		this.siguienteTurno();
 	}

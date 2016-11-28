@@ -4,6 +4,7 @@ import java.io.File;
 
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaquePlanta;
+import fiuba.algo3.modelo.ataques.TipoAtaque;
 
 public class Bulbasaur extends Algomon{
 	public Bulbasaur(){
@@ -11,11 +12,11 @@ public class Bulbasaur extends Algomon{
 		imagen = new File("src/resources/Bulbasaur_XY.gif");
 		puntosVida = 140;
 		puntosVidaActuales = 140;
-		Ataque latigoCepa = new AtaquePlanta(15,10, "Latigo Cepa");
-		Ataque chupaVidas = new AtaquePlanta(15,8, "ChupaVidas");
+		Ataque latigoCepa = new AtaquePlanta(15,10, TipoAtaque.LatigoCepa);
+		Ataque chupaVidas = new AtaquePlanta(15,8, TipoAtaque.ChupaVidas);
 		chupaVidas.puedeChuparVida(chupaVidas, this);
-		ataques.put("Latigo Cepa",latigoCepa);
-		ataques.put("ChupaVidas",chupaVidas);
+		ataques.put(TipoAtaque.LatigoCepa,latigoCepa);
+		ataques.put(TipoAtaque.ChupaVidas,chupaVidas);
 
 	}
 

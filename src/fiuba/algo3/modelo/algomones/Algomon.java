@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueNormal;
+import fiuba.algo3.modelo.ataques.TipoAtaque;
 import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.estadoAlgomones.Estado;
 import fiuba.algo3.modelo.estadoAlgomones.EstadoNormal;
@@ -19,10 +21,10 @@ public abstract class Algomon {
 	protected int puntosVida;
 	protected int puntosVidaActuales;
 	protected Estado estado = new EstadoNormal(this);
-	protected HashMap<String,Ataque> ataques = new HashMap<String,Ataque>();
+	protected HashMap<TipoAtaque,Ataque> ataques = new HashMap<TipoAtaque,Ataque>();
 
 	public Algomon(){
-		ataques.put("Ataque rapido",new AtaqueNormal(10,16, "Ataque rapido"));
+		ataques.put(TipoAtaque.AtaqueRapido,new AtaqueNormal(10,16, TipoAtaque.AtaqueRapido));
 	}
 
 	public String getNombre(){
@@ -51,7 +53,7 @@ public abstract class Algomon {
 		else puntosVidaActuales -= danio;
 	}
 
-	public void atacarCon(String ataque,Algomon enemigo) throws AtaqueNoDisponibleException{
+	public void atacarCon(TipoAtaque ataque,Algomon enemigo) throws AtaqueNoDisponibleException{
 		if (!this.ataques.get(ataque).sePuedeUsarAtaque()){
 			throw new AtaqueNoDisponibleException();
 		}
@@ -71,12 +73,12 @@ public abstract class Algomon {
 
 
 	public void restaurarAtaques(int cantidad) {
-		for(Map.Entry<String, Ataque> datos : ataques.entrySet()){
+		for(Entry<TipoAtaque, Ataque> datos : ataques.entrySet()){
 			datos.getValue().restaurarAtaque(cantidad);
 		}
 	}
 
-	public int cantidadAtaquesDisponibles(String ataque) {
+	public int cantidadAtaquesDisponibles(TipoAtaque ataque) {
 		return ataques.get(ataque).cantidadDisponible();
 	}
 
