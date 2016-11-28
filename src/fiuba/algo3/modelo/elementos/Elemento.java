@@ -6,6 +6,4 @@ public interface Elemento {
 
 	public abstract void utilizar(Algomon pokemon);
 
-	public abstract String getNombre();
-
 }

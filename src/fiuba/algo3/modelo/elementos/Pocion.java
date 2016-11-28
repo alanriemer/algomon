@@ -8,10 +8,4 @@ public class Pocion implements Elemento {
 		pokemon.aumentarPuntosDeVidaActuales(20);
 	}
 
-	@Override
-	public String getNombre() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

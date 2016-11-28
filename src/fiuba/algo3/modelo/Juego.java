@@ -20,9 +20,9 @@ public interface Juego {
 	public int getPuntosVidaActualJugador2();
 	public int getPuntosVidaOriginalJugador1();
 	public int getPuntosVidaOriginalJugador2();
-	public String getNombreJugadorActual();
 	public void setNombreJugador1(String nombre);
 	public void setNombreJugador2(String nombre);
+	public String getNombreJugadorActual();
 	public String getNombreJugador1();
 	public String getNombreJugador2();
 	public boolean faltaQueEligaAlgunaJugador(); //Quitar? Arreglar nombre si no.

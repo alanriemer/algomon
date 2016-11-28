@@ -9,10 +9,5 @@ public class Restaurador implements Elemento {
 		pokemon.normalizar();
 	}
 
-	@Override
-	public String getNombre() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

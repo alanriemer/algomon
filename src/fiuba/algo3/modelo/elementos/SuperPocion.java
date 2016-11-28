@@ -9,10 +9,4 @@ public class SuperPocion implements Elemento {
 		pokemon.aumentarPuntosDeVidaActuales(40);
 	}
 
-	@Override
-	public String getNombre() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
