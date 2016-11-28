@@ -11,7 +11,7 @@ import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
-public class JuegoAlgomon {
+public class JuegoAlgomon implements Juego {
 	private Jugador jugador1;
 	private Jugador jugador2;
 	private Jugador jugadorActual;
@@ -50,7 +50,6 @@ public class JuegoAlgomon {
 		try {
 			this.jugadorActual.cambiarAlgomon(algomon);
 		} catch (AlgomonInvalidoException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		this.siguienteTurno();
@@ -132,7 +131,6 @@ public class JuegoAlgomon {
 		this.jugadorActual = (jugadorActual == jugador1)? jugador2:jugador1;
 		this.cambiarEnemigo();
 	}
-
 
 
 }

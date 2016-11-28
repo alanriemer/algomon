@@ -3,6 +3,7 @@ package fiuba.algo3.vistas;
 import java.io.IOException;
 import java.nio.file.Paths;
 
+import fiuba.algo3.modelo.Juego;
 import fiuba.algo3.modelo.JuegoAlgomon;
 //import fiuba.algo3.modelo.algomones.Bulbasaur;
 import fiuba.algo3.modelo.algomones.Charmander;
@@ -19,7 +20,7 @@ import javafx.stage.Stage;
 public class Aplicacion extends Application {
 	private Stage primaryStage;
 	private static BorderPane mainLayout;
-	public static JuegoAlgomon nuevoJuego = new JuegoAlgomon();
+	public static Juego nuevoJuego = new JuegoAlgomon();
 
 	public static void restart(){
 		Aplicacion.nuevoJuego = new JuegoAlgomon();
