@@ -5,60 +5,56 @@ import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
-public class EstadoNormal implements Estado{
+public class EstadoMuerto implements Estado{
 
-	Algomon algomon;
-
-	public EstadoNormal(Algomon actual){
-		algomon = actual;
-	}
-
+	@Override
 	public void atacar(Ataque ataque, Algomon enemigo) throws AtaqueNoDisponibleException {
-		ataque.atacar(enemigo);
+
 	}
 
 	@Override
-	public void aplicarElemento(Elemento elemento) {
-		elemento.utilizar(algomon);
-	}
-	public boolean estaDormido(){
+	public boolean estaDormido() {
 		return false;
 	}
 
-	public boolean estaQuemado(){
+	@Override
+	public boolean estaQuemado() {
 		return false;
 	}
 
+	@Override
 	public boolean estaDormidoQuemado() {
 		return false;
 	}
 
 	@Override
 	public int turnos() {
+		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void dormir() {
-		this.algomon.nuevoEstado(new EstadoDormido(this.algomon));
+
 	}
 
 	@Override
 	public void quemar() {
-		this.algomon.nuevoEstado(new EstadoQuemado(this.algomon));
 	}
 
 	@Override
 	public void despertar() {
-		this.algomon.nuevoEstado(new EstadoNormal(this.algomon));
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void aplicarElemento(Elemento elemento) {
 	}
 
 	@Override
 	public boolean estaMuerto() {
-		return false;
+		return true;
 	}
-
-
-
 
 }

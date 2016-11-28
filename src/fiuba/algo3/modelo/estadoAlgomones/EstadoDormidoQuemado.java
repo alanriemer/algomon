@@ -8,36 +8,36 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public class EstadoDormidoQuemado implements Estado {
 	Algomon algomon;
 	int turnos;
-	
+
 	public EstadoDormidoQuemado(Algomon actual){
 		algomon = actual;
 		if (actual.estaDormido()){
 			turnos = actual.turnosEstadoActual();
 		}else turnos = 0;
 	}
-	
+
 	private void efecto() {
 		this.algomon.recibirDanio((int)Math.floor(this.algomon.getPuntosVida()*0.1));
 	}
-	
+
 	public void atacar(Ataque ataque, Algomon enemigo) throws AtaqueNoDisponibleException {
 		this.efecto();
 		this.verificarSiTieneQueDespertar();
 	}
-	
+
 	@Override
 	public void aplicarElemento(Elemento elemento) {
 		elemento.utilizar(algomon);
 		this.efecto();
 		this.verificarSiTieneQueDespertar();
 	}
-	
+
 	public void verificarSiTieneQueDespertar(){
 		turnos++;
 		if (turnos == 3) {
 			algomon.despertar();
 		}
-		
+
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class EstadoDormidoQuemado implements Estado {
 	public boolean estaDormidoQuemado() {
 		return true;
 	}
-	
+
 	@Override
 	public boolean estaDormido(){
 		return true;
@@ -73,6 +73,11 @@ public class EstadoDormidoQuemado implements Estado {
 	@Override
 	public void despertar() {
 		this.algomon.nuevoEstado(new EstadoQuemado(this.algomon));
+	}
+
+	@Override
+	public boolean estaMuerto() {
+		return false;
 	}
 
 }

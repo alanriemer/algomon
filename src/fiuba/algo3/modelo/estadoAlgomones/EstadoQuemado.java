@@ -8,20 +8,20 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 public class EstadoQuemado implements Estado {
 
 	Algomon algomon;
-	
+
 	public EstadoQuemado(Algomon actual){
 		this.algomon = actual;
 	}
-	
+
 	private void efecto() {
 		this.algomon.recibirDanio((int)Math.floor(this.algomon.getPuntosVida()*0.1));
 	}
-	
+
 	public void atacar(Ataque ataque, Algomon enemigo)	throws AtaqueNoDisponibleException {
 		ataque.atacar(enemigo);
 		this.efecto();
 	}
-	
+
 	@Override
 	public void aplicarElemento(Elemento elemento) {
 		elemento.utilizar(algomon);
@@ -61,5 +61,10 @@ public class EstadoQuemado implements Estado {
 		this.algomon.nuevoEstado(new EstadoQuemado(this.algomon));
 	}
 
-	
+	@Override
+	public boolean estaMuerto() {
+		return false;
+	}
+
+
 }

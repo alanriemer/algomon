@@ -11,6 +11,7 @@ import fiuba.algo3.modelo.ataques.AtaqueNormal;
 import fiuba.algo3.modelo.ataques.TipoAtaque;
 import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.estadoAlgomones.Estado;
+import fiuba.algo3.modelo.estadoAlgomones.EstadoMuerto;
 import fiuba.algo3.modelo.estadoAlgomones.EstadoNormal;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
@@ -47,8 +48,10 @@ public abstract class Algomon {
 	}
 
 	public void recibirDanio(int danio){
-		if(danio > puntosVidaActuales)
+		if(danio > puntosVidaActuales){
 			puntosVidaActuales = 0;
+			this.estado = new EstadoMuerto();
+		}
 		else puntosVidaActuales -= danio;
 	}
 
@@ -125,6 +128,6 @@ public abstract class Algomon {
 	}
 
 	public boolean estaMuerto() {
-		return (this.puntosVidaActuales <= 0);
+		return estado.estaMuerto();
 	}
 }
