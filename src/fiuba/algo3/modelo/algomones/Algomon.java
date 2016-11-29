@@ -48,7 +48,7 @@ public abstract class Algomon {
 	}
 
 	public void recibirDanio(int danio){
-		if(danio > puntosVidaActuales){
+		if(danio >= puntosVidaActuales){
 			puntosVidaActuales = 0;
 			this.estado = new EstadoMuerto();
 		}
