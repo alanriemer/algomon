@@ -30,7 +30,6 @@ public class Aplicacion extends Application {
 		Charmander charmander = new Charmander();
 		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
 		nuevoJuego.getJugador2().agregarAlgomon(charmander);
-
 	}
 
 	@Override
@@ -42,9 +41,9 @@ public class Aplicacion extends Application {
 		nuevoJuego.setNombreJugador2("Gary");
 		showMainItems();
 
-//        Media media = new Media(Paths.get("src/resources/a.mp3").toUri().toString());
-//        MediaPlayer mp = new MediaPlayer(media);
-//        mp.play();
+        Media media = new Media(Paths.get("src/resources/a.mp3").toUri().toString());
+        MediaPlayer mp = new MediaPlayer(media);
+        mp.play();
 
 	}
 

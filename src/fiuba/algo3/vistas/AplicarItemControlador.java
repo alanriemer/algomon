@@ -110,5 +110,9 @@ public class AplicarItemControlador implements Initializable {
 			alert.showAndWait();
 		}	
 	}
+	
+	public void volver() throws IOException{
+		Aplicacion.showEscenarioPelea();
+	}
 }
 

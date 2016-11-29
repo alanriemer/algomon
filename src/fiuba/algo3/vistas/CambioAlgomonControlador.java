@@ -57,5 +57,9 @@ public class CambioAlgomonControlador implements Initializable {
 		Aplicacion.nuevoJuego.cambiarAlgomonJugadorActual(ataques.get(2));
 		Aplicacion.showEscenarioPelea();
 	}
+	
+	public void volver() throws IOException{
+		Aplicacion.showEscenarioPelea();
+	}
 }
 

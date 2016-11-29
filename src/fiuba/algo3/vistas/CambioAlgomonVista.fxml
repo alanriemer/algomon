@@ -63,5 +63,14 @@
          </BorderPane.margin>
       </VBox>
    </center>
+   <top>
+      <Button mnemonicParsing="false" onAction="#volver" text="Volver" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets left="30.0" top="15.0" />
+         </BorderPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </top>
 </BorderPane>
-
