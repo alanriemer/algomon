@@ -90,7 +90,7 @@ public class AtaquesControlador implements Initializable {
 			alert.showAndWait();
 		}
 	}
-
+	
 	public void volver() throws IOException{
 		Aplicacion.showEscenarioPelea();
 	}

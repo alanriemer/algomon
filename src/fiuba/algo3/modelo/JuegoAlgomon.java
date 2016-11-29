@@ -3,6 +3,7 @@ package fiuba.algo3.modelo;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.ataques.Ataque;
@@ -32,10 +33,8 @@ public class JuegoAlgomon implements Juego {
 		List<Jugador> jugadores = new ArrayList<Jugador>();
 		jugadores.add(jugador1);
 		jugadores.add(jugador2);
-		this.jugadorActual = jugador1;
-		enemigoActual = jugador2;
-//		this.jugadorActual =  jugadores.get((int)Math.random() * jugadores.size());
-//		this.cambiarEnemigo();
+		this.jugadorActual =  jugadores.get(ThreadLocalRandom.current().nextInt(0, 2));
+		this.enemigoActual = (jugadorActual == jugador1)? jugador2:jugador1;
 	}
 	public void atacarCon(TipoAtaque ataque)throws AtaqueNoDisponibleException{
 		this.jugadorActual.atacarCon(ataque, this.enemigoActual.algomonActual());
