@@ -2,13 +2,8 @@ package fiuba.algo3.vistas;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-
 import fiuba.algo3.modelo.Juego;
 import fiuba.algo3.modelo.JuegoAlgomon;
-//import fiuba.algo3.modelo.algomones.Bulbasaur;
-import fiuba.algo3.modelo.algomones.Charmander;
-//import fiuba.algo3.modelo.algomones.Rattata;
-import fiuba.algo3.modelo.algomones.Squirtle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,36 +13,37 @@ import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class Aplicacion extends Application {
-	private Stage primaryStage;
+	private static Stage primaryStage;
 	private static BorderPane mainLayout;
 	public static Juego nuevoJuego = new JuegoAlgomon();
-
-	public static void restart(){
+		
+	public static void restart() throws IOException{
 		Aplicacion.nuevoJuego = new JuegoAlgomon();
-		nuevoJuego.setNombreJugador1("Ash");
-		nuevoJuego.setNombreJugador1("Gary");
-		Squirtle squirtle = new Squirtle();
-		Charmander charmander = new Charmander();
-		nuevoJuego.getJugador1().agregarAlgomon(squirtle);
-		nuevoJuego.getJugador2().agregarAlgomon(charmander);
-	}
-
-	@Override
-	public void start(Stage primaryStage) throws IOException {
-		this.primaryStage = primaryStage;
-		this.primaryStage.setTitle("Algomon - La aventura recien comienza");
 		showMainView();
 		nuevoJuego.setNombreJugador1("Ash");
 		nuevoJuego.setNombreJugador2("Gary");
 		showMainItems();
+//        Media media = new Media(Paths.get("src/resources/a.mp3").toUri().toString());
+//        MediaPlayer mp = new MediaPlayer(media);
+//        mp.play();
+	}
 
-        Media media = new Media(Paths.get("src/resources/a.mp3").toUri().toString());
-        MediaPlayer mp = new MediaPlayer(media);
-        mp.play();
+	@Override
+	public void start(Stage primaryStage) throws IOException {
+		Aplicacion.primaryStage = primaryStage;
+		Aplicacion.primaryStage.setTitle("Algomon - La aventura recien comienza");
+		showMainView();
+		nuevoJuego.setNombreJugador1("Ash");
+		nuevoJuego.setNombreJugador2("Gary");
+		showMainItems();
+//
+//        Media media = new Media(Paths.get("src/resources/a.mp3").toUri().toString());
+//        MediaPlayer mp = new MediaPlayer(media);
+//        mp.play();
 
 	}
 
-	private void showMainView() throws IOException{
+	private static void showMainView() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Aplicacion.class.getResource("../vistas/MenuPrincipalVista.fxml"));
 		mainLayout = loader.load();
@@ -56,7 +52,7 @@ public class Aplicacion extends Application {
 		primaryStage.show();
 	}
 
-	public void showMainItems() throws IOException{
+	public static void showMainItems() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Aplicacion.class.getResource("../vistas/VentanaInicioVista.fxml"));
 		BorderPane mainItems = loader.load();
