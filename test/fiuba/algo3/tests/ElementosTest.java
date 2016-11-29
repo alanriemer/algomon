@@ -9,11 +9,12 @@ import fiuba.algo3.modelo.algomones.Jigglypuff;
 import fiuba.algo3.modelo.algomones.Squirtle;
 import fiuba.algo3.modelo.ataques.TipoAtaque;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
+import fiuba.algo3.modelo.excepciones.ElementoNoDisponibleException;
 
 public class ElementosTest {
 
 	@Test
-	public void test01ChamanderEstaDebilitado20puntosYseCura20PuntosDeVidaConUnaPocion() throws AtaqueNoDisponibleException{
+	public void test01ChamanderEstaDebilitado20puntosYseCura20PuntosDeVidaConUnaPocion() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
@@ -25,7 +26,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test02ChamanderEstaDebilitado40puntosYseCura40PuntosDeVidaConUnaSuperPocion() throws AtaqueNoDisponibleException{
+	public void test02ChamanderEstaDebilitado40puntosYseCura40PuntosDeVidaConUnaSuperPocion() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
@@ -38,7 +39,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test03ChamanderEstaDebilitado60puntosYseCura60PuntosDeVidaConUnaSuperPocionYunaPocion() throws AtaqueNoDisponibleException{
+	public void test03ChamanderEstaDebilitado60puntosYseCura60PuntosDeVidaConUnaSuperPocionYunaPocion() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
@@ -54,7 +55,7 @@ public class ElementosTest {
 
 
 	@Test
-	public void test04ChamanderEstaDebilitado40puntosYseCura20PuntosDeVidaConUnaPocion() throws AtaqueNoDisponibleException{
+	public void test04ChamanderEstaDebilitado40puntosYseCura20PuntosDeVidaConUnaPocion() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
@@ -67,7 +68,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test05ChamanderEstaDormidoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException{
+	public void test05ChamanderEstaDormidoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
@@ -78,7 +79,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test06JigglypuffEstaQuemadoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException{
+	public void test06JigglypuffEstaQuemadoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
@@ -89,7 +90,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test07JigglypuffEstaQuemadoYDormidoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException{
+	public void test07JigglypuffEstaQuemadoYDormidoYvuelveAestadoNormalConUnRestaurador() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jigglypuff otroJigglypuff = new Jigglypuff();
@@ -102,7 +103,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test08JigglypuffUsa2VecesCantoyUsandoUnaVitaminaRestauraLos2AtaquesCanto() throws AtaqueNoDisponibleException{
+	public void test08JigglypuffUsa2VecesCantoyUsandoUnaVitaminaRestauraLos2AtaquesCanto() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
@@ -114,7 +115,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test09igglypuffUsaCantoyUsandoUnaVitaminaRestaura1AtaqueCantoYaQueNoPuedePasarElMaximo() throws AtaqueNoDisponibleException{
+	public void test09igglypuffUsaCantoyUsandoUnaVitaminaRestaura1AtaqueCantoYaQueNoPuedePasarElMaximo() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
@@ -125,7 +126,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test10CharmanderSeQuedaSinFogonazoYRestaura2UsandoVitamina() throws AtaqueNoDisponibleException{
+	public void test10CharmanderSeQuedaSinFogonazoYRestaura2UsandoVitamina() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
@@ -139,7 +140,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test11CharmanderUsa2FogonazosYAtaquesRapidosYSeRestauranUsandoVitamina() throws AtaqueNoDisponibleException{
+	public void test11CharmanderUsa2FogonazosYAtaquesRapidosYSeRestauranUsandoVitamina() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jigglypuff unJigglypuff = new Jigglypuff();
 		Jugador unJugador = new Jugador();
@@ -154,7 +155,7 @@ public class ElementosTest {
 	}
 
 	@Test
-	public void test12CharmanderNoUsoAtaquesYUsaVitamina() throws AtaqueNoDisponibleException{
+	public void test12CharmanderNoUsoAtaquesYUsaVitamina() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Charmander unCharmander = new Charmander();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unCharmander);

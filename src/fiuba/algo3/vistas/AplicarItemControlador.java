@@ -6,10 +6,13 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 import fiuba.algo3.modelo.elementos.Elemento;
+import fiuba.algo3.modelo.excepciones.ElementoNoDisponibleException;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 
 public class AplicarItemControlador implements Initializable {
 
@@ -46,30 +49,66 @@ public class AplicarItemControlador implements Initializable {
 
 	public void usarItem1() throws IOException{
 		//List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		Elemento elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarPocion();
-		Aplicacion.nuevoJuego.aplicarElemento(elemento);
-		Aplicacion.showEscenarioPelea();
+		Elemento elemento;
+		try {
+			elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarPocion();
+			Aplicacion.nuevoJuego.aplicarElemento(elemento);
+			Aplicacion.showEscenarioPelea();
+		} catch (ElementoNoDisponibleException e) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no pudo recibir el elemento!");
+			alert.setHeaderText(null);
+			alert.setContentText("Ya no quedan mas elementos de este tipo");
+			alert.showAndWait();
+		}
 	}
 
 	public void usarItem2() throws IOException{
 		//List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		Elemento elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarSuperPocion();
-		Aplicacion.nuevoJuego.aplicarElemento(elemento);
-		Aplicacion.showEscenarioPelea();
+		Elemento elemento;
+		try {
+			elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarSuperPocion();
+			Aplicacion.nuevoJuego.aplicarElemento(elemento);
+			Aplicacion.showEscenarioPelea();
+		} catch (ElementoNoDisponibleException e) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no pudo recibir el elemento!");
+			alert.setHeaderText(null);
+			alert.setContentText("Ya no quedan mas elementos de este tipo");
+			alert.showAndWait();
+		}	
 	}
 
 	public void usarItem3() throws IOException{
 		//List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		Elemento elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarVitamina();
-		Aplicacion.nuevoJuego.aplicarElemento(elemento);
-		Aplicacion.showEscenarioPelea();
+		Elemento elemento;
+		try {
+			elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarVitamina();
+			Aplicacion.nuevoJuego.aplicarElemento(elemento);
+			Aplicacion.showEscenarioPelea();
+		} catch (ElementoNoDisponibleException e) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no pudo recibir el elemento!");
+			alert.setHeaderText(null);
+			alert.setContentText("Ya no quedan mas elementos de este tipo");
+			alert.showAndWait();
+		}
 	}
 
 	public void usarItem4() throws IOException{
 		//List<String> elementos = Aplicacion.nuevoJuego.elementosDisponibles();
-		Elemento elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarRestaurador();
-		Aplicacion.nuevoJuego.aplicarElemento(elemento);
-		Aplicacion.showEscenarioPelea();
+		Elemento elemento;
+		try {
+			elemento = Aplicacion.nuevoJuego.getJugadorActual().sacarRestaurador();
+			Aplicacion.nuevoJuego.aplicarElemento(elemento);
+			Aplicacion.showEscenarioPelea();
+		} catch (ElementoNoDisponibleException e) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no pudo recibir el elemento!");
+			alert.setHeaderText(null);
+			alert.setContentText("Ya no quedan mas elementos de este tipo");
+			alert.showAndWait();
+		}	
 	}
 }
 

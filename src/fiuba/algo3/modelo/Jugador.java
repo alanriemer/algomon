@@ -11,6 +11,7 @@ import fiuba.algo3.modelo.elementos.ContenedorElementos;
 import fiuba.algo3.modelo.elementos.Elemento;
 import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
+import fiuba.algo3.modelo.excepciones.ElementoNoDisponibleException;
 
 
 public class Jugador {
@@ -42,10 +43,10 @@ public class Jugador {
 	public void usarElemento(Elemento elemento) {
 		this.algomonActual().aplicarElemento(elemento);
 	}
-	public Elemento sacarPocion() {
+	public Elemento sacarPocion() throws ElementoNoDisponibleException {
 		return contenedorDeElementos.sacarPocion();
 	}
-	public Elemento sacarSuperPocion() {
+	public Elemento sacarSuperPocion() throws ElementoNoDisponibleException {
 		return contenedorDeElementos.sacarSuperPocion();
 	}
 	public void cambiarAlgomon(Algomon algomon) throws AlgomonInvalidoException {
@@ -55,10 +56,10 @@ public class Jugador {
 		this.activo = algomon;
 
 	}
-	public Elemento sacarRestaurador() {
+	public Elemento sacarRestaurador() throws ElementoNoDisponibleException {
 		return contenedorDeElementos.sacarRestaurador();
 	}
-	public Elemento sacarVitamina() {
+	public Elemento sacarVitamina() throws ElementoNoDisponibleException {
 		return contenedorDeElementos.sacarVitamina();
 	}
 	public String setNombre(String nombre) {

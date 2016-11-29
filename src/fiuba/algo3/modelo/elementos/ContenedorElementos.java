@@ -2,6 +2,8 @@ package fiuba.algo3.modelo.elementos;
 
 import java.util.Stack;
 
+import fiuba.algo3.modelo.excepciones.ElementoNoDisponibleException;
+
 public class ContenedorElementos {
 
 	Stack<Elemento> misPociones;
@@ -34,21 +36,42 @@ public class ContenedorElementos {
 
 	}
 
-	public Elemento sacarPocion() {
-		return this.misPociones.pop();
+	public Elemento sacarPocion() throws ElementoNoDisponibleException {
+		try{
+				return this.misPociones.pop();
+		}
+		catch(java.util.EmptyStackException e){
+			throw new ElementoNoDisponibleException();
+		}
 	}
 
-	public Elemento sacarSuperPocion() {
-		return this.miSuperPociones.pop();
+	public Elemento sacarSuperPocion() throws ElementoNoDisponibleException {
+		try{
+			return this.miSuperPociones.pop();
+		}
+		catch(java.util.EmptyStackException e){
+			throw new ElementoNoDisponibleException();
+		}
 	}
 
-	public Elemento sacarRestaurador() {
-		return this.misRestauradores.pop();
+	public Elemento sacarRestaurador() throws ElementoNoDisponibleException {
+		try{
+			return this.misRestauradores.pop();
+		}
+		catch(java.util.EmptyStackException e){
+			throw new ElementoNoDisponibleException();
+		}
 	}
 
-	public Elemento sacarVitamina() {
-		return this.misVitaminas.pop();
+	public Elemento sacarVitamina() throws ElementoNoDisponibleException {
+		try{
+			return this.misVitaminas.pop();
+		}
+		catch(java.util.EmptyStackException e){
+			throw new ElementoNoDisponibleException();
+		}
 	}
+		
 
 	public Integer cantPocion() {
 		return this.misPociones.size();
