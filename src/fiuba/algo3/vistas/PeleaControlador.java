@@ -80,7 +80,12 @@ public class PeleaControlador implements Initializable {
 	}
 	@FXML
 	private void goAtaquesView() throws IOException{
-		Aplicacion.showAtaquesView();
+		if (!Aplicacion.nuevoJuego.getJugadorActual().algomonActual().estaMuerto()){
+			Aplicacion.showAtaquesView();
+		}
+		else {
+			this.algomonMuerto();
+		}
 	}
 	@FXML
 	private void goCambioAlgomonView() throws IOException{
@@ -88,6 +93,11 @@ public class PeleaControlador implements Initializable {
 	}
 	@FXML
 	private void goAplicarItemView() throws IOException{
-		Aplicacion.showAplicarItemView();
+		if (!Aplicacion.nuevoJuego.getJugadorActual().algomonActual().estaMuerto()){
+			Aplicacion.showAplicarItemView();
+		}
+		else {
+			this.algomonMuerto();
+		}
 	}
 }

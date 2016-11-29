@@ -65,7 +65,7 @@
             </ToolBar>
             <HBox layoutX="42.0" layoutY="88.0" spacing="80.0">
                <children>
-                  <Button layoutX="40.0" layoutY="88.0" mnemonicParsing="false" onAction="#goAtaquesView" text="Atacar">
+                  <Button fx:id="atacar" layoutX="40.0" layoutY="88.0" mnemonicParsing="false" onAction="#goAtaquesView" text="Atacar">
                      <effect>
                         <DropShadow />
                      </effect></Button>
