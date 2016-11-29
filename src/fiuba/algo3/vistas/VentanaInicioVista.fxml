@@ -30,4 +30,7 @@
          </cursor>
       </Button>
    </bottom>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
 </BorderPane>

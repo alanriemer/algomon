@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="400.0" maxWidth="500.0" minHeight="200.0" minWidth="400.0" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.EleccionAlgomonControlador">
+<BorderPane maxHeight="400.0" maxWidth="600.0" minHeight="200.0" minWidth="400.0" prefHeight="300.0" prefWidth="500.0" style="-fx-background-image: url('file:src/resources/fondo3.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.EleccionAlgomonControlador">
    <top>
       <Pane prefHeight="50.0" prefWidth="500.0" BorderPane.alignment="CENTER">
          <children>
@@ -29,6 +29,12 @@
                   <Button fx:id="chansey" mnemonicParsing="false" onAction="#agregarChanseyJugadorActual" prefHeight="65.0" prefWidth="75.0" text="Chansey" />
                   <Button fx:id="jigglypuff" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarJigglypuffJugadorActual" prefHeight="65.0" prefWidth="75.0" text="Jigglypuff" />
                </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
             </HBox>
             <HBox layoutX="30.0" layoutY="138.0" prefHeight="100.0" spacing="70.0">
                <children>
@@ -36,6 +42,9 @@
                   <Button fx:id="squirtle" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarSquirtleJugadorActual" prefHeight="65.0" prefWidth="75.0" text="Squirtle" />
                   <Button fx:id="charmander" layoutX="471.0" layoutY="38.0" mnemonicParsing="false" onAction="#agregarCharmanderJugadorActual" prefHeight="65.0" prefWidth="75.0" text="Charmander" />
                </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
             </HBox>
          </children>
       </Pane>
