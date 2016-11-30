@@ -9,14 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.VentanaInicioControlador">
-   <center>
-      <ImageView fitHeight="401.0" fitWidth="597.0" opacity="0.24" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-         <image>
-            <Image url="@../../../resources/imagenPrincipal.jpg" />
-         </image>
-      </ImageView>
-   </center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:src/resources/fondoPrincipal.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.VentanaInicioControlador">
    <bottom>
       <Button mnemonicParsing="false" onAction="#goEscenarioPelea" text="Iniciar Juego" BorderPane.alignment="CENTER">
          <BorderPane.margin>
