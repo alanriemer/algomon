@@ -55,17 +55,27 @@ public class PeleaControlador implements Initializable {
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle(null);
 			alert.setHeaderText(null);
-			alert.setContentText("El Algomon del jugador 1 ha muerto, el jugador 2 gana!");
+			alert.setContentText("El Algomon de Ash ha muerto, Gary gana!");
 			alert.showAndWait();
-			//Aplicacion.restart();
+			try {
+				Aplicacion.restart();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		if (Aplicacion.nuevoJuego.getJugador2().algomonesMuertos()){
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle(null);
 			alert.setHeaderText(null);
-			alert.setContentText("El Algomon del jugador 2 ha muerto, el jugador 1 gana!");
+			alert.setContentText("El Algomon de Gary ha muerto, Ash gana!");
 			alert.showAndWait();
-			//Aplicacion.restart();
+			try {
+				Aplicacion.restart();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	private void algomonMuerto(){
@@ -74,7 +84,7 @@ public class PeleaControlador implements Initializable {
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle(null);
 			alert.setHeaderText(null);
-			alert.setContentText(algomonMuerto + " ha muerto, debe cambiarlo para Continuar.!");
+			alert.setContentText(algomonMuerto + " ha muerto, debe cambiarlo para Continuar!");
 			alert.showAndWait();
 		}
 	}

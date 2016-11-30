@@ -11,11 +11,12 @@ import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.algomones.Charmander;
 import fiuba.algo3.modelo.algomones.Squirtle;
 import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class JuegoTest {
 	@Test
-	public void test01agregarAlgomonesYelPrimeroEselActualDelJugador() throws AtaqueNoDisponibleException{
+	public void test01agregarAlgomonesYelPrimeroEselActualDelJugador() throws AtaqueNoDisponibleException, AlgomonInvalidoException{
 		Squirtle squirtle = new Squirtle();
 		Charmander charmander = new Charmander();
 		JuegoAlgomon juego = new JuegoAlgomon();
