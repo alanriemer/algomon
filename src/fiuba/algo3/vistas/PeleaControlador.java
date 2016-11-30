@@ -2,8 +2,13 @@
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
+import fiuba.algo3.modelo.estadoAlgomones.EstadoDormido;
+import fiuba.algo3.modelo.estadoAlgomones.EstadoDormidoQuemado;
+import fiuba.algo3.modelo.estadoAlgomones.EstadoNormal;
+import fiuba.algo3.modelo.estadoAlgomones.EstadoQuemado;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -14,7 +19,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert.AlertType;
 
 public class PeleaControlador implements Initializable {
-
+	private HashMap<Object, String> estados = new HashMap<Object, String>();
 	@FXML
 	private ImageView img1;
 	@FXML
@@ -31,6 +36,11 @@ public class PeleaControlador implements Initializable {
 	private Button nombreAlgo2;
 
 	@FXML
+	private Label estado1;
+	@FXML
+	private Label estado2;
+	
+	@FXML
 	private Label _nombre1;
 	@FXML
 	private Label _nombre2;
@@ -39,7 +49,13 @@ public class PeleaControlador implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		estados.put(EstadoNormal.class," ");
+		estados.put(EstadoDormido.class,"DORMIDO");
+		estados.put(EstadoQuemado.class,"QUEMADO");
+		estados.put(EstadoDormidoQuemado.class,"DORMIDO Y QUEMADO");
 		actual.setText(Aplicacion.nuevoJuego.getNombreJugadorActual());
+		estado1.setText(estados.get(Aplicacion.nuevoJuego.getJugador1().algomonActual().getEstado().getClass()));
+		estado2.setText(estados.get(Aplicacion.nuevoJuego.getJugador2().algomonActual().getEstado().getClass()));
 		_nombre1.setText(Aplicacion.nuevoJuego.getJugador1().algomonActual().getNombre());
 		_nombre2.setText(Aplicacion.nuevoJuego.getJugador2().algomonActual().getNombre());
         Image image = new Image(Aplicacion.nuevoJuego.getJugador1().algomonActual().getImagen().toURI().toString());
@@ -60,7 +76,6 @@ public class PeleaControlador implements Initializable {
 			try {
 				Aplicacion.restart();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -73,7 +88,6 @@ public class PeleaControlador implements Initializable {
 			try {
 				Aplicacion.restart();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

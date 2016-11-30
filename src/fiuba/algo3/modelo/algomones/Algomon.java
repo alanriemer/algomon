@@ -110,7 +110,11 @@ public abstract class Algomon {
 	public void despertar() {
 		estado.despertar();
 	}
-
+	
+	public Estado getEstado(){
+		return estado;
+	}
+	
 	public boolean estaDormido() {
 		return estado.estaDormido();
 	}
