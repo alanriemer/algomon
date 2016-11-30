@@ -7,11 +7,12 @@ import fiuba.algo3.modelo.algomones.Algomon;
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.TipoAtaque;
 import fiuba.algo3.modelo.elementos.Elemento;
+import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public interface Juego {
 	public void atacarCon(TipoAtaque ataque) throws AtaqueNoDisponibleException;
-	public void cambiarAlgomonJugadorActual(Algomon algomon);
+	public void cambiarAlgomonJugadorActual(Algomon algomon) throws AlgomonInvalidoException;
 	public List<Ataque> ataquesDisponiblesAlgomonActual();
 	public List<Algomon> algomonesDisponibles();
 	public void aplicarElemento(Elemento elemento);

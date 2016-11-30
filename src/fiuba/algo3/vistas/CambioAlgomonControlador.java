@@ -6,10 +6,13 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import fiuba.algo3.modelo.algomones.Algomon;
+import fiuba.algo3.modelo.excepciones.AlgomonInvalidoException;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 
 public class CambioAlgomonControlador implements Initializable {
 
@@ -42,20 +45,44 @@ public class CambioAlgomonControlador implements Initializable {
 
 	public void cambiarAlgomon1() throws IOException{
 		List<Algomon> algomones = Aplicacion.nuevoJuego.algomonesDisponibles();
-		Aplicacion.nuevoJuego.cambiarAlgomonJugadorActual(algomones.get(0));
-		Aplicacion.showEscenarioPelea();
+		try {
+			Aplicacion.nuevoJuego.cambiarAlgomonJugadorActual(algomones.get(0));
+			Aplicacion.showEscenarioPelea();
+		} catch (AlgomonInvalidoException e) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no puede pelear!");
+			alert.setHeaderText(null);
+			alert.setContentText("El Algomon esta debilitado y no puede luchar");
+			alert.showAndWait();
+		}
 	}
 
 	public void cambiarAlgomon2() throws IOException{
 		List<Algomon> algomones = Aplicacion.nuevoJuego.algomonesDisponibles();
-		Aplicacion.nuevoJuego.cambiarAlgomonJugadorActual(algomones.get(1));
-		Aplicacion.showEscenarioPelea();
+		try {
+			Aplicacion.nuevoJuego.cambiarAlgomonJugadorActual(algomones.get(1));
+			Aplicacion.showEscenarioPelea();
+		} catch (AlgomonInvalidoException e) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no puede pelear!");
+			alert.setHeaderText(null);
+			alert.setContentText("El Algomon esta debilitado y no puede luchar");
+			alert.showAndWait();
+		}
 	}
 
 	public void cambiarAlgomon3() throws IOException{
 		List<Algomon> ataques = Aplicacion.nuevoJuego.algomonesDisponibles();
-		Aplicacion.nuevoJuego.cambiarAlgomonJugadorActual(ataques.get(2));
-		Aplicacion.showEscenarioPelea();
+		try {
+			Aplicacion.nuevoJuego.cambiarAlgomonJugadorActual(ataques.get(2));
+			Aplicacion.showEscenarioPelea();
+		} catch (AlgomonInvalidoException e) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("El Algomon no puede pelear!");
+			alert.setHeaderText(null);
+			alert.setContentText("El Algomon esta debilitado y no puede luchar");
+			alert.showAndWait();
+		}
 	}
 	
 	public void volver() throws IOException{

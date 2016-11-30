@@ -45,12 +45,8 @@ public class JuegoAlgomon implements Juego {
 		this.enemigoActual = (enemigoActual == jugador1)? jugador2:jugador1;
 	}
 
-	public void cambiarAlgomonJugadorActual(Algomon algomon){
-		try {
-			this.jugadorActual.cambiarAlgomon(algomon);
-		} catch (AlgomonInvalidoException e) {
-			e.printStackTrace();
-		}
+	public void cambiarAlgomonJugadorActual(Algomon algomon) throws AlgomonInvalidoException{
+		this.jugadorActual.cambiarAlgomon(algomon);
 		this.siguienteTurno();
 	}
 	public List<Ataque> ataquesDisponiblesAlgomonActual(){
