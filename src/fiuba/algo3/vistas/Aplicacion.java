@@ -16,7 +16,7 @@ public class Aplicacion extends Application {
 	private static Stage primaryStage;
 	private static BorderPane mainLayout;
 	public static Juego nuevoJuego = new JuegoAlgomon();
-		
+
 	public static void restart() throws IOException{
 		Aplicacion.nuevoJuego = new JuegoAlgomon();
 		showMainView();
@@ -44,7 +44,7 @@ public class Aplicacion extends Application {
 
 	private static void showMainView() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Aplicacion.class.getResource("../vistas/MenuPrincipalVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("/fiuba/algo3/vistas/MenuPrincipalVista.fxml"));
 		mainLayout = loader.load();
 		Scene scene = new Scene(mainLayout);
 		primaryStage.setScene(scene);
@@ -53,48 +53,48 @@ public class Aplicacion extends Application {
 
 	public static void showMainItems() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Aplicacion.class.getResource("../vistas/VentanaInicioVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("/fiuba/algo3/vistas/VentanaInicioVista.fxml"));
 		BorderPane mainItems = loader.load();
 		mainLayout.setCenter(mainItems);
 	}
 
 	public static void showNuevo() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Aplicacion.class.getResource("../vistas/VentanaInicioVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("/fiuba/algo3/vistas/VentanaInicioVista.fxml"));
 		BorderPane mainItems = loader.load();
 		mainLayout.setCenter(mainItems);
 	}
 
 	public static void showEscenarioPelea() throws IOException{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Aplicacion.class.getResource("../vistas/PeleaVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("/fiuba/algo3/vistas/PeleaVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
 
 	public static void showAtaquesView() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Aplicacion.class.getResource("../vistas/AtaquesVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("/fiuba/algo3/vistas/AtaquesVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
 
 	public static void showCambioAlgomonView() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Aplicacion.class.getResource("../vistas/CambioAlgomonVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("/fiuba/algo3/vistas/CambioAlgomonVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
 	public static void showAplicarItemView() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Aplicacion.class.getResource("../vistas/AplicarItemVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("/fiuba/algo3/vistas/AplicarItemVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
 
 	public static void showEleccionAlgomones() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Aplicacion.class.getResource("../vistas/EleccionAlgomonVista.fxml"));
+		loader.setLocation(Aplicacion.class.getResource("/fiuba/algo3/vistas/EleccionAlgomonVista.fxml"));
 		BorderPane escenarioPelea = loader.load();
 		mainLayout.setCenter(escenarioPelea);
 	}
