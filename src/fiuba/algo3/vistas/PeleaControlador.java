@@ -52,7 +52,7 @@ public class PeleaControlador implements Initializable {
 		estados.put(EstadoNormal.class," ");
 		estados.put(EstadoDormido.class,"DORMIDO");
 		estados.put(EstadoQuemado.class,"QUEMADO");
-		estados.put(EstadoDormidoQuemado.class,"DORMIDO Y QUEMADO");
+		estados.put(EstadoDormidoQuemado.class,"DORMIDO \nY QUEMADO");
 		actual.setText(Aplicacion.nuevoJuego.getNombreJugadorActual());
 		estado1.setText(estados.get(Aplicacion.nuevoJuego.getJugador1().algomonActual().getEstado().getClass()));
 		estado2.setText(estados.get(Aplicacion.nuevoJuego.getJugador2().algomonActual().getEstado().getClass()));

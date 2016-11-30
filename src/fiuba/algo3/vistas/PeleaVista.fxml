@@ -98,17 +98,20 @@
          <children>
             <Label fx:id="estado1" layoutX="32.0" layoutY="7.0" text="Label" textFill="#c30505a6">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font></Label>
          </children></Pane>
    </left>
    <right>
       <Pane maxHeight="200.0" maxWidth="100.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="estado2" layoutX="-4.0" layoutY="179.0" text="Label" textFill="#c6318fa6">
+            <Label fx:id="estado2" layoutX="-27.0" layoutY="154.0" text="Label" textFill="#c6318fa6">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font></Label>
-         </children></Pane>
+         </children>
+         <BorderPane.margin>
+            <Insets right="15.0" />
+         </BorderPane.margin></Pane>
    </right>
 </BorderPane>
