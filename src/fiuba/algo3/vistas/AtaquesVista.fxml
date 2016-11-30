@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
@@ -14,7 +15,10 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
                <children>
-                  <Label fx:id="nombreAta1" minWidth="100.0" text="Label" textAlignment="CENTER" wrapText="true" />
+                  <Label fx:id="nombreAta1" minWidth="215.0" style="-fx-background-color: white;" text="Label" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Label>
                   <Button fx:id="atacar1" mnemonicParsing="false" onAction="#usarAtaque1" text="Button" wrapText="true">
                      <effect>
                         <DropShadow />
@@ -29,7 +33,10 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
                <children>
-                  <Label fx:id="nombreAta2" minWidth="100.0" text="Label" textAlignment="CENTER" wrapText="true" />
+                  <Label fx:id="nombreAta2" minWidth="215.0" style="-fx-background-color: white;" text="Label" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Label>
                   <Button fx:id="atacar2" mnemonicParsing="false" onAction="#usarAtaque2" text="Button">
                      <effect>
                         <DropShadow />
@@ -44,7 +51,10 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
                <children>
-                  <Label fx:id="nombreAta3" minWidth="100.0" text="Label" textAlignment="CENTER" wrapText="true" />
+                  <Label fx:id="nombreAta3" minWidth="215.0" style="-fx-background-color: white;" text="Label" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Label>
                   <Button fx:id="atacar3" mnemonicParsing="false" onAction="#usarAtaque3" text="Button">
                      <effect>
                         <DropShadow />
@@ -66,7 +76,7 @@
    <top>
       <Button fx:id="volver" mnemonicParsing="false" onAction="#volver" text="Volver" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
-            <Insets bottom="-25.0" left="10.0" top="25.0" />
+            <Insets bottom="-25.0" left="20.0" top="20.0" />
          </BorderPane.margin>
          <cursor>
             <Cursor fx:constant="HAND" />
