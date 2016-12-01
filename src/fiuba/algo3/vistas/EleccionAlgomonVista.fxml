@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="400.0" maxWidth="600.0" minHeight="200.0" minWidth="400.0" prefHeight="300.0" prefWidth="500.0" style="-fx-background-image: url('file:src/resources/fondo3.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.EleccionAlgomonControlador">
+<BorderPane maxHeight="400.0" maxWidth="600.0" minHeight="200.0" minWidth="400.0" prefHeight="300.0" prefWidth="500.0" style="-fx-background-image: url('file:resources/fondo3.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.EleccionAlgomonControlador">
    <top>
       <Pane prefHeight="50.0" prefWidth="500.0" BorderPane.alignment="CENTER">
          <children>

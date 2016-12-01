@@ -9,7 +9,7 @@ import fiuba.algo3.modelo.ataques.TipoAtaque;
 public class Squirtle extends Algomon{
 	public Squirtle (){
 		nombre = "Squirtle";
-		imagen = new File("src/resources/Squirtle_XY.gif");
+		imagen = new File("resources/Squirtle_XY.gif");
 		puntosVida = 150;
 		puntosVidaActuales = 150;
 		Ataque burbuja = new AtaqueAgua(10,15, TipoAtaque.Burbuja);

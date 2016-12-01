@@ -23,7 +23,7 @@ public class Aplicacion extends Application {
 		nuevoJuego.setNombreJugador1("Ash");
 		nuevoJuego.setNombreJugador2("Gary");
 		showMainItems();
-        Media media = new Media(Paths.get("src/resources/a.mp3").toUri().toString());
+        Media media = new Media(Paths.get("resources/a.mp3").toUri().toString());
         MediaPlayer mp = new MediaPlayer(media);
         mp.play();
 	}
@@ -36,7 +36,7 @@ public class Aplicacion extends Application {
 		nuevoJuego.setNombreJugador1("Ash");
 		nuevoJuego.setNombreJugador2("Gary");
 		showMainItems();
-        Media media = new Media(Paths.get("src/resources/a.mp3").toUri().toString());
+        Media media = new Media(Paths.get("resources/a.mp3").toUri().toString());
         MediaPlayer mp = new MediaPlayer(media);
         mp.play();
 

@@ -10,7 +10,7 @@ import fiuba.algo3.modelo.ataques.TipoAtaque;
 public class Jigglypuff extends Algomon{
 	public Jigglypuff(){
 		nombre = "Jigglypuff";
-		imagen = new File("src/resources/Jigglypuff_XY.gif");
+		imagen = new File("resources/Jigglypuff_XY.gif");
 		puntosVida = 130;
 		puntosVidaActuales = 130;
 		Ataque burbuja = new AtaqueAgua(10,15, TipoAtaque.Burbuja);
