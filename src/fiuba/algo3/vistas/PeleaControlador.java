@@ -58,9 +58,9 @@ public class PeleaControlador implements Initializable {
 		estado2.setText(estados.get(Aplicacion.nuevoJuego.getJugador2().algomonActual().getEstado().getClass()));
 		_nombre1.setText(Aplicacion.nuevoJuego.getJugador1().algomonActual().getNombre());
 		_nombre2.setText(Aplicacion.nuevoJuego.getJugador2().algomonActual().getNombre());
-        Image image = new Image(Aplicacion.nuevoJuego.getJugador1().algomonActual().getImagen().toURI().toString());
+        Image image = new Image(Aplicacion.nuevoJuego.getJugador1().algomonActual().getImagen());
         img1.setImage(image);
-        Image image2 = new Image(Aplicacion.nuevoJuego.getJugador2().algomonActual().getImagen().toURI().toString());
+        Image image2 = new Image(Aplicacion.nuevoJuego.getJugador2().algomonActual().getImagen());
         img2.setImage(image2);
 		vidaJ1.setText(String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaActualJugador1())+"/"+String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaOriginalJugador1()));
 		vidaJ2.setText(String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaActualJugador2())+"/"+String.valueOf(Aplicacion.nuevoJuego.getPuntosVidaOriginalJugador2()));

@@ -48,7 +48,7 @@ public class EleccionAlgomonControlador implements Initializable{
 		//INICIALIZO CADA IMAGEN
 		//BULBASAUR
 		Bulbasaur bulba = new Bulbasaur();
-		Image imageBulbasaur = new Image(bulba.getImagen().toURI().toString());
+		Image imageBulbasaur = new Image(bulba.getImagen());
 		ImageView bulbasaurView = new ImageView();
 		bulbasaurView.setImage(imageBulbasaur);
 		this.bulbasaur.setGraphic(bulbasaurView);
@@ -56,7 +56,7 @@ public class EleccionAlgomonControlador implements Initializable{
 		
 		//SQUIRTLEl
 		Squirtle squir = new Squirtle();
-		Image imageSquirtle = new Image(squir.getImagen().toURI().toString());
+		Image imageSquirtle = new Image(squir.getImagen());
 		ImageView squirtleView = new ImageView();
 		squirtleView.setImage(imageSquirtle);
 		this.squirtle.setGraphic(squirtleView);
@@ -64,7 +64,7 @@ public class EleccionAlgomonControlador implements Initializable{
 		
 		//CHARMANDER
 		Charmander charman = new Charmander();
-		Image imageCharmander = new Image(charman.getImagen().toURI().toString());
+		Image imageCharmander = new Image(charman.getImagen());
 		ImageView charmanderView = new ImageView();
 		charmanderView.setImage(imageCharmander);
 		this.charmander.setGraphic(charmanderView);
@@ -72,7 +72,7 @@ public class EleccionAlgomonControlador implements Initializable{
 		
 		//RATTATA
 		Rattata rata = new Rattata();
-		Image imageRattata = new Image(rata.getImagen().toURI().toString());
+		Image imageRattata = new Image(rata.getImagen());
 		ImageView rattataView = new ImageView();
 		rattataView.setImage(imageRattata);
 		this.rattata.setGraphic(rattataView);
@@ -80,7 +80,7 @@ public class EleccionAlgomonControlador implements Initializable{
 		
 		//JIGGLYPUFF
 		Jigglypuff jiggly = new Jigglypuff();
-		Image imageJigglypuff = new Image(jiggly.getImagen().toURI().toString());
+		Image imageJigglypuff = new Image(jiggly.getImagen());
 		ImageView jigglypuffView = new ImageView();
 		jigglypuffView.setImage(imageJigglypuff);
 		this.jigglypuff.setGraphic(jigglypuffView);
@@ -88,7 +88,7 @@ public class EleccionAlgomonControlador implements Initializable{
 		
 		//CHANSEY
 		Chansey chan = new Chansey();
-		Image imageChansey = new Image(chan.getImagen().toURI().toString());
+		Image imageChansey = new Image(chan.getImagen());
 		ImageView chanseyView = new ImageView();
 		chanseyView.setImage(imageChansey);
 		this.chansey.setGraphic(chanseyView);

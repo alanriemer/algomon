@@ -1,6 +1,5 @@
 package fiuba.algo3.modelo.algomones;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,7 +16,7 @@ import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public abstract class Algomon {
 	protected String nombre;
-	protected File imagen;
+	protected String imagen;
 	protected int puntosVida;
 	protected int puntosVidaActuales;
 	protected Estado estado = new EstadoNormal(this);
@@ -91,7 +90,7 @@ public abstract class Algomon {
 
 
 
-	public File getImagen(){
+	public String getImagen(){
 		return this.imagen;
 	}
 

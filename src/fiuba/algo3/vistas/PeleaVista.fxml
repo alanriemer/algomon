@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="600.0" maxWidth="800.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:resources/fondo.jpg'); -fx-background-opacity: 0.6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.PeleaControlador">
+<BorderPane maxHeight="600.0" maxWidth="800.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/resources/fondo.jpg'); -fx-background-opacity: 0.6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fiuba.algo3.vistas.PeleaControlador">
    <top>
       <Pane maxHeight="100.0" maxWidth="600.0" prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>

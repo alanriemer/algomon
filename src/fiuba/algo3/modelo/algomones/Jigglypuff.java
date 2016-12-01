@@ -1,7 +1,5 @@
 package fiuba.algo3.modelo.algomones;
 
-import java.io.File;
-
 import fiuba.algo3.modelo.ataques.Ataque;
 import fiuba.algo3.modelo.ataques.AtaqueAgua;
 import fiuba.algo3.modelo.ataques.AtaqueNormal;
@@ -10,7 +8,7 @@ import fiuba.algo3.modelo.ataques.TipoAtaque;
 public class Jigglypuff extends Algomon{
 	public Jigglypuff(){
 		nombre = "Jigglypuff";
-		imagen = new File("resources/Jigglypuff_XY.gif");
+		imagen = "/resources/Jigglypuff_XY.gif";
 		puntosVida = 130;
 		puntosVidaActuales = 130;
 		Ataque burbuja = new AtaqueAgua(10,15, TipoAtaque.Burbuja);
