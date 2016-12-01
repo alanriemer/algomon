@@ -29,13 +29,12 @@ public abstract class Ataque {
 		return (cantidad > 0);
 	}
 
-	public int atacar(Algomon pokemon){
+	public void atacar(Algomon pokemon){
 		if(this.tieneEfecto())
 			this.efecto.aplicarEfecto(pokemon);
 		int danio = pokemon.calcularDanio(this);
 		pokemon.recibirDanio(danio);
 		cantidad--;
-		return danio;
 	}
 
 	public void puedeDormir(){
