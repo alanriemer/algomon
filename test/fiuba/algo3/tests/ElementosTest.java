@@ -1,6 +1,9 @@
 package fiuba.algo3.tests;
 
 import static org.junit.Assert.assertEquals;
+
+import java.util.HashMap;
+
 import org.junit.Test;
 
 import fiuba.algo3.modelo.Jugador;
@@ -164,7 +167,7 @@ public class ElementosTest {
 	}
 	
 	@Test(expected = ElementoNoDisponibleException.class) 
-	public void test13tiraExcepcionCuandoNoLeQuedanItemsDisponiblesDeUnTipo() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
+	public void test13tiraExcepcionCuandoNoLeQuedanSuperPocionesDisponibles() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
 		unJugador.agregarAlgomon(unSquirtle);
@@ -176,4 +179,54 @@ public class ElementosTest {
 		unJugador.usarElemento(unJugador.sacarSuperPocion());
 		unJugador.usarElemento(unJugador.sacarSuperPocion());
 	}
+	
+	@Test(expected = ElementoNoDisponibleException.class) 
+	public void test14tiraExcepcionCuandoNoLeQuedanPocionesDisponibles() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
+		Squirtle unSquirtle = new Squirtle();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unSquirtle);
+		unJugador.usarElemento(unJugador.sacarPocion());
+		unJugador.usarElemento(unJugador.sacarPocion());
+		unJugador.usarElemento(unJugador.sacarPocion());
+		unJugador.usarElemento(unJugador.sacarPocion());
+		unJugador.usarElemento(unJugador.sacarPocion());
+		unJugador.usarElemento(unJugador.sacarPocion());
+	}
+	
+	@Test(expected = ElementoNoDisponibleException.class) 
+	public void test15tiraExcepcionCuandoNoLeQuedanVitaminasDisponibles() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
+		Squirtle unSquirtle = new Squirtle();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unSquirtle);
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		unJugador.usarElemento(unJugador.sacarVitamina());
+		unJugador.usarElemento(unJugador.sacarVitamina());
+	}
+	
+	@Test(expected = ElementoNoDisponibleException.class) 
+	public void test16tiraExcepcionCuandoNoLeQuedanRestauradoresDisponibles() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
+		Squirtle unSquirtle = new Squirtle();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unSquirtle);
+		unJugador.usarElemento(unJugador.sacarRestaurador());
+		unJugador.usarElemento(unJugador.sacarRestaurador());
+		unJugador.usarElemento(unJugador.sacarRestaurador());
+		unJugador.usarElemento(unJugador.sacarRestaurador());
+		unJugador.usarElemento(unJugador.sacarRestaurador());
+	}
+	
+	@Test
+	public void test17UnContenedorTieneLaCantidadDeElementosPedidos(){
+		Jugador unJugador = new Jugador();
+		HashMap<String, Integer> Contenedor = unJugador.cantElementos();
+		assertEquals((int)Contenedor.get("Pocion"),4);
+		assertEquals((int)Contenedor.get("SuperPocion"),2);
+		assertEquals((int)Contenedor.get("Vitamina"),5);
+		assertEquals((int)Contenedor.get("Restaurador"),3);
+	}
+	
 }

@@ -8,6 +8,7 @@ import fiuba.algo3.modelo.algomones.Bulbasaur;
 import fiuba.algo3.modelo.algomones.Chansey;
 import fiuba.algo3.modelo.algomones.Charmander;
 import fiuba.algo3.modelo.ataques.TipoAtaque;
+import fiuba.algo3.modelo.elementos.Pocion;
 import fiuba.algo3.modelo.excepciones.AtaqueNoDisponibleException;
 
 public class EstadoAlgomonTest {
@@ -144,5 +145,57 @@ public class EstadoAlgomonTest {
 		int vidaDespues = unBulbasaur.getPuntosVidaActuales();
 		//14 es el 10% de la vida de Bulbasaur (140)
 		assertEquals(vidaDespues, vidaAntes-14);
+	}
+	
+	@Test
+	public void test10BulbasaurPasaAEstadoMuerto() throws AtaqueNoDisponibleException {
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Charmander unCharmander = new Charmander();
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		assertEquals(unBulbasaur.estaMuerto(), true);
+		assertEquals(unBulbasaur.estaQuemado(), false);
+		assertEquals(unBulbasaur.estaDormido(), false);
+		assertEquals(unBulbasaur.estaDormidoQuemado(), false);
+	}
+	
+	@Test
+	public void test11BulbasaurPasaAEstadoMuertoYNoPuedeCambiarSuEstado() throws AtaqueNoDisponibleException {
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Charmander unCharmander = new Charmander();
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		assertEquals(unBulbasaur.estaMuerto(), true);
+		unBulbasaur.quemar();
+		assertEquals(unBulbasaur.estaQuemado(), false);
+		unBulbasaur.dormir();
+		assertEquals(unBulbasaur.estaDormido(), false);
+		unBulbasaur.despertar();
+		assertEquals(unBulbasaur.estaDormido(), false);
+		assertEquals(unBulbasaur.estaDormidoQuemado(), false);
+	}
+	
+	@Test
+	public void test12BulbasaurPasaAEstadoMuertoYUsarItems() throws AtaqueNoDisponibleException {
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Charmander unCharmander = new Charmander();
+		Pocion pocion = new Pocion();
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unCharmander.atacarCon(TipoAtaque.Brasas, unBulbasaur);
+		unBulbasaur.aplicarElemento(pocion);
+		assertEquals(unBulbasaur.estaMuerto(), true);
+		assertEquals(unBulbasaur.getPuntosVidaActuales(), 0);
 	}
 }

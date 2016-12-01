@@ -77,6 +77,7 @@ public class JugadorTest {
 		unJugador.cambiarAlgomon(otroSquirtle);
 	}
 	
+	@Test
 	public void test06JugadorTieneTodosLosAlgomonesMuertos() throws AtaqueNoDisponibleException{
 		Squirtle unSquirtle = new Squirtle();
 		Jugador unJugador = new Jugador();
@@ -93,5 +94,17 @@ public class JugadorTest {
 		otroJugador.atacarCon(TipoAtaque.LatigoCepa, unSquirtle);
 		assertEquals(unJugador.algomonesMuertos(),true);
 	}
-
+	
+	@Test
+	public void test07JugadorEligioTodosSusAlgomones(){
+		Squirtle unSquirtle = new Squirtle();
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Charmander unCharmander = new Charmander();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unCharmander);
+		unJugador.agregarAlgomon(unSquirtle);
+		unJugador.agregarAlgomon(unBulbasaur);
+		assertEquals(unJugador.eligioTodosLosAlgomon(), true);
+	}
+	
 }

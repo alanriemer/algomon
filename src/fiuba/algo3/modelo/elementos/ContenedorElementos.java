@@ -78,7 +78,7 @@ public class ContenedorElementos {
 	}
 
 	public Integer cantVitamina() {
-		return this.misRestauradores.size();
+		return this.misVitaminas.size();
 	}
 
 	public Integer cantRestaurador() {
