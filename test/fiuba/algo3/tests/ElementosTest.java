@@ -162,4 +162,18 @@ public class ElementosTest {
 		unJugador.usarElemento(unJugador.sacarVitamina());
 		assertEquals(unCharmander.cantidadAtaquesDisponibles(TipoAtaque.Fogonazo), 4);
 	}
+	
+	@Test(expected = ElementoNoDisponibleException.class) 
+	public void test13tiraExcepcionCuandoNoLeQuedanItemsDisponiblesDeUnTipo() throws AtaqueNoDisponibleException, ElementoNoDisponibleException{
+		Squirtle unSquirtle = new Squirtle();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unSquirtle);
+		unJugador.usarElemento(unJugador.sacarSuperPocion());
+		unJugador.usarElemento(unJugador.sacarSuperPocion());
+		unJugador.usarElemento(unJugador.sacarSuperPocion());
+		unJugador.usarElemento(unJugador.sacarSuperPocion());
+		unJugador.usarElemento(unJugador.sacarSuperPocion());
+		unJugador.usarElemento(unJugador.sacarSuperPocion());
+		unJugador.usarElemento(unJugador.sacarSuperPocion());
+	}
 }

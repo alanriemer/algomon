@@ -67,5 +67,31 @@ public class JugadorTest {
 		unJugador.cambiarAlgomon(algomonElegido);
 		assertEquals(unJugador.algomonActual(),unCharmander);
 	}
+	
+	@Test(expected = AlgomonInvalidoException.class) 
+	public void test05TiraExcepcionCuandoQuieroUsarUnAlgomonQueNoTengo() throws AlgomonInvalidoException{
+		Squirtle unSquirtle = new Squirtle();
+		Squirtle otroSquirtle = new Squirtle();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unSquirtle);
+		unJugador.cambiarAlgomon(otroSquirtle);
+	}
+	
+	public void test06JugadorTieneTodosLosAlgomonesMuertos() throws AtaqueNoDisponibleException{
+		Squirtle unSquirtle = new Squirtle();
+		Jugador unJugador = new Jugador();
+		unJugador.agregarAlgomon(unSquirtle);
+		Bulbasaur unBulbasaur = new Bulbasaur();
+		Jugador otroJugador = new Jugador();
+		otroJugador.agregarAlgomon(unBulbasaur);
+		otroJugador.atacarCon(TipoAtaque.LatigoCepa, unSquirtle);
+		otroJugador.atacarCon(TipoAtaque.LatigoCepa, unSquirtle);
+		otroJugador.atacarCon(TipoAtaque.LatigoCepa, unSquirtle);
+		otroJugador.atacarCon(TipoAtaque.LatigoCepa, unSquirtle);
+		otroJugador.atacarCon(TipoAtaque.LatigoCepa, unSquirtle);
+		otroJugador.atacarCon(TipoAtaque.LatigoCepa, unSquirtle);
+		otroJugador.atacarCon(TipoAtaque.LatigoCepa, unSquirtle);
+		assertEquals(unJugador.algomonesMuertos(),true);
+	}
 
 }
