@@ -15,6 +15,7 @@ public class Rattata extends Algomon{
 		puntosVidaActuales = 170;
 		Ataque fogonazo = new AtaqueFuego(2,4, TipoAtaque.Fogonazo);
 		Ataque burbuja = new AtaqueAgua(10,15, TipoAtaque.Burbuja);
+		fogonazo.puedeQuemar();
 		ataques.put(TipoAtaque.Fogonazo,fogonazo);
 		ataques.put(TipoAtaque.Burbuja,burbuja);
 
