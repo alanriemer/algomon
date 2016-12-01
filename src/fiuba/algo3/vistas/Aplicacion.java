@@ -1,7 +1,8 @@
 package fiuba.algo3.vistas;
 
+import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
+
 import fiuba.algo3.modelo.Juego;
 import fiuba.algo3.modelo.JuegoAlgomon;
 import javafx.application.Application;
@@ -16,6 +17,7 @@ public class Aplicacion extends Application {
 	private static Stage primaryStage;
 	private static BorderPane mainLayout;
 	public static Juego nuevoJuego = new JuegoAlgomon();
+	
 
 	public static void restart() throws IOException{
 		Aplicacion.nuevoJuego = new JuegoAlgomon();
@@ -23,9 +25,6 @@ public class Aplicacion extends Application {
 		nuevoJuego.setNombreJugador1("Ash");
 		nuevoJuego.setNombreJugador2("Gary");
 		showMainItems();
-        Media media = new Media(Paths.get("/resources/a.mp3").toUri().toString());
-        MediaPlayer mp = new MediaPlayer(media);
-        mp.play();
 	}
 
 	@Override
@@ -36,10 +35,10 @@ public class Aplicacion extends Application {
 		nuevoJuego.setNombreJugador1("Ash");
 		nuevoJuego.setNombreJugador2("Gary");
 		showMainItems();
-        Media media = new Media(Paths.get("/resources/a.mp3").toUri().toString());
-        MediaPlayer mp = new MediaPlayer(media);
-        mp.play();
-
+		String musicFile = "a.mp3";
+		Media sound = new Media(new File(musicFile).toURI().toString());
+		MediaPlayer mediaPlayer = new MediaPlayer(sound);
+		mediaPlayer.play();
 	}
 
 	private static void showMainView() throws IOException{
