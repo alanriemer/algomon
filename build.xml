@@ -201,7 +201,7 @@
 
 		<target name="empaquetar.con.imagenes" depends="compilar.paquete">
 			<copydir src="src/fiuba/algo3/vistas"
-				dest="${build}classes/fiuba/algo3/vistas"
+				dest="${build}/classes/fiuba/algo3/vistas"
 				includes="**/*.fxml "/>
 			<copydir src="src/resources"
 				dest="${build}/classes/resources"
